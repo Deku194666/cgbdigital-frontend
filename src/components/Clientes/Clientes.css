@@ -1,0 +1,233 @@
+.clientes {
+  padding-bottom: 100px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* HERO */
+.clientes-hero {
+  text-align: center;
+  padding: 110px 24px 90px;
+  background-color: var(--navy-mid, #1b2a4a);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.clientes-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8) !important; 
+  margin-bottom: 1rem;
+}
+
+.clientes-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 1.25rem;
+  line-height: 1.15;
+}
+
+.clientes-hero-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CONTENIDO (filtros + grid) centrado debajo del hero de ancho completo */
+.clientes-content {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+/* FILTERS */
+.clientes-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 3rem;
+  padding: 0 24px;
+}
+
+.filter-btn {
+  background: white;
+  border: 1px solid #dfe4ec;
+  color: var(--navy-mid, #1b2a4a);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--blue-accent, #2f6fed);
+  color: var(--blue-accent, #2f6fed);
+}
+
+.filter-btn.active {
+  background: var(--navy-mid, #1b2a4a);
+  border-color: var(--navy-mid, #1b2a4a);
+  color: white;
+}
+
+/* GRID */
+.clientes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 0 32px;
+  align-items: start;
+}
+
+.cliente-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: default;
+}
+
+a.cliente-card {
+  cursor: pointer;
+}
+
+.cliente-card:hover .cliente-image-wrapper {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(10, 42, 94, 0.22);
+}
+
+/* IMAGEN / PREVIEW — mockup flotante, imagen completa sin recorte */
+.cliente-image-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #eef1f6;
+  box-shadow: 0 12px 28px rgba(10, 42, 94, 0.14);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cliente-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fallback: si la imagen no carga, se ve un degradado con la inicial */
+.cliente-image-fallback {
+  display: none;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Georgia, serif;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, var(--card-color, #2f6fed), var(--navy-mid, #1b2a4a));
+}
+
+.cliente-image-wrapper.no-image .cliente-image {
+  display: none;
+}
+
+.cliente-image-wrapper.no-image .cliente-image-fallback {
+  display: flex;
+}
+
+.cliente-status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 11px;
+  border-radius: 20px;
+  letter-spacing: 0.4px;
+  z-index: 2;
+}
+
+.status-done {
+  background: #e4f6ea;
+  color: #2f8f4e;
+}
+
+.status-progress {
+  background: #fff2e0;
+  color: var(--orange-accent, #e07a2e);
+}
+
+.cliente-view-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(27, 42, 74, 0.55);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.cliente-card:hover .cliente-view-overlay {
+  opacity: 1;
+}
+
+/* BODY */
+.cliente-card-body {
+  padding: 1.25rem 0.25rem 0;
+}
+
+.cliente-category {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--card-color, #2f6fed);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.cliente-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy-mid, #1b2a4a);
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .clientes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .clientes-hero-title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .clientes-grid {
+    grid-template-columns: 1fr;
+  }
+  .clientes-hero {
+    padding: 70px 24px 50px;
+  }
+  .clientes-hero-title {
+    font-size: 1.9rem;
+  }
+}

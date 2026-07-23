@@ -1,0 +1,92 @@
+
+
+
+
+/*
+  ============================================================
+  CSS PROPIO DE: CapacitacionTecnologica
+  ============================================================
+  Todo lo de aquí abajo SOLO afecta esta página, porque todas
+  las reglas empiezan con .svcdet-capacitacion-tecnologica
+  (no toca las otras páginas de servicio).
+  ============================================================
+*/
+.svcdet-capacitacion-tecnologica .svcdet-breadcrumb {
+  font-size: 1rem;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-hero-icon {
+  font-size: 3.5rem;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-tagline {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-intro {
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-btn {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-feature-card h3 {
+  font-size: 1.3rem;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-feature-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-audience-list li {
+  font-size: 1.1rem;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-process-num {
+  font-size: 1.5rem;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-process-step h4 {
+  font-size: 1.4rem;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-process-step p {
+  font-size: 1.04rem;
+  line-height: 1.5;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-stack-tag {
+  font-size: 1.1rem;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-faq-question {
+  font-size: 1.2rem;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-faq-answer {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-cta h2 {
+  font-size: 1.7rem;
+}
+
+.svcdet-capacitacion-tecnologica .svcdet-cta p {
+  font-size: 1rem;
+}

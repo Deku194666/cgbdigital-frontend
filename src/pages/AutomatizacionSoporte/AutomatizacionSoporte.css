@@ -1,0 +1,106 @@
+
+
+
+/*
+  ============================================================
+  CSS PROPIO DE: Automatización y Soporte
+  ============================================================
+  Todo lo de aquí abajo SOLO afecta esta página, porque todas
+  las reglas empiezan con .svcdet-automatizacion-soporte
+  (no toca las otras 6 páginas de servicio).
+
+  Cómo usarlo: busca la sección que quieras cambiar
+  (están ordenadas de arriba hacia abajo, igual que se ve
+  la página) y edita el valor que necesites.
+  ============================================================
+*/
+
+/* ---------- MIGAS DE PAN (Inicio / Servicios / ...) ---------- */
+.svcdet-automatizacion-soporte .svcdet-breadcrumb {
+  font-size: 1rem;
+}
+
+/* ---------- HERO (ícono, título, subtítulo, intro) ---------- */
+.svcdet-automatizacion-soporte .svcdet-hero-icon {
+  font-size: 3.5rem;
+}
+
+.svcdet-automatizacion-soporte .svcdet-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.svcdet-automatizacion-soporte .svcdet-tagline {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.svcdet-automatizacion-soporte .svcdet-intro {
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+/* ---------- BOTONES DEL HERO ---------- */
+.svcdet-automatizacion-soporte .svcdet-btn {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+}
+
+/* ---------- TÍTULOS DE CADA SECCIÓN ("¿Qué incluye...?", etc.) ---------- */
+.svcdet-automatizacion-soporte .svcdet-section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* ---------- TARJETAS "¿QUÉ INCLUYE ESTE SERVICIO?" ---------- */
+.svcdet-automatizacion-soporte .svcdet-feature-card h3 {
+  font-size: 1.3rem;
+}
+
+.svcdet-automatizacion-soporte .svcdet-feature-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ---------- LISTA "¿PARA QUIÉN ES ESTE SERVICIO?" ---------- */
+.svcdet-automatizacion-soporte .svcdet-audience-list li {
+  font-size: 1.1rem;
+}
+
+/* ---------- PROCESO "CÓMO TRABAJAMOS" (01, 02, 03...) ---------- */
+.svcdet-automatizacion-soporte .svcdet-process-num {
+  font-size: 1.5rem;
+}
+
+.svcdet-automatizacion-soporte .svcdet-process-step h4 {
+  font-size: 1.4rem;
+}
+
+.svcdet-automatizacion-soporte .svcdet-process-step p {
+  font-size: 1.04rem;
+  line-height: 1.5;
+}
+
+/* ---------- TECNOLOGÍAS (Node.js, APIs REST, etc.) ---------- */
+.svcdet-automatizacion-soporte .svcdet-stack-tag {
+  font-size: 1.1rem;
+}
+
+/* ---------- PREGUNTAS FRECUENTES ---------- */
+.svcdet-automatizacion-soporte .svcdet-faq-question {
+  font-size: 1.2rem;
+}
+
+.svcdet-automatizacion-soporte .svcdet-faq-answer {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ---------- CTA FINAL ("¿Tienes un proyecto en mente?") ---------- */
+.svcdet-automatizacion-soporte .svcdet-cta h2 {
+  font-size: 1.7rem;
+}
+
+.svcdet-automatizacion-soporte .svcdet-cta p {
+  font-size: 1rem;
+}

@@ -1,0 +1,130 @@
+.services {
+  padding: 90px 24px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-eyebrow2 {
+  display: block;
+  color: var(--orange-accent, #e07a2e);
+  font-weight: 900;
+  font-size: 1.1rem!important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 2rem!important;
+  font-weight: 600;
+  color: var(--navy-mid);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 14px;
+  padding: 32px 28px;
+  border-top: 4px solid var(--card-color);
+  box-shadow: 0 4px 18px rgba(10, 42, 94, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(10, 42, 94, 0.1);
+}
+
+.service-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.service-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--navy-mid);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.service-text {
+  font-size: 1.1rem;
+  color: var(--gray-text);
+  line-height: 1.55;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  text-align: center!important;
+}
+
+.service-features li {
+  font-size: 1.1rem;
+  color: #2c3648;
+  display: flex;
+  align-items: center!important;
+  margin-left: 3rem;
+  gap: 8px;
+  
+}
+
+.check-icon {
+  color: var(--card-color);
+  font-weight: 700;
+  flex-shrink: 0;
+  
+}
+
+.service-cta {
+  align-self: flex-start;
+  color: var(--card-color);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1.5px solid var(--card-color);
+  padding: 9px 20px;
+  border-radius: 7px;
+  transition: all 0.2s ease;
+  margin-left: 3rem;
+}
+
+.service-cta:hover {
+  background: var(--card-color);
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+}

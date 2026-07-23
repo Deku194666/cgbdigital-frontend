@@ -1,0 +1,441 @@
+
+
+
+.nosotros-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ---------- Hero ---------- */
+.nosotros-hero {
+  position: relative;
+  padding: 90px 24px 70px;
+  text-align: center;
+  background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy-mid) 55%, var(--blue-accent) 100%);
+  overflow: hidden;
+}
+
+.nosotros-hero-circuit {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.6) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 80% 25%, rgba(255,255,255,0.6) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255,255,255,0.15) 1px, transparent 1px);
+  background-size: 220px 220px, 220px 220px, 70px 70px, 70px 70px;
+}
+
+.nosotros-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.section-eyebrow-light {
+  display: block;
+  color: #8fc1ff;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.nosotros-hero-title {
+  font-size:2.4rem;
+  font-weight: 600;
+  font-style: italic;
+  color: white;
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+
+.highlight-orange {
+  color: var(--orange-accent);
+}
+
+.nosotros-hero-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+
+/* ---------- Stats ---------- */
+.nosotros-stats {
+  max-width: 900px;
+  margin: -40px auto 0;
+  position: relative;
+  z-index: 3;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 34px rgba(10, 42, 94, 0.12);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 30px 20px;
+}
+
+.stat-item {
+  text-align: center;
+  border-right: 1px solid #eef2f8;
+}
+
+.stat-item:last-child {
+  border-right: none;
+}
+
+.stat-number {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--blue-accent);
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: var(--gray-text);
+}
+
+/* ---------- Misión / Visión ---------- */
+.nosotros-mission {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 90px 24px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.mission-card {
+  background: white;
+  border-radius: 14px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 18px rgba(10, 42, 94, 0.06);
+}
+
+.mission-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.mission-card h2 {
+  font-size: 1.6rem;
+  color: var(--navy-mid);
+  margin-bottom: 10px;
+}
+
+.mission-card p {
+  font-size: 1.2rem;
+  color: var(--gray-text);
+  line-height: 1.6;
+}
+
+/* ---------- Headers compartidos ---------- */
+.nosotros-team-header {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.section-eyebrow5 {
+  display: block;
+  color: var(--orange-accent, #e07a2e);
+  font-weight: 900;
+  font-size: 1.1rem!important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--navy-mid);
+}
+
+.section-subtitle {
+  max-width: 480px;
+  margin: 12px auto 0;
+  color: var(--gray-text);
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* ---------- Equipo ---------- */
+.nosotros-team {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+  margin-bottom: 26px;
+}
+
+.team-card {
+  background: white;
+  border-radius: 14px;
+  padding: 32px 28px;
+  box-shadow: 0 4px 18px rgba(10, 42, 94, 0.06);
+  text-align: center;
+}
+
+.team-photo {
+  width: 136px;
+  height: 136px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+  border: 3px solid var(--bg-light);
+  box-shadow: 0 4px 14px rgba(10, 42, 94, 0.15);
+}
+
+.team-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--navy-mid);
+  margin-bottom: 4px;
+}
+
+.team-role {
+  display: block;
+  color: var(--orange-accent);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.team-bio {
+  color: var(--gray-text);
+  font-size: 1.1rem;
+  line-height: 1.55;
+}
+
+.team-note {
+  text-align: center;
+  color: var(--gray-text);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* ---------- Historia / Timeline ---------- */
+.nosotros-history {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 90px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: #dbe4f0;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 34px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -32px;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--blue-accent);
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px var(--blue-accent);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--orange-accent);
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.timeline-content h3 {
+  font-size: 1.3rem;
+  color: var(--navy-mid);
+  margin-bottom: 6px;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: var(--gray-text);
+  line-height: 1.55;
+}
+
+/* ---------- Valores ---------- */
+.nosotros-values {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 90px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.value-card {
+  background: white;
+  border-radius: 14px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 18px rgba(10, 42, 94, 0.06);
+  text-align: center;
+}
+
+.value-icon {
+  display: block;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.value-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--navy-mid);
+  margin-bottom: 8px;
+}
+
+.value-text {
+  font-size: 1rem;
+  color: var(--gray-text);
+  line-height: 1.5;
+}
+
+/* ---------- Stack tecnológico ---------- */
+.nosotros-stack {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 24px 90px;
+  text-align: center;
+}
+
+.stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.stack-badge {
+  background: white;
+  color: var(--navy-mid);
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 24px;
+  box-shadow: 0 4px 14px rgba(10, 42, 94, 0.07);
+  border: 1.5px solid #e6ecf5;
+}
+
+/* ---------- Contacto ---------- */
+.nosotros-contact {
+  background: var(--navy-deep);
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.nosotros-contact h2 {
+  color: white;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.nosotros-contact p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.nosotros-contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.nosotros-contact-links a {
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nosotros-contact-links a:hover {
+  color: var(--orange-accent);
+}
+
+.nosotros-contact-btn {
+  display: inline-block;
+  background: var(--orange-accent);
+  color: white;
+  font-weight: 600;
+  padding: 13px 30px;
+  border-radius: 8px;
+  transition: filter 0.2s ease;
+}
+
+.nosotros-contact-btn:hover {
+  filter: brightness(1.1);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px) {
+  .nosotros-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .nosotros-mission {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nosotros-hero-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

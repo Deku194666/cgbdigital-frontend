@@ -1,0 +1,93 @@
+
+
+
+
+/*
+  ============================================================
+  CSS PROPIO DE: MigracionDatos
+  ============================================================
+  Todo lo de aquí abajo SOLO afecta esta página, porque todas
+  las reglas empiezan con .svcdet-migracion-datos
+  (no toca las otras páginas de servicio).
+  ============================================================
+*/
+
+.svcdet-migracion-datos .svcdet-breadcrumb {
+  font-size: 1rem;
+}
+
+.svcdet-migracion-datos .svcdet-hero-icon {
+  font-size: 3.5rem;
+}
+
+.svcdet-migracion-datos .svcdet-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.svcdet-migracion-datos .svcdet-tagline {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.svcdet-migracion-datos .svcdet-intro {
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+.svcdet-migracion-datos .svcdet-btn {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+}
+
+.svcdet-migracion-datos .svcdet-section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.svcdet-migracion-datos .svcdet-feature-card h3 {
+  font-size: 1.3rem;
+}
+
+.svcdet-migracion-datos .svcdet-feature-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.svcdet-migracion-datos .svcdet-audience-list li {
+  font-size: 1.1rem;
+}
+
+.svcdet-migracion-datos .svcdet-process-num {
+  font-size: 1.5rem;
+}
+
+.svcdet-migracion-datos .svcdet-process-step h4 {
+  font-size: 1.4rem;
+}
+
+.svcdet-migracion-datos .svcdet-process-step p {
+  font-size: 1.04rem;
+  line-height: 1.5;
+}
+
+.svcdet-migracion-datos .svcdet-stack-tag {
+  font-size: 1.1rem;
+}
+
+.svcdet-migracion-datos .svcdet-faq-question {
+  font-size: 1.2rem;
+}
+
+.svcdet-migracion-datos .svcdet-faq-answer {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.svcdet-migracion-datos .svcdet-cta h2 {
+  font-size: 1.7rem;
+}
+
+.svcdet-migracion-datos .svcdet-cta p {
+  font-size: 1rem;
+}

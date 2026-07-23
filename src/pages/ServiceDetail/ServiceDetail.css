@@ -1,0 +1,340 @@
+.svcdet-page {
+  color: var(--navy-mid, #1b2a4a);
+}
+
+/* BREADCRUMB */
+.svcdet-breadcrumb {
+  font-size: 0.82rem;
+  color: var(--gray-text, #6b7280);
+  margin-bottom: 1.5rem;
+}
+
+.svcdet-breadcrumb a {
+  color: var(--gray-text, #6b7280);
+  text-decoration: none;
+}
+
+.svcdet-breadcrumb a:hover {
+  color: var(--card-color);
+}
+
+.svcdet-breadcrumb span {
+  margin: 0 0.3rem;
+}
+
+/* HERO */
+.svcdet-hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 24px 60px;
+  text-align: center;
+}
+
+.svcdet-hero-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.svcdet-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--navy-mid, #1b2a4a);
+  margin: 0 0 0.6rem;
+}
+
+.svcdet-tagline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--card-color);
+  margin: 0 0 1.25rem;
+}
+
+.svcdet-intro {
+  font-size: 1rem;
+  color: var(--gray-text, #6b7280);
+  line-height: 1.7;
+  margin: 0 0 2rem;
+}
+
+.svcdet-hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.svcdet-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.svcdet-btn-primary {
+  background: var(--card-color);
+  color: white;
+}
+
+.svcdet-btn-primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+.svcdet-btn-ghost {
+  background: white;
+  color: var(--navy-mid, #1b2a4a);
+  border: 1px solid #dfe4ec;
+}
+
+.svcdet-btn-ghost:hover {
+  border-color: var(--card-color);
+  color: var(--card-color);
+}
+
+/* SECTIONS */
+.svcdet-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.svcdet-section-alt {
+  background: var(--bg-light, #f3f5f9);
+  max-width: 100%;
+}
+
+.svcdet-section-alt .svcdet-section-title,
+.svcdet-section-alt .svcdet-audience-list {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.svcdet-section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 2.5rem;
+}
+
+/* FEATURES */
+.svcdet-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.svcdet-feature-card {
+  background: white;
+  border: 1px solid #eef1f6;
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 16px rgba(10, 42, 94, 0.05);
+}
+
+.svcdet-feature-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--card-color);
+  color: white;
+  font-size: 0.85rem;
+  margin-bottom: 0.9rem;
+}
+
+.svcdet-feature-card h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+}
+
+.svcdet-feature-card p {
+  font-size: 0.9rem;
+  color: var(--gray-text, #6b7280);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* AUDIENCE */
+.svcdet-audience-list {
+  list-style: none;
+  padding: 0 24px;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.svcdet-audience-list li {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  box-shadow: 0 3px 10px rgba(10, 42, 94, 0.05);
+}
+
+.svcdet-audience-check {
+  color: var(--card-color);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* PROCESS */
+.svcdet-process {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.svcdet-process-step {
+  border-left: 3px solid var(--card-color);
+  padding: 0.25rem 0 0.25rem 1rem;
+}
+
+.svcdet-process-num {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--card-color);
+}
+
+.svcdet-process-step h4 {
+  font-size: 0.98rem;
+  margin: 0.4rem 0 0.35rem;
+}
+
+.svcdet-process-step p {
+  font-size: 0.85rem;
+  color: var(--gray-text, #6b7280);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* STACK */
+.svcdet-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.svcdet-stack-tag {
+  background: white;
+  border: 1px solid #dfe4ec;
+  color: var(--navy-mid, #1b2a4a);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+}
+
+/* FAQ */
+.svcdet-faq {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.svcdet-faq-item {
+  background: white;
+  border: 1px solid #eef1f6;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.svcdet-faq-item.open {
+  border-color: var(--card-color);
+}
+
+.svcdet-faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 1rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy-mid, #1b2a4a);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.svcdet-faq-icon {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: var(--card-color);
+  transition: transform 0.2s ease;
+}
+
+.svcdet-faq-item.open .svcdet-faq-icon {
+  transform: rotate(180deg);
+}
+
+.svcdet-faq-answer {
+  padding: 0 1.25rem 1.1rem;
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--gray-text, #6b7280);
+  line-height: 1.6;
+}
+
+/* CTA FINAL */
+.svcdet-cta {
+  text-align: center;
+  padding: 70px 24px 90px;
+  background: linear-gradient(135deg, var(--navy-mid, #1b2a4a), var(--card-color));
+  color: white;
+}
+
+.svcdet-cta h2 {
+  font-size: 1.7rem;
+  margin: 0 0 0.6rem;
+}
+
+.svcdet-cta p {
+  opacity: 0.9;
+  margin: 0 0 1.75rem;
+}
+
+.svcdet-cta .svcdet-btn-primary {
+  background: white;
+  color: var(--navy-mid, #1b2a4a);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .svcdet-features-grid,
+  .svcdet-audience-list {
+    grid-template-columns: 1fr;
+  }
+  .svcdet-process {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .svcdet-title {
+    font-size: 1.8rem;
+  }
+  .svcdet-process {
+    grid-template-columns: 1fr;
+  }
+}

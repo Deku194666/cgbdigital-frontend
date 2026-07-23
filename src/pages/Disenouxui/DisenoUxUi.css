@@ -1,0 +1,93 @@
+
+
+
+
+/*
+  ============================================================
+  CSS PROPIO DE: DisenoUxUi
+  ============================================================
+  Todo lo de aquí abajo SOLO afecta esta página, porque todas
+  las reglas empiezan con .svcdet-diseno-ux-ui
+  (no toca las otras páginas de servicio).
+  ============================================================
+*/
+
+.svcdet-diseno-ux-ui .svcdet-breadcrumb {
+  font-size: 1rem;
+}
+
+.svcdet-diseno-ux-ui .svcdet-hero-icon {
+  font-size: 3.5rem;
+}
+
+.svcdet-diseno-ux-ui .svcdet-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.svcdet-diseno-ux-ui .svcdet-tagline {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.svcdet-diseno-ux-ui .svcdet-intro {
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+.svcdet-diseno-ux-ui .svcdet-btn {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+}
+
+.svcdet-diseno-ux-ui .svcdet-section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.svcdet-diseno-ux-ui .svcdet-feature-card h3 {
+  font-size: 1.3rem;
+}
+
+.svcdet-diseno-ux-ui .svcdet-feature-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.svcdet-diseno-ux-ui .svcdet-audience-list li {
+  font-size: 1.1rem;
+}
+
+.svcdet-diseno-ux-ui .svcdet-process-num {
+  font-size: 1.5rem;
+}
+
+.svcdet-diseno-ux-ui .svcdet-process-step h4 {
+  font-size: 1.4rem;
+}
+
+.svcdet-diseno-ux-ui .svcdet-process-step p {
+  font-size: 1.04rem;
+  line-height: 1.5;
+}
+
+.svcdet-diseno-ux-ui .svcdet-stack-tag {
+  font-size: 1.1rem;
+}
+
+.svcdet-diseno-ux-ui .svcdet-faq-question {
+  font-size: 1.2rem;
+}
+
+.svcdet-diseno-ux-ui .svcdet-faq-answer {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.svcdet-diseno-ux-ui .svcdet-cta h2 {
+  font-size: 1.7rem;
+}
+
+.svcdet-diseno-ux-ui .svcdet-cta p {
+  font-size: 1rem;
+}

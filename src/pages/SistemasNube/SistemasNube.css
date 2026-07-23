@@ -1,0 +1,107 @@
+
+
+
+
+/*
+  ============================================================
+  CSS PROPIO DE: Sistemas en la Nube
+  ============================================================
+  Todo lo de aquí abajo SOLO afecta esta página, porque todas
+  las reglas empiezan con .svcdet-sistemas-nube
+  (no toca las otras 6 páginas de servicio).
+
+  Cómo usarlo: busca la sección que quieras cambiar
+  (están ordenadas de arriba hacia abajo, igual que se ve
+  la página) y edita el valor que necesites.
+  ============================================================
+*/
+
+/* ---------- MIGAS DE PAN (Inicio / Servicios / ...) ---------- */
+.svcdet-sistemas-nube .svcdet-breadcrumb {
+  font-size: 1rem;
+}
+
+/* ---------- HERO (ícono, título, subtítulo, intro) ---------- */
+.svcdet-sistemas-nube .svcdet-hero-icon {
+  font-size: 3.5rem;
+}
+
+.svcdet-sistemas-nube .svcdet-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.svcdet-sistemas-nube .svcdet-tagline {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.svcdet-sistemas-nube .svcdet-intro {
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+/* ---------- BOTONES DEL HERO ---------- */
+.svcdet-sistemas-nube .svcdet-btn {
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+}
+
+/* ---------- TÍTULOS DE CADA SECCIÓN ("¿Qué incluye...?", etc.) ---------- */
+.svcdet-sistemas-nube .svcdet-section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* ---------- TARJETAS "¿QUÉ INCLUYE ESTE SERVICIO?" ---------- */
+.svcdet-sistemas-nube .svcdet-feature-card h3 {
+  font-size: 1.3rem;
+}
+
+.svcdet-sistemas-nube .svcdet-feature-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ---------- LISTA "¿PARA QUIÉN ES ESTE SERVICIO?" ---------- */
+.svcdet-sistemas-nube .svcdet-audience-list li {
+  font-size: 1.1rem;
+}
+
+/* ---------- PROCESO "CÓMO TRABAJAMOS" (01, 02, 03...) ---------- */
+.svcdet-sistemas-nube .svcdet-process-num {
+  font-size: 1.5rem;
+}
+
+.svcdet-sistemas-nube .svcdet-process-step h4 {
+  font-size: 1.4rem;
+}
+
+.svcdet-sistemas-nube .svcdet-process-step p {
+  font-size: 1.04rem;
+  line-height: 1.5;
+}
+
+/* ---------- TECNOLOGÍAS (AWS, Render, etc.) ---------- */
+.svcdet-sistemas-nube .svcdet-stack-tag {
+  font-size: 1.1rem;
+}
+
+/* ---------- PREGUNTAS FRECUENTES ---------- */
+.svcdet-sistemas-nube .svcdet-faq-question {
+  font-size: 1.2rem;
+}
+
+.svcdet-sistemas-nube .svcdet-faq-answer {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ---------- CTA FINAL ("¿Tienes un proyecto en mente?") ---------- */
+.svcdet-sistemas-nube .svcdet-cta h2 {
+  font-size: 1.7rem;
+}
+
+.svcdet-sistemas-nube .svcdet-cta p {
+  font-size: 1rem;
+}

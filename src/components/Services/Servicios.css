@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap");
+
+.svc-page {
+  --ink: #f4f7fb;
+  --panel: #ffffff;
+  --panel-2: #edf2fa;
+  --line: #d7e1ef;
+  --text: #1b2436;
+  --muted: #5c6b85;
+  --cyan: #2f8fd1;
+  --amber: #e2933f;
+
+  background-color: var(--ink);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.svc-page h1,
+.svc-page h2,
+.svc-page h3,
+.svc-page h4 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.svc-eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  color: var(--cyan);
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Buttons */
+.svc-btn {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.svc-btn-primary {
+  background: linear-gradient(135deg, var(--cyan), #3aa0e0);
+  color: #06141f;
+}
+.svc-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(87, 199, 255, 0.25);
+}
+.svc-btn-ghost {
+  border: 1px solid var(--line);
+  color: var(--text);
+  background: transparent;
+}
+.svc-btn-ghost:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+/* HERO */
+.svc-hero {
+  position: relative;
+  padding: 6rem 1.5rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.svc-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 42px 42px;
+  opacity: 0.5;
+  mask-image: radial-gradient(ellipse at 30% 20%, black 40%, transparent 75%);
+  pointer-events: none;
+}
+
+.svc-hero-content {
+  position: relative;
+  max-width: 560px;
+}
+
+.svc-hero-content h1 {
+  font-size: 2.75rem;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  color: var(--text);
+}
+
+.svc-hero-text {
+  color: var(--muted);
+  font-size: 1.24rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.svc-hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.svc-hero-schematic {
+  position: relative;
+  width: 100%;
+  max-width: 490px;
+  height: auto;
+}
+
+.svc-draw {
+  fill: rgba(87, 199, 255, 0.05);
+  stroke: var(--cyan);
+  stroke-width: 1.5;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  animation: draw 1s ease forwards;
+}
+
+.svc-draw-line {
+  stroke: var(--amber);
+  stroke-width: 1.5;
+  fill: none;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: draw 0.8s ease forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.svc-schem-label {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  fill: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+/* SECTION HEAD */
+.svc-section-head {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.svc-section-head h2 {
+  font-size: 1.9rem;
+  color: var(--text);
+  margin: 0;
+}
+
+/* CATALOG (contenedor de sección, el diseño de tarjeta va más abajo) */
+.svc-catalog {
+  padding: 5rem 0 6rem;
+  border-top: 1px solid var(--line);
+}
+
+/* PROCESS */
+.svc-process {
+  padding: 5rem 0 6rem;
+  background: var(--panel-2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.svc-process-line {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.svc-process-step {
+  padding: 1.5rem 1.25rem;
+  border-left: 2px solid var(--line);
+}
+
+.svc-process-num {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--cyan);
+  font-size: 1.4rem;
+}
+
+.svc-process-step h4 {
+  color: var(--text);
+  font-size: 1.6rem;
+  margin: 0.5rem 0 0.4rem;
+}
+
+.svc-process-step p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* PLANS */
+.svc-plans {
+  padding: 5rem 0 6rem;
+}
+
+.svc-plans-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.svc-plan-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 2rem 1.75rem;
+}
+
+.svc-plan-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  color: var(--amber);
+  letter-spacing: 0.06em;
+}
+
+.svc-plan-card h3 {
+  color: var(--text);
+  font-size: 1.3rem;
+  margin: 0.6rem 0 0.6rem;
+}
+
+.svc-plan-card p {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* CTA */
+.svc-cta {
+  padding: 6rem 1.5rem;
+  text-align: center;
+}
+
+.svc-cta-inner h2 {
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+}
+
+.svc-cta-inner p {
+  color: var(--muted);
+  margin-bottom: 1.75rem;
+}
+
+/* RESPONSIVE (secciones blueprint: hero, proceso, planes) */
+@media (max-width: 992px) {
+  .svc-process-line {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .svc-plans-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .svc-hero-content h1 {
+    font-size: 2.1rem;
+  }
+  .svc-process-line {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .svc-draw,
+  .svc-draw-line {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
+
+/* ============================================================
+   TARJETAS DE SERVICIO — mismo diseño que en Home (Services.jsx)
+   Todo lo de aquí abajo pinta la grilla de 9 tarjetas del catálogo
+   ============================================================ */
+
+.services-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 14px;
+  padding: 32px 28px;
+  border-top: 4px solid var(--card-color);
+  box-shadow: 0 4px 18px rgba(10, 42, 94, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(10, 42, 94, 0.1);
+}
+
+.service-icon {
+  font-size: 4rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.service-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--navy-mid, #1b2a4a);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.service-text {
+  font-size: 1.1rem;
+  color: var(--gray-text, #6b7280);
+  line-height: 1.55;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+  text-align: center !important;
+}
+
+.service-features li {
+  font-size: 1.1rem;
+  color: #2c3648;
+  display: flex;
+  align-items: center !important;
+  margin-left: 3rem;
+  gap: 8px;
+}
+
+.check-icon {
+  color: var(--card-color);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.service-cta {
+  align-self: flex-start;
+  color: var(--card-color);
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1.5px solid var(--card-color);
+  padding: 9px 20px;
+  border-radius: 7px;
+  transition: all 0.2s ease;
+  margin-left: 3rem;
+  text-decoration: none;
+}
+
+.service-cta:hover {
+  background: var(--card-color);
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
