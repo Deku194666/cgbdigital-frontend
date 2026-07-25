@@ -1,11 +1,7 @@
-
-
-
-
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { registerRequest } from "../../services/authService";
 import "./Register.css";
- 
 
 function Register() {
   const [form, setForm] = useState({
@@ -21,6 +17,7 @@ function Register() {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
+  const navigate = useNavigate();
 
   const validateForm = () => {
     const newErrors = {};
@@ -75,26 +72,44 @@ function Register() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSuccessMessage("");
+    setErrors((prev) => ({ ...prev, submit: "" }));
 
     if (!validateForm()) {
       return;
     }
 
-    // TODO: conectar con backend real de registro (registerRequest) cuando esté listo
     setLoading(true);
-    setTimeout(() => {
-      console.log("Registro (demo, sin backend todavía):", form);
+
+    try {
+      const data = await registerRequest({
+        name: form.name,
+        email: form.email,
+        password: form.password,
+        phone: form.phone,
+        role: "cliente",
+      });
+
+      // Guardamos la sesión igual que en el login
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data));
+
       setSuccessMessage("¡Cuenta creada exitosamente! 🎉");
+
+      setTimeout(() => {
+        navigate("/dashboard-cliente");
+      }, 1500);
+    } catch (err) {
+      setErrors((prev) => ({ ...prev, submit: err.message || "Error al crear la cuenta" }));
+    } finally {
       setLoading(false);
-    }, 900);
+    }
   };
 
   return (
     <div className="register-container">
-    
       <div className="register-wrapper">
         {/* SIDE INFO (IZQUIERDA) */}
         <div className="register-side">
@@ -114,7 +129,7 @@ function Register() {
               </div>
               <div className="benefit-item">
                 <span>💬</span>
-                <p style={{ fontSize: 17 }}>Mensajería directa</p>
+                <p style={{ fontSize: 17 }}>Mensajería directa conmigo</p>
               </div>
               <div className="benefit-item">
                 <span>📄</span>

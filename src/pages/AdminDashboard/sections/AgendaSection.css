@@ -1,0 +1,252 @@
+.admin-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--navy-mid, #1b2a4a);
+  margin: 0 0 0.4rem;
+}
+
+.admin-subtitle {
+  color: var(--gray-text, #6b7280);
+  font-size: 0.95rem;
+  margin: 0 0 1.5rem;
+}
+
+.admin-empty {
+  font-size: 0.85rem;
+  color: var(--gray-text, #6b7280);
+  font-style: italic;
+}
+
+.admin-activity-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.88rem;
+  box-shadow: 0 3px 10px rgba(10, 42, 94, 0.05);
+}
+
+/* SELECTOR DE FECHA */
+.agenda-date-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.agenda-date-picker label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy-mid, #1b2a4a);
+}
+
+.agenda-date-picker input {
+  border: 1px solid #dfe4ec;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.87rem;
+  color: var(--navy-mid, #1b2a4a);
+  font-family: inherit;
+}
+
+.agenda-date-picker input:focus {
+  outline: none;
+  border-color: var(--blue-accent, #2f6fed);
+}
+
+/* BLOQUES DE HORA */
+.agenda-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.agenda-slot {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 3px 10px rgba(10, 42, 94, 0.05);
+  border-left: 4px solid #d7dce5;
+}
+
+.agenda-slot.occupied {
+  border-left-color: var(--blue-accent, #2f6fed);
+}
+
+.agenda-slot.free {
+  border-left-color: #2f8f4e;
+}
+
+.agenda-slot.done {
+  border-left-color: #9aa4b8;
+  background: #f7f8fa;
+}
+
+.agenda-slot-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.agenda-complete-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #e4f6ea;
+  color: #2f8f4e;
+  border: none;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.agenda-complete-btn:hover {
+  background: #d1efdb;
+}
+
+.agenda-done-badge {
+  display: inline-block;
+  background: #eef1f6;
+  color: #6b7280;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+}
+
+.agenda-slot-hour {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--navy-mid, #1b2a4a);
+  margin-bottom: 0.6rem;
+}
+
+.agenda-slot-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.agenda-slot-info strong {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--navy-mid, #1b2a4a);
+}
+
+.agenda-slot-project {
+  color: var(--blue-accent, #2f6fed);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.agenda-slot-reason {
+  font-size: 0.82rem;
+  color: var(--gray-text, #6b7280);
+  margin: 0.3rem 0 0;
+}
+
+.agenda-cancel-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #ffebee;
+  color: #c94f4f;
+  border: none;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.agenda-cancel-btn:hover {
+  background: #ffd9dd;
+}
+
+.agenda-free-btn {
+  background: none;
+  border: 1px dashed #cfd6e0;
+  color: #2f8f4e;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+.agenda-free-btn:hover {
+  background: #f3f9f5;
+}
+
+/* FORMULARIO DE RESERVA MANUAL */
+.agenda-book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.agenda-form-error {
+  color: #c94f4f;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.agenda-book-form select,
+.agenda-book-form input {
+  border: 1px solid #dfe4ec;
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.85rem;
+  color: var(--navy-mid, #1b2a4a);
+  font-family: inherit;
+}
+
+.agenda-book-form select:focus,
+.agenda-book-form input:focus {
+  outline: none;
+  border-color: var(--blue-accent, #2f6fed);
+}
+
+.agenda-form-actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.agenda-btn-primary {
+  background: var(--blue-accent, #2f6fed);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.agenda-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.agenda-btn-ghost {
+  background: white;
+  border: 1px solid #dfe4ec;
+  color: var(--navy-mid, #1b2a4a);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}

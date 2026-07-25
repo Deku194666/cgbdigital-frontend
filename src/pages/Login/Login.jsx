@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { loginRequest } from "../../services/authService";
 import "./Login.css";
 
 
@@ -9,6 +10,7 @@ function Login() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const validateForm = () => {
     if (!email) {
@@ -30,7 +32,7 @@ function Login() {
     return true;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
@@ -38,12 +40,26 @@ function Login() {
       return;
     }
 
-    // TODO: conectar con backend de autenticación real (login/register como en Hikari)
     setLoading(true);
-    setTimeout(() => {
-      console.log("Login (demo, sin backend todavía):", { email, password });
+
+    try {
+      const data = await loginRequest(email, password);
+
+      // Guardamos la sesión en el navegador
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data));
+
+      // Redirección según el rol del usuario
+      if (data.role === "admin") {
+        navigate("/admin");
+      } else {
+        navigate("/dashboard-cliente");
+      }
+    } catch (err) {
+      setError(err.message || "Correo o contraseña incorrectos");
+    } finally {
       setLoading(false);
-    }, 900);
+    }
   };
 
   return (
@@ -144,17 +160,6 @@ function Login() {
           <Link to="/register" className="btn-register">
             📝 Crear una cuenta nueva
           </Link>
-
-          {/* BOTONES DEMO (mientras no hay backend) */}
-          <div className="demo-buttons">
-            <p>Modo demo — sin backend todavía</p>
-            <Link to="/dashboard-cliente" className="demo-client">
-              👤 Ver Dashboard Cliente
-            </Link>
-            <Link to="/admin" className="demo-admin">
-              🛠️ Ver Dashboard Admin
-            </Link>
-          </div>
 
           {/* FOOTER CON INFO */}
           <div className="login-footer">

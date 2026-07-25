@@ -29,6 +29,9 @@ import PoliticaDeCookies from "./pages/PoliticaDeCookies";
 import AdminDashboard from "./pages/AdminDashboard/AdminDashboard";
 import ClientDashboard from "./pages/ClientDashboard/ClientDashboard";
 
+ 
+
+
 // Rutas "internas" (dentro de la cuenta) donde NO debe salir NavBar2
 const INTERNAL_ROUTES = ["/admin", "/dashboard-cliente"];
 
@@ -68,6 +71,7 @@ function App() {
         <Route path="/politica-de-cookies" element={<PoliticaDeCookies />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/dashboard-cliente" element={<ClientDashboard />} />
+        
 
       </Routes>
       <Footer />

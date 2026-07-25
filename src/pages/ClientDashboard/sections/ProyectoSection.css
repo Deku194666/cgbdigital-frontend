@@ -1,0 +1,155 @@
+.client-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--navy-mid, #1b2a4a);
+  margin: 0 0 0.4rem;
+}
+
+.client-subtitle {
+  color: var(--gray-text, #6b7280);
+  font-size: 0.95rem;
+  margin: 0 0 2rem;
+}
+
+.client-description {
+  font-size: 0.95rem;
+  color: var(--gray-text, #6b7280);
+  line-height: 1.7;
+  max-width: 700px;
+  margin-bottom: 1.25rem;
+}
+
+.client-tags-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.client-tag {
+  background: white;
+  border: 1px solid #dfe4ec;
+  color: var(--proj-color, #2f6fed);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.client-hero-card {
+  background: white;
+  border-radius: 14px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 4px 16px rgba(10, 42, 94, 0.07);
+  border-top: 4px solid var(--proj-color, #2f6fed);
+  margin-top: 1rem;
+}
+
+.client-hero-deadline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--gray-text, #6b7280);
+  margin: 1rem 0 0;
+}
+
+.client-phase-timeline-wrap {
+  margin: 0;
+}
+
+.client-phase-percent {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2f6fed;
+  margin-bottom: 0.75rem;
+}
+
+.client-phase-timeline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+}
+
+.client-phase-timeline::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: #e0e4ea;
+  z-index: 0;
+}
+
+.client-phase-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.client-phase-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e0e4ea;
+  color: #9aa4b2;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-phase-step.done .client-phase-dot {
+  background: #2f6fed;
+  color: #fff;
+}
+
+.client-phase-step:hover .client-phase-dot {
+  filter: brightness(0.95);
+}
+
+.client-phase-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #9aa4b2;
+  text-align: center;
+}
+
+.client-phase-step.done .client-phase-label {
+  color: #1e3a8a;
+}
+
+.client-phase-step.open .client-phase-label {
+  color: #2563eb;
+}
+
+.client-phase-detail-panel {
+  background: #f6f7fb;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0 0;
+}
+
+.client-phase-detail-panel h4 {
+  margin: 0 0 0.4rem;
+  color: #1e3a8a;
+  font-size: 0.95rem;
+}
+
+.client-phase-detail-panel p {
+  margin: 0;
+  color: #374151;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,106 @@
+
+
+
+
+.cp-perfil-titulo {
+  color: #1e3a8a;
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin: 0 0 0.25rem;
+}
+
+.cp-perfil-subtitulo {
+  color: #6b7280;
+  margin: 0 0 1.5rem;
+}
+
+.cp-perfil-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  gap: 2.5rem;
+  max-width: 800px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.cp-perfil-avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 160px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.cp-perfil-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #2f6fed;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 0.75rem;
+}
+
+.cp-perfil-avatar-hint {
+  font-size: 0.8rem;
+  color: #9aa4b2;
+}
+
+.cp-perfil-campos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cp-perfil-campos label {
+  color: #1e3a8a;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin: 0.9rem 0 0.4rem;
+}
+
+.cp-perfil-campos label:first-child {
+  margin-top: 0;
+}
+
+.cp-perfil-campos input {
+  border: 1px solid #e0e4ea;
+  border-radius: 8px;
+  padding: 0.65rem 0.8rem;
+  font-size: 0.92rem;
+  color: #1e293b;
+}
+
+.cp-perfil-campos input:disabled {
+  background: #f3f5f9;
+  color: #6b7280;
+}
+
+.cp-perfil-hint {
+  font-size: 0.78rem;
+  color: #9aa4b2;
+  margin-top: 0.25rem;
+}
+
+.cp-perfil-guardar {
+  align-self: flex-start;
+  margin-top: 1.5rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cp-perfil-guardar:hover {
+  background: #1d4ed8;
+}

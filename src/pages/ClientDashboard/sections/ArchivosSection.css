@@ -1,0 +1,63 @@
+
+
+
+
+.client-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--navy-mid, #1b2a4a);
+  margin: 0 0 0.4rem;
+}
+
+.client-subtitle {
+  color: var(--gray-text, #6b7280);
+  font-size: 0.95rem;
+  margin: 0 0 2rem;
+}
+
+.client-files-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.client-file-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(10, 42, 94, 0.05);
+}
+
+.client-file-info strong {
+  display: block;
+  color: var(--navy-mid, #1b2a4a);
+  font-size: 0.92rem;
+  margin-bottom: 0.2rem;
+}
+
+.client-file-info span {
+  font-size: 0.78rem;
+  color: var(--gray-text, #6b7280);
+}
+
+.client-file-download {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-light, #f3f5f9);
+  color: var(--proj-color, #2f6fed);
+  border: none;
+  font-weight: 600;
+  font-size: 0.82rem;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.client-file-download:hover {
+  background: #e4e9f2;
+}

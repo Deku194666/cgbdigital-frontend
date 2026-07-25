@@ -1,0 +1,46 @@
+
+
+
+
+.video-call-overlay {
+  position: fixed;
+  inset: 0;
+  background: #0e1420;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-call-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.5rem;
+  background: #161d2f;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.video-call-close {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #c94f4f;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.video-call-close:hover {
+  opacity: 0.9;
+}
+
+.video-call-container {
+  flex: 1;
+  width: 100%;
+}

@@ -1,0 +1,430 @@
+.admin-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--navy-mid, #1b2a4a);
+  margin: 0 0 0.4rem;
+}
+
+.admin-subtitle {
+  color: var(--gray-text, #6b7280);
+  font-size: 0.95rem;
+  margin: 0 0 2rem;
+}
+
+.admin-empty {
+  font-size: 0.85rem;
+  color: var(--gray-text, #6b7280);
+  font-style: italic;
+}
+
+/* HEADER CON BOTÓN */
+.admin-section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.admin-section-header-row .admin-subtitle {
+  margin-bottom: 0;
+}
+
+.proj-btn-primary {
+  background: var(--blue-accent, #2f6fed);
+  color: white;
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.proj-btn-primary:hover {
+  opacity: 0.9;
+}
+
+.proj-btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* FORMULARIO AGREGAR PROYECTO */
+.project-add-form {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 14px rgba(10, 42, 94, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-form-error {
+  color: #c94f4f;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.project-add-form-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-add-form-row input,
+.project-add-form-row select {
+  flex: 1;
+  min-width: 160px;
+  border: 1px solid #dfe4ec;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.87rem;
+  color: var(--navy-mid, #1b2a4a);
+  font-family: inherit;
+  background: white;
+}
+
+.project-add-form textarea {
+  border: 1px solid #dfe4ec;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.87rem;
+  color: var(--navy-mid, #1b2a4a);
+  font-family: inherit;
+  resize: vertical;
+}
+
+.project-add-form-row input:focus,
+.project-add-form-row select:focus,
+.project-add-form textarea:focus {
+  outline: none;
+  border-color: var(--blue-accent, #2f6fed);
+}
+
+.admin-activity-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: white;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.88rem;
+  box-shadow: 0 3px 10px rgba(10, 42, 94, 0.05);
+}
+
+/* LISTA DE PROYECTOS */
+.admin-projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-project-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  border-left: 4px solid var(--proj-color, #2f6fed);
+  box-shadow: 0 4px 14px rgba(10, 42, 94, 0.06);
+}
+
+.admin-project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.admin-project-category {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--proj-color, #2f6fed);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.admin-project-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy-mid, #1b2a4a);
+  margin: 0;
+}
+
+.admin-status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 11px;
+  border-radius: 20px;
+  letter-spacing: 0.4px;
+  flex-shrink: 0;
+}
+
+.status-done {
+  background: #e4f6ea;
+  color: #2f8f4e;
+}
+
+.status-progress {
+  background: #fff2e0;
+  color: var(--orange-accent, #e07a2e);
+}
+
+.admin-project-contact {
+  font-size: 0.82rem;
+  color: var(--gray-text, #6b7280);
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+}
+
+.dot-sep {
+  opacity: 0.5;
+}
+
+/* ASIGNACIÓN DE CLIENTE */
+.admin-assign-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 0.9rem;
+  border-top: 1px dashed #eef1f6;
+}
+
+.admin-assign-row select {
+  flex: 1;
+  border: 1px solid #dfe4ec;
+  border-radius: 8px;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.85rem;
+  color: var(--navy-mid, #1b2a4a);
+  background: white;
+}
+
+.admin-assign-row select:focus {
+  outline: none;
+  border-color: var(--blue-accent, #2f6fed);
+}
+
+.admin-assign-status {
+  font-size: 0.8rem;
+  color: var(--gray-text, #6b7280);
+  white-space: nowrap;
+}
+
+.admin-assign-ok {
+  color: #2f8f4e;
+  font-weight: 600;
+}
+
+/* LÍNEA DE TIEMPO DE FASES */
+.phase-timeline-wrap {
+  margin-bottom: 1rem;
+}
+
+.phase-percent {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--proj-color, #2f6fed);
+  margin-bottom: 0.6rem;
+}
+
+.phase-timeline {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.phase-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.4rem 0.2rem;
+  position: relative;
+}
+
+.phase-step::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: -50%;
+  width: 100%;
+  height: 2px;
+  background: #e5e9f0;
+  z-index: 0;
+}
+
+.phase-step:first-child::before {
+  display: none;
+}
+
+.phase-step.done::before {
+  background: var(--proj-color, #2f6fed);
+}
+
+.phase-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #eef1f6;
+  color: #9aa4b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.phase-step.done .phase-dot {
+  background: var(--proj-color, #2f6fed);
+  color: white;
+}
+
+.phase-step.open .phase-dot {
+  box-shadow: 0 0 0 4px rgba(47, 111, 237, 0.18);
+}
+
+.phase-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--gray-text, #6b7280);
+  text-align: center;
+}
+
+.phase-step-percent {
+  font-size: 0.65rem;
+  color: #b7bfcc;
+  font-weight: 600;
+}
+
+.phase-step.done .phase-step-percent {
+  color: var(--proj-color, #2f6fed);
+}
+
+.phase-step.done .phase-label {
+  color: var(--navy-mid, #1b2a4a);
+}
+
+.phase-detail-panel {
+  background: var(--bg-light, #f3f5f9);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.phase-detail-panel h4 {
+  margin: 0 0 0.3rem;
+  color: var(--navy-mid, #1b2a4a);
+  font-size: 1rem;
+}
+
+.phase-detail-panel > p {
+  font-size: 0.85rem;
+  color: var(--gray-text, #6b7280);
+  margin: 0 0 0.9rem;
+  line-height: 1.5;
+}
+
+.phase-detail-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #9aa4b8;
+  font-weight: 600;
+}
+
+.phase-detail-actions {
+  margin-bottom: 1rem;
+}
+
+.phase-current-tag {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--proj-color, #2f6fed);
+  background: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+}
+
+.phase-set-current-btn {
+  background: var(--proj-color, #2f6fed);
+  color: white;
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.phase-set-current-btn:hover {
+  opacity: 0.9;
+}
+
+.phase-set-current-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.phase-notes-box {
+  background: white;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+}
+
+.phase-notes-box textarea {
+  width: 100%;
+  border: 1px solid #dfe4ec;
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.85rem;
+  font-family: inherit;
+  color: var(--navy-mid, #1b2a4a);
+  resize: vertical;
+  margin-top: 0.4rem;
+}
+
+.phase-notes-box textarea:focus {
+  outline: none;
+  border-color: var(--blue-accent, #2f6fed);
+}
+
+.phase-notes-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.6rem;
+}
+
+.phase-save-note-btn {
+  background: var(--bg-light, #f3f5f9);
+  color: var(--navy-mid, #1b2a4a);
+  border: 1px solid #dfe4ec;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.phase-save-note-btn:hover {
+  background: #e4e9f2;
+}
+
+.phase-save-note-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

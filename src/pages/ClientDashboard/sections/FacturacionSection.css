@@ -1,0 +1,300 @@
+
+
+
+
+/* ============================================
+   FacturacionSection — tema claro y simple
+   (mismos tokens que AgendaSection para consistencia)
+============================================ */
+.facturacion {
+  --bg: #ffffff;
+  --panel: #f6f8fa;
+  --line: #e3e8ee;
+  --text: #1f2937;
+  --text-dim: #6b7280;
+  --text-faint: #9aa4b2;
+  --accent: #2563eb;
+  --accent-bg: #eaf0fe;
+  --ok: #16a34a;
+  --ok-bg: #eafaf0;
+  --warn: #b45309;
+  --warn-bg: #fef3e2;
+  --danger: #b91c1c;
+  --danger-bg: #fdecec;
+  --radius: 10px;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   Header
+============================================ */
+.facturacion__header {
+  margin-bottom: 18px;
+}
+
+.facturacion__title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: #111827;
+}
+
+.facturacion__subtitle {
+  font-size: 14px;
+  color: var(--text-dim);
+  margin: 0;
+}
+
+/* ============================================
+   Resumen (cards)
+============================================ */
+.facturacion__resumen {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.facturacion__card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.facturacion__card-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+.facturacion__card-monto {
+  font-size: 19px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.facturacion__card--pendiente {
+  background: var(--warn-bg);
+  border-color: #f3ddb2;
+}
+
+.facturacion__card--pendiente .facturacion__card-label,
+.facturacion__card--pendiente .facturacion__card-monto {
+  color: var(--warn);
+}
+
+.facturacion__card--vencida {
+  background: var(--danger-bg);
+  border-color: #f3c6c6;
+}
+
+.facturacion__card--vencida .facturacion__card-label,
+.facturacion__card--vencida .facturacion__card-monto {
+  color: var(--danger);
+}
+
+/* ============================================
+   Filtros
+============================================ */
+.facturacion__filtros {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.facturacion__filtro {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dim);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.facturacion__filtro:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.facturacion__filtro:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.facturacion__filtro--activo {
+  background: var(--accent-bg);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ============================================
+   Lista de facturas
+============================================ */
+.facturacion__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.facturacion__vacio {
+  padding: 24px 16px;
+  text-align: center;
+  color: var(--text-faint);
+  font-size: 14px;
+  background: var(--panel);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+}
+
+.facturacion__fila {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr auto auto auto;
+  align-items: center;
+  gap: 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+
+.facturacion__fila-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.facturacion__fila-id {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
+}
+
+.facturacion__fila-concepto {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.facturacion__fila-cliente {
+  font-size: 12.5px;
+  color: var(--text-dim);
+}
+
+.facturacion__fila-fechas {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12.5px;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.facturacion__fila-monto {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  white-space: nowrap;
+}
+
+.facturacion__estado {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  justify-self: start;
+}
+
+.facturacion__estado--pagada {
+  background: var(--ok-bg);
+  color: var(--ok);
+}
+
+.facturacion__estado--pendiente {
+  background: var(--warn-bg);
+  color: var(--warn);
+}
+
+.facturacion__estado--vencida {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.facturacion__ver {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: filter 0.15s ease;
+  white-space: nowrap;
+}
+
+.facturacion__ver:hover {
+  filter: brightness(0.97);
+}
+
+.facturacion__ver:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Responsive
+============================================ */
+@media (max-width: 720px) {
+  .facturacion__fila {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "info info"
+      "fechas monto"
+      "estado ver";
+    row-gap: 10px;
+  }
+
+  .facturacion__fila-info { grid-area: info; }
+  .facturacion__fila-fechas { grid-area: fechas; }
+  .facturacion__fila-monto { grid-area: monto; justify-self: end; }
+  .facturacion__estado { grid-area: estado; }
+  .facturacion__ver { grid-area: ver; justify-self: end; }
+}
+
+@media (max-width: 560px) {
+  .facturacion {
+    padding: 18px;
+    border-radius: 0;
+  }
+
+  .facturacion__resumen {
+    grid-template-columns: 1fr;
+  }
+}

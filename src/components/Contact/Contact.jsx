@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaEnvelope, FaWhatsapp, FaPaperPlane, FaChevronDown } from "react-icons/fa";
+import { createLeadRequest } from "../../services/leadService";
 import "./Contact.css";
 
 const faqs = [
@@ -24,6 +25,8 @@ const faqs = [
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
   const [openFaq, setOpenFaq] = useState(null);
 
   const toggleFaq = (index) => {
@@ -34,12 +37,20 @@ const Contact = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: conectar con backend/API o servicio de email (ej. EmailJS, Formspree)
-    console.log("Datos del formulario:", form);
-    setSent(true);
-    setForm({ name: "", email: "", message: "" });
+    setError("");
+    setSending(true);
+    try {
+      await createLeadRequest(form);
+      setSent(true);
+      setForm({ name: "", email: "", message: "" });
+      setTimeout(() => setSent(false), 5000);
+    } catch (err) {
+      setError(err.message || "No se pudo enviar el mensaje, intenta de nuevo.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -121,13 +132,15 @@ const Contact = () => {
             />
           </div>
 
-          <button type="submit" className="contact-submit">
-            Enviar mensaje <FaPaperPlane />
+          <button type="submit" className="contact-submit" disabled={sending}>
+            {sending ? "Enviando..." : "Enviar mensaje"} <FaPaperPlane />
           </button>
+
+          {error && <p className="contact-error">⚠️ {error}</p>}
 
           {sent && (
             <p className="contact-success">
-              ¡Gracias! Tu mensaje quedó registrado (conexión con envío real pendiente).
+              ¡Gracias por escribirnos! Te responderemos a la brevedad posible.
             </p>
           )}
         </form>
