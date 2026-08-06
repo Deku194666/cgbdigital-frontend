@@ -6,7 +6,7 @@ const team = [
     name: "Carlos Garcés Jiménez",
     role: "Innovación y Desarrollo",
     bio: "Ingeniero Informático y Kinesiólogo. Lidera el desarrollo web, de apps y las soluciones tecnológicas de la empresa — con una mirada clínica poco común en el rubro tech.",
-    photo: "https://i.pravatar.cc/400?img=13",
+    photo: `${process.env.PUBLIC_URL}/images/team/carlos.jpg`,
   },
   {
     name: "Bárbara Pirul Hernández",
@@ -70,7 +70,12 @@ const Nosotros = () => {
   return (
     <div className="nosotros-page">
       {/* Hero de la página */}
-      <section className="nosotros-hero">
+      <section
+  className="nosotros-hero"
+  style={{
+    backgroundImage: `linear-gradient(135deg, rgba(15, 23, 51, 0.88), rgba(30, 58, 110, 0.82)), url(${process.env.PUBLIC_URL}/images/hero-office.jpg)`,
+  }}
+>
         <div className="nosotros-hero-circuit"></div>
         <div className="nosotros-hero-content">
           <span className="section-eyebrow-light">Quiénes somos</span>
@@ -123,7 +128,7 @@ const Nosotros = () => {
           <span className="section-eyebrow5">El equipo</span>
           <h2 className="section-title">Las personas detrás del proyecto</h2>
           <p className="section-subtitle">
-            Dos formaciones distintas, un mismo objetivo: construir
+            Formaciones distintas, un mismo objetivo: construir
             tecnología que realmente sirva.
           </p>
         </div>

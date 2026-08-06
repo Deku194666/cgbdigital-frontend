@@ -9,14 +9,15 @@
   margin-bottom: 50px;
 }
 
-.section-eyebrow {
+.section-eyebrow7 {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--orange-accent, #e07a2e);
+  color: var(--orange-accent, #e07a2e); 
   margin-bottom: 0.5rem;
+  margin-top: 4rem;
 }
 
 .section-title {
@@ -37,8 +38,11 @@
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 2.5rem;
-  align-items: start;
+  align-items: center;
+  width: 66rem;
+  margin-left: 13rem;
 }
+
 
 /* INTRO */
 .contact-intro {
@@ -267,16 +271,6 @@
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact-intro {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
 /* FAQ */
 .contact-faq {
   max-width: 700px;
@@ -340,4 +334,149 @@
   font-size: 0.87rem;
   color: var(--gray-text, #6b7280);
   line-height: 1.6;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+/* Pantallas medianas/laptops chicas — el ancho fijo de 66rem
+   y el margin-left de 13rem ya no caben, hay que resetear */
+@media (max-width: 1100px) {
+  .contact {
+    padding: 70px 24px;
+  }
+
+  .contact-grid {
+    width: 100%;
+    margin-left: 0;
+    max-width: 900px;
+    margin-right: auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+  }
+}
+
+/* Tablets — pasa a 1 sola columna */
+@media (max-width: 768px) {
+  .contact {
+    padding: 56px 20px;
+  }
+
+  .section-eyebrow7 {
+    margin-top: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-left: 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .contact-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-facts {
+    gap: 1.5rem;
+  }
+}
+
+/* Celulares medianos */
+@media (max-width: 600px) {
+  .contact {
+    padding: 44px 16px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-grid {
+    padding: 0 8px;
+    gap: 1.5rem;
+  }
+
+  .contact-form,
+  .contact-direct {
+    padding: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 0.88rem;
+    padding: 0.85rem 1rem;
+  }
+}
+
+/* Celulares chicos */
+@media (max-width: 480px) {
+  .contact {
+    padding: 36px 14px;
+    margin-top: 3.8rem !important;
+    width: 97.5%;
+  }
+
+  .contact-avatar {
+    width: 52px;
+    height: 52px;
+    font-size: 1rem;
+  }
+
+  .contact-form,
+  .contact-direct {
+    padding: 1.15rem;
+  }
+
+  .contact-submit {
+    padding: 0.75rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-direct-item {
+    padding: 0.75rem 0.85rem;
+  }
+}
+
+/* Celular acostado (landscape) */
+@media (orientation: landscape) and (max-height: 500px) {
+  .contact {
+    padding: 30px 20px;
+  }
+
+  .section-eyebrow7 {
+    margin-top: 1rem;
+  }
+
+  .contact-header {
+    margin-bottom: 24px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin-left: 0;
+    gap: 1.25rem;
+    padding: 0 12px;
+  }
+
+  .contact-intro {
+    margin-bottom: 1rem;
+  }
+
+  .contact-facts {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .contact-form,
+  .contact-direct {
+    padding: 1.25rem;
+  }
 }

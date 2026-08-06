@@ -35,7 +35,7 @@ const projects = [
     tags: ["React", "Node.js", "MongoDB"],
     status: "Entregado",
     statusType: "done",
-    liveLink: "https://hikari-frontend-jade.vercel.app/",
+    liveLink: "https://www.hikarivet.com/",
     repoLink: "#",
   },
   {
@@ -66,8 +66,8 @@ const Projects = () => {
         <span className="section-eyebrow3">Nuestro trabajo</span>
         <h2 className="section-title">Proyectos destacados</h2>
         <p className="section-subtitle">
-          Productos reales que hemos desarrollado de principio a fin, del
-          diseño al despliegue en producción.
+          Productos reales que hemos desarrollado de principio a fin, desde el 
+          diseño hasta el despliegue en producción.
         </p>
       </div>
 

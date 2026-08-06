@@ -1,0 +1,48 @@
+
+
+
+.proyectospage {
+  padding-bottom: 40px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* HERO — mismo patrón que Clientes */
+.proyectospage-hero {
+  text-align: center;
+  padding: 110px 24px 90px;
+  background-color: var(--navy-mid, #1b2a4a);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.proyectospage-hero-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.proyectospage-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 1.25rem;
+  line-height: 1.15;
+}
+
+.proyectospage-hero-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .proyectospage-hero {
+    padding: 70px 24px 50px;
+  }
+  .proyectospage-hero-title {
+    font-size: 1.9rem;
+  }
+}

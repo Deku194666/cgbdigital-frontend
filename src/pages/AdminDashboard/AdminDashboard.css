@@ -239,36 +239,318 @@
   overflow-y: auto;
 }
 
-/* RESPONSIVE */
+/* ==========================================================
+   RESPONSIVE
+   Orden: laptops chicas → tablets grandes → tablets chicas →
+   celulares grandes → medianos → chicos → landscape
+   ========================================================== */
+
+/* Laptops chicas / pantallas medianas — sidebar un poco más
+   angosta, sin cambiar de layout todavía */
+@media (max-width: 1200px) {
+  .admin-sidebar {
+    width: 210px;
+  }
+
+  .admin-content {
+    padding: 2rem 2.2rem;
+  }
+}
+
+/* Tablets grandes — sidebar se vuelve barra horizontal arriba,
+   organizada en 2 filas: logo + usuario arriba, iconos del menú
+   abajo en una fila con scroll horizontal si no caben todos */
 @media (max-width: 900px) {
   .admin-dashboard {
     flex-direction: column;
   }
+
   .admin-sidebar {
     width: 100% !important;
     flex-direction: row;
-    align-items: center;
-    padding: 1rem !important;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    align-items: center;
+    padding: 0.85rem 1rem !important;
+    gap: 0.5rem 0.75rem;
   }
+
+  /* Fila 1 — logo a la izquierda */
   .admin-logo-row {
+    order: 1;
+    flex: 0 0 auto;
     margin-bottom: 0;
   }
-  .admin-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+
+  /* Fila 1 — usuario/cerrar sesión a la derecha */
   .admin-user-card {
+    order: 2;
     flex-direction: row;
     align-items: center;
     margin-top: 0;
     margin-left: auto;
   }
+
+  /* Fila 2 — iconos del menú, ancho completo, scroll horizontal
+     si no caben todos en el ancho disponible */
+  .admin-nav {
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.35rem;
+    padding-bottom: 0.2rem;
+    margin-top: 0.35rem;
+    scrollbar-width: thin;
+  }
+
+  .admin-nav-item {
+    flex-shrink: 0;
+  }
+
   .admin-logout-btn span {
     display: none;
   }
+
   .admin-content {
     padding: 1.5rem;
+  }
+}
+
+/* Tablets chicas — nav items un poco más compactos */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    padding: 0.85rem !important;
+    gap: 0.5rem;
+  }
+
+  .admin-logo-text {
+    font-size: 0.95rem;
+  }
+
+  .admin-nav-item {
+    font-size: 0.85rem;
+    padding: 0.55rem 0.7rem;
+  }
+
+  .admin-nav-icon {
+    font-size: 1.15rem;
+  }
+
+  .admin-user-card {
+    padding: 0.6rem;
+  }
+
+  .admin-user-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .admin-user-text strong {
+    font-size: 0.78rem;
+  }
+
+  .admin-user-text span {
+    font-size: 0.66rem;
+  }
+
+  .admin-content {
+    padding: 1.15rem;
+  }
+}
+
+/* Celulares grandes — las etiquetas de texto del menú se ocultan,
+   queda solo el ícono, para que quepa todo en el ancho disponible */
+@media (max-width: 600px) {
+  .admin-sidebar {
+    padding: 0.7rem !important;
+    gap: 0.4rem;
+  }
+
+  .admin-logo-badge {
+    font-size: 0.68rem;
+    padding: 4px 7px;
+  }
+
+  .admin-logo-text {
+    font-size: 0.85rem;
+  }
+
+  .admin-collapse-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .admin-nav-item {
+    padding: 0.55rem;
+  }
+
+  .admin-nav-label {
+    display: none;
+  }
+
+  .admin-nav-icon {
+    font-size: 1.2rem;
+  }
+
+  .admin-nav-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    margin-left: 0;
+    font-size: 0.6rem;
+    padding: 1px 5px;
+  }
+
+  .admin-user-text {
+    display: none;
+  }
+
+  .admin-logout-btn {
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .admin-content {
+    padding: 0.9rem;
+  }
+}
+
+/* Celulares medianos */
+@media (max-width: 480px) {
+  .admin-sidebar {
+    padding: 0.55rem !important;
+    gap: 0.3rem;
+  }
+
+  .admin-logo-badge {
+    font-size: 0.62rem;
+    padding: 3px 6px;
+  }
+
+  .admin-logo-text {
+    display: none;
+  }
+
+  .admin-nav-item {
+    padding: 0.45rem;
+  }
+
+  .admin-nav-icon {
+    font-size: 1.05rem;
+  }
+
+  .admin-user-avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+  .admin-content {
+    padding: 0.7rem;
+  }
+}
+
+/* Celulares chicos — todo al mínimo */
+@media (max-width: 360px) {
+  .admin-nav {
+    gap: 0.2rem;
+  }
+
+  .admin-nav-item {
+    padding: 0.4rem;
+  }
+
+  .admin-nav-icon {
+    font-size: 0.95rem;
+  }
+
+  .admin-collapse-btn {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* Celular acostado (landscape), pantallas grandes y chicas —
+   la barra ya es horizontal desde los 900px, así que en landscape
+   el problema es que puede ocupar mucho alto si el nav envuelve
+   en varias filas; forzamos que no envuelva y compactamos todo
+   verticalmente */
+@media (orientation: landscape) and (max-height: 500px) {
+  .admin-sidebar {
+    padding: 0.5rem 0.85rem !important;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.6rem;
+  }
+
+  .admin-logo-row {
+    order: 1;
+    flex: 0 0 auto;
+  }
+
+  .admin-logo-text {
+    font-size: 0.85rem;
+  }
+
+  .admin-user-card {
+    order: 2;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: 0.4rem;
+  }
+
+  .admin-nav {
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 0.2rem;
+  }
+
+  .admin-nav-item {
+    padding: 0.4rem 0.6rem;
+    flex-shrink: 0;
+  }
+
+  .admin-nav-label {
+    display: none;
+  }
+
+  .admin-user-text {
+    display: none;
+  }
+
+  .admin-content {
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+/* Celular acostado muy angosto (celulares chicos de lado) —
+   compactamos aún más el logo y el botón de colapsar */
+@media (orientation: landscape) and (max-height: 400px) {
+  .admin-logo-badge {
+    font-size: 0.6rem;
+    padding: 3px 6px;
+  }
+
+  .admin-logo-text {
+    display: none;
+  }
+
+  .admin-collapse-btn {
+    width: 24px;
+    height: 24px;
+  }
+
+  .admin-nav-item {
+    padding: 0.35rem 0.5rem;
+  }
+
+  .admin-nav-icon {
+    font-size: 1rem;
   }
 }

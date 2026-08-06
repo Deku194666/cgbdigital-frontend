@@ -80,6 +80,42 @@ const ServiceDetail = ({ data }) => {
         </ul>
       </section>
 
+
+      {/* PRECIOS (solo si el servicio los define) */}
+      {data.pricing && (
+        <section className="svcdet-section svcdet-section-alt">
+          <h2 className="svcdet-section-title">Planes y precios</h2>
+          {data.pricingNote && (
+            <p className="svcdet-pricing-note">{data.pricingNote}</p>
+          )}
+          <div className="svcdet-pricing-grid">
+            {data.pricing.map((plan, i) => (
+              <div
+                className={`svcdet-pricing-card ${plan.highlight ? "highlight" : ""}`}
+                key={i}
+              >
+                {plan.highlight && (
+                  <span className="svcdet-pricing-badge">Más elegido</span>
+                )}
+                <h3>{plan.name}</h3>
+                <p className="svcdet-pricing-price">{plan.price}</p>
+                <p className="svcdet-pricing-desc">{plan.description}</p>
+                <ul className="svcdet-pricing-items">
+                  {plan.items.map((item, j) => (
+                    <li key={j}>
+                      <FaCheck /> {item}
+                    </li>
+                  ))}
+                </ul>
+                <Link to="/#contacto" className="svcdet-btn svcdet-btn-primary">
+                  Cotizar este plan <FaArrowRight />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* PROCESO */}
       <section className="svcdet-section">
         <h2 className="svcdet-section-title">Cómo trabajamos</h2>

@@ -5,7 +5,7 @@ import "./NavBar2.css";
 const links = [
   { label: "Inicio", href: "/" },
   { label: "Servicios", href: "/servicios" }, // usa la nueva ServicesPage
-  { label: "Proyectos", href: "/proyects" },
+  { label: "Proyectos", href: "/proyectospage" },
   { label: "Nosotros", href: "/nosotros" },
   { label: "Clientes", href: "/clientes" },
   { label: "Contacto", href: "/contact" },

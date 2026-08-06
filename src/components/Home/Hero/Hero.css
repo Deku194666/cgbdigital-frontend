@@ -1,13 +1,13 @@
-.hero {
-  position: relative;
-  min-height: 80vh;
+.home .hero {
   display: flex;
   align-items: center;
-  padding: 60px 20px;
+  justify-content: space-between;
+  gap: 56px;
   background-color: var(--navy-mid, #1b2a4a);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 80px 6vw;
 }
 
 .hero-inner {
@@ -95,11 +95,152 @@
   color: var(--navy-mid);
 }
 
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .home .hero {
+    padding: 60px 5vw;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+}
+
+/* Tablets chicas / celulares grandes */
+@media (max-width: 768px) {
+  .home .hero {
+    padding: 56px 24px;
+  }
+
+  .hero-logo-badge {
+    font-size: 1rem;
+    padding: 5px 14px;
+    margin-bottom: 22px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 18px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 26px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 11px 24px;
+    font-size: 0.92rem;
+  }
+}
+
+/* Celulares medianos */
+@media (max-width: 600px) {
+  .home .hero {
+    padding: 48px 20px;
+  }
+
+  .hero-logo-badge {
+    font-size: 0.9rem;
+    padding: 5px 12px;
+    margin-bottom: 18px;
+  }
+
+  .hero-title {
+    font-size: 1.7rem;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 0.98rem;
+    margin-bottom: 22px;
+  }
+
+  .hero-buttons {
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 20px;
+    font-size: 0.88rem;
+  }
+}
+
+/* Celulares chicos */
 @media (max-width: 480px) {
+  .home .hero {
+    padding: 40px 18px;
+  }
+
+  .hero-logo-badge {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    margin-bottom: 16px;
+  }
+
   .hero-title {
     font-size: 1.9rem;
   }
   .hero-subtitle {
     font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Celular acostado (landscape) — poco alto disponible */
+@media (orientation: landscape) and (max-height: 500px) {
+  .home .hero {
+    padding: 28px 6vw;
+    gap: 24px;
+  }
+
+  .hero-logo-badge {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    margin-bottom: 12px;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 8px 18px;
+    font-size: 0.82rem;
   }
 }

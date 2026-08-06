@@ -20,6 +20,7 @@ import MigracionDatos from "./pages/Migraciondatos/MigracionDatos";
 import DisenoUxUi from "./pages/Disenouxui/DisenoUxUi";
 import Projects from "./components/Home/Projects/Projects";
 import Contact from "./components/Contact/Contact";
+import ProyectosPage from "./pages/ProyectosPage/ProyectosPage";
 import Nosotros from "./components/Nosotros/Nosotros";
 import Clientes from "./components/Clientes/Clientes";
 import Footer from "./components/Footer/Footer";
@@ -54,6 +55,7 @@ function App() {
         <Route path="/contact"  element={ < Contact />  } />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/clientes"  element={ <  Clientes /> }  />
+        <Route path="/proyectospage" element={<ProyectosPage />} />
         <Route path="/servicios/desarrollo-software" element={<DesarrolloSoftware />} />
         <Route path="/servicios/apps-moviles" element={<AppsMoviles />} />
         <Route path="/servicios/sistemas-nube" element={<SistemasNube />} />

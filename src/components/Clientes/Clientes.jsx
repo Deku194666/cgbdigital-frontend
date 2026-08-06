@@ -12,7 +12,7 @@ const clients = [
     status: "Entregado",
     statusType: "done",
     image: "/images/clients/hikari.jpg",
-    link: "https://hikari-frontend-jade.vercel.app/",
+    link: "https://www.hikarivet.com/",
     color: "#2f6fed",
     imageMaxWidth: "350px",
   },
@@ -30,8 +30,8 @@ const clients = [
     imageMaxWidth: "360px",
   },
   {
-    name: "Sr Robot Sushi",
-    category: "Comida / E-commerce",
+    name: "Tu Mercado Online",
+    category: "E-commerce",
     description:
       "Tienda online con catálogo, carrito y pagos integrados para una tienda de sushi a domicilio.",
     tags: ["React", "Node.js", "E-commerce"],

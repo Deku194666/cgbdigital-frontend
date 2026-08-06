@@ -319,6 +319,108 @@
   color: var(--navy-mid, #1b2a4a);
 }
 
+
+
+
+
+.svcdet-pricing-note {
+  max-width: 700px;
+  margin: -1.5rem auto 2.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--gray-text, #6b7280);
+  line-height: 1.6;
+}
+
+.svcdet-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.svcdet-pricing-card {
+  background: white;
+  border: 1px solid #eef1f6;
+  border-radius: 14px;
+  padding: 2rem 1.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.svcdet-pricing-card.highlight {
+  border: 2px solid var(--card-color);
+  box-shadow: 0 8px 24px rgba(10, 42, 94, 0.1);
+  transform: scale(1.03);
+}
+
+.svcdet-pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card-color);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.svcdet-pricing-card h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.4rem;
+  color: var(--navy-mid, #1b2a4a);
+}
+
+.svcdet-pricing-price {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--card-color);
+  margin: 0 0 0.3rem;
+}
+
+.svcdet-pricing-desc {
+  font-size: 0.85rem;
+  color: var(--gray-text, #6b7280);
+  margin: 0 0 1.25rem;
+}
+
+.svcdet-pricing-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.svcdet-pricing-items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--navy-mid, #1b2a4a);
+}
+
+.svcdet-pricing-items li svg {
+  color: var(--card-color);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.svcdet-pricing-card .svcdet-btn {
+  justify-content: center;
+  width: 100%;
+}
+
+ 
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .svcdet-features-grid,
@@ -327,6 +429,18 @@
   }
   .svcdet-process {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .svcdet-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+  .svcdet-pricing-card.highlight {
+    transform: none;
   }
 }
 

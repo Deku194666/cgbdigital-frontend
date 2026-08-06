@@ -1,52 +1,66 @@
 .contact {
-  padding: 90px 24px;
-  max-width: 1100px;
+  max-width: 100%;
   margin: 0 auto;
+  margin-top: -6rem;
+  margin-left: -3rem;
+  margin-right: -23rem !important;
+  width: 150rem;
 }
 
-.contact-header {
+/* HERO */
+.contact-hero {
   text-align: center;
-  margin-bottom: 50px;
+  padding: 110px 24px 90px;
+  background-color: var(--navy-mid, #1b2a4a);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.section-eyebrow {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gray-text, #6b7280)!important;
-  margin-bottom: 0.5rem;
-}
-
-.section-title {
-  font-size: 2rem;
-  color: var(--navy-mid, #1b2a4a);
-  margin: 0 0 0.75rem;
-}
-
-.section-subtitle {
-  color: var(--gray-text, #6b7280);
-  font-size: 0.95rem;
-  max-width: 480px;
+.contact-hero-inner {
+  max-width: 700px;
   margin: 0 auto;
-  line-height: 1.6;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  gap: 2.5rem;
-  align-items: start;
+.contact-hero-eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+}
+
+.contact-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 1.25rem;
+  line-height: 1.15;
+}
+
+.contact-hero-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 70px 24px 90px;
 }
 
 /* INTRO */
 .contact-intro {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.25rem;
-  max-width: 600px;
-  margin: 0 auto 2rem;
+  gap: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .contact-avatar {
@@ -82,7 +96,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: #2f8f4e;
-  margin-bottom: 2rem;
+  margin-top: 0.5rem;
 }
 
 .availability-dot {
@@ -91,15 +105,14 @@
   border-radius: 50%;
   background: #2f8f4e;
   display: inline-block;
-  
 }
 
 /* QUICK FACTS */
 .contact-facts {
   display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
   margin-bottom: 3rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid #eef1f6;
@@ -127,7 +140,13 @@
   color: var(--navy-mid, #1b2a4a);
 }
 
-/* FORM */
+/* FORM + CONTACTO DIRECTO — siempre uno debajo del otro, en cualquier tamaño */
+.contact-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .contact-form {
   background: white;
   border-radius: 14px;
@@ -160,6 +179,8 @@
   color: var(--navy-mid, #1b2a4a);
   resize: vertical;
   transition: border-color 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -194,6 +215,15 @@
   font-size: 0.85rem;
   color: #2f8f4e;
   background: #e4f6ea;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.contact-error {
+  font-size: 0.85rem;
+  color: #c94f4f;
+  background: #fbe9e9;
   padding: 0.6rem 0.9rem;
   border-radius: 8px;
   margin: 0;
@@ -260,19 +290,8 @@
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact-intro {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
 /* FAQ */
 .contact-faq {
-  max-width: 700px;
   margin: 4rem auto 0;
 }
 
@@ -333,4 +352,158 @@
   font-size: 1.1rem;
   color: var(--gray-text, #6b7280);
   line-height: 1.6;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   La regla base de .contact (arriba) queda intacta para
+   pantallas grandes. Estos breakpoints resetean los márgenes
+   extremos y ajustan tamaños progresivamente.
+   ========================================================== */
+
+/* Pantallas medianas/grandes (laptops, ventanas no maximizadas) */
+@media (max-width: 1000px) {
+  .contact {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0 !important;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 90px 24px 70px;
+  }
+
+  .contact-hero-title {
+    font-size: 2.4rem;
+  }
+
+  .contact-content {
+    padding: 60px 20px 70px;
+  }
+
+  .contact-facts {
+    gap: 1rem;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 600px) {
+  .contact-hero {
+    padding: 70px 20px 50px;
+  }
+
+  .contact-hero-title {
+    font-size: 1.9rem;
+  }
+
+  .contact-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .contact-content {
+    padding: 50px 16px 60px;
+  }
+
+  .contact-form,
+  .contact-direct {
+    padding: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    padding: 0.85rem 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+}
+
+/* Celulares chicos */
+@media (max-width: 480px) {
+  .contact1-hero {
+    padding: 60px 16px 40px;
+    margin-top: 0rem;
+    margin-left: -2rem;
+    margin-right: -1.5rem;
+  }
+
+  .contact-hero-title {
+    font-size: 1.8rem;
+  }
+  ;
+
+  .contact-hero-eyebrow {
+    font-size: 0.75rem;
+  }
+
+  .contact-hero-subtitle {
+    font-size: 0.92rem;
+  }
+
+  .contact-avatar {
+    width: 52px;
+    height: 52px;
+    font-size: 1rem;
+  }
+
+  .contact-intro-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-form,
+  .contact-direct {
+    padding: 1.25rem;
+  }
+
+  .contact-submit {
+    padding: 0.75rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-direct-item {
+    padding: 0.75rem 0.85rem;
+  }
+}
+
+/* Celular acostado (landscape) — el ancho puede seguir siendo
+   "grande" pero el alto es muy chico, así que se detecta por
+   orientación + altura máxima, no por ancho */
+@media (orientation: landscape) and (max-height: 500px) {
+  .contact-hero {
+    padding: 40px 24px 30px;
+  }
+
+  .contact-hero-title {
+    font-size: 1.7rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .contact-hero-eyebrow {
+    margin-bottom: 0.4rem;
+  }
+
+  .contact-hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .contact-content {
+    padding: 40px 24px 50px;
+  }
+
+  .contact-intro {
+    margin-bottom: 1.2rem;
+  }
+
+  .contact-facts {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 }

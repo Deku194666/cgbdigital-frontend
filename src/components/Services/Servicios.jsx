@@ -59,7 +59,7 @@ const services = [
     link: "/servicios/reparacion-equipos",
   },
   {
-    icon: "🖧",
+    icon: "📡",
     title: "Administración de Redes",
     text: "Configuramos y mantenemos tu red y servidores para que todo tu equipo funcione sin interrupciones.",
     features: ["Administración de Active Directory", "Mantención de servidores", "Configuración de redes", "Soporte remoto y presencial"],

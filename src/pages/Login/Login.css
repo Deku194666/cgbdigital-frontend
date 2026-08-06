@@ -622,14 +622,51 @@
   }
 }
 
+/* Celulares medianos */
+@media (max-width: 600px) {
+  .login-wrapper {
+    margin: 2.5rem 1rem;
+  }
+
+  .login-card {
+    padding: 28px 18px;
+  }
+
+  .login-icon {
+    font-size: 2.8em;
+    margin-bottom: 14px;
+  }
+
+  .login-header h1 {
+    font-size: 1.35em;
+  }
+
+  .form-group input {
+    padding: 11px 13px;
+    font-size: 0.85em;
+  }
+
+  .btn-login,
+  .btn-register {
+    padding: 11px 20px;
+    font-size: 0.8em;
+  }
+}
+
 @media (max-width: 480px) {
   .login-wrapper {
     border-radius: 10px;
     margin: 2rem 0.75rem;
+    margin-left: 2rem;
+    margin-right: 1rem !important;
+    width: 87%;
   }
 
   .login-card {
     padding: 21px 17px;
+    text-align: center;
+    margin-right: 0rem;
+    align-items: center;
   }
 
   .login-header {
@@ -642,15 +679,16 @@
   }
 
   .login-header h1 {
-    font-size: 1.2em;
+    font-size: 1.6em;
   }
 
   .login-header p {
-    font-size: 0.75em;
+    font-size: 0.95em;
   }
 
   .login-form {
     gap: 15px;
+    width: 90%;
   }
 
   .form-group input {
@@ -662,6 +700,7 @@
   .btn-register {
     padding: 10px 17px;
     font-size: 0.75em;
+    width: 90%;
   }
 
   .login-side {
@@ -698,5 +737,100 @@
 
   .login-footer {
     font-size: 0.65em;
+  }
+}
+
+/* Celular acostado (landscape) — el formulario y el panel lateral
+   ya están apilados (flex-direction: column desde 768px), pero
+   con poco alto de pantalla conviene volver a ponerlos lado a lado
+   para no generar tanto scroll vertical */
+@media (orientation: landscape) and (max-height: 500px) {
+  .login-container {
+    min-height: auto;
+  }
+
+  .login-wrapper {
+    flex-direction: row;
+    margin: 1.5rem auto;
+    max-width: 780px;
+  }
+
+  .login-card {
+    padding: 20px 24px;
+  }
+
+  .login-header {
+    margin-bottom: 14px;
+  }
+
+  .login-icon {
+    font-size: 2em;
+    margin-bottom: 8px;
+  }
+
+  .login-header h1 {
+    font-size: 1.15em;
+    margin-bottom: 4px;
+  }
+
+  .login-header p {
+    font-size: 0.75em;
+  }
+
+  .login-form {
+    gap: 12px;
+  }
+
+  .form-group input {
+    padding: 8px 12px;
+    font-size: 0.8em;
+  }
+
+  .btn-login,
+  .btn-register {
+    padding: 9px 18px;
+    font-size: 0.75em;
+  }
+
+  .login-side {
+    padding: 20px 22px;
+    min-height: auto;
+  }
+
+  .side-content h2 {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+  }
+
+  .side-content > p {
+    font-size: 0.72em;
+    margin-bottom: 14px;
+  }
+
+  .side-logo {
+    width: 44px;
+    height: 44px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+
+  .side-benefits {
+    gap: 8px;
+  }
+
+  .benefit-item span {
+    width: 24px;
+    height: 24px;
+    font-size: 0.85em;
+  }
+
+  .benefit-item p {
+    font-size: 0.65em;
+    line-height: 1.3;
+  }
+
+  .demo-buttons {
+    margin-top: 10px;
+    padding-top: 10px;
   }
 }

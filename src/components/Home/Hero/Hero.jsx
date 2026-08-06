@@ -6,9 +6,9 @@ const Hero = () => {
     <section
       className="hero"
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(15, 23, 51, 0.88), rgba(30, 58, 110, 0.82)), url(${process.env.PUBLIC_URL}/images/hero-office.jpg)`,
-      }}
-    >
+          backgroundImage: `linear-gradient(135deg, rgba(15, 23, 51, 0.88), rgba(30, 58, 110, 0.82)), url(${process.env.PUBLIC_URL}/images/hero-office.jpg)`,
+        }}
+      >
       <div className="hero-inner">
         <div className="hero-content">
           <div className="hero-logo-badge">CGB DIGITAL</div>

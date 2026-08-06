@@ -288,32 +288,320 @@
 }
 
 /* ============================================
-   RESPONSIVE — solo layout
+   RESPONSIVE
+   Orden: laptops chicas → tablets grandes → tablets chicas →
+   celulares grandes → medianos → chicos → landscape
 ============================================ */
+
+/* Laptops chicas / pantallas medianas */
+@media (max-width: 1200px) {
+  .client-sidebar {
+    width: 220px;
+  }
+
+  .client-content {
+    padding: 2rem 2.2rem;
+  }
+}
+
+/* Tablets grandes — sidebar pasa a barra horizontal, en 2 filas:
+   logo + cuenta arriba, iconos del menú abajo con scroll horizontal */
 @media (max-width: 900px) {
   .client-dashboard {
     flex-direction: column;
   }
+
   .client-sidebar {
-    width: 100%;
+    width: 100% !important;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 1rem 1.25rem;
+    padding: 0.85rem 1rem;
+    gap: 0.5rem 0.75rem;
   }
+
+  /* Fila 1 — logo a la izquierda */
   .client-top {
+    order: 1;
+    flex: 0 0 auto;
+    width: auto;
     margin-bottom: 0;
   }
+
   .client-colapsar {
     display: none;
   }
-  .client-nav {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+
+  /* Fila 1 — cuenta/logout a la derecha, versión compacta
+     (nunca se oculta del todo, así siempre se puede cerrar sesión) */
   .client-cuenta {
+    order: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: auto;
+    margin-top: 0;
+    margin-left: auto;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .client-cuenta-info {
+    margin-bottom: 0;
+  }
+
+  .client-cuenta-texto {
     display: none;
   }
+
+  .client-logout {
+    margin-top: 0;
+    padding: 0.5rem 0.6rem;
+    white-space: nowrap;
+  }
+
+  .client-logout span {
+    display: none;
+  }
+
+  /* Fila 2 — iconos del menú, ancho completo, scroll horizontal
+     si no caben todos */
+  .client-nav {
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.35rem;
+    padding-bottom: 0.2rem;
+    margin-top: 0.35rem;
+    scrollbar-width: thin;
+  }
+
+  .client-nav-item {
+    flex-shrink: 0;
+    width: auto;
+  }
+
+  .client-nav-label {
+    max-width: 90px;
+  }
+
   .client-content {
     padding: 1.5rem;
+  }
+}
+
+/* Tablets chicas */
+@media (max-width: 768px) {
+  .client-sidebar {
+    padding: 0.75rem 0.85rem;
+    gap: 0.5rem;
+  }
+
+  .client-logo-text {
+    font-size: 0.88rem;
+  }
+
+  .client-logo-sub {
+    font-size: 0.66rem;
+  }
+
+  .client-nav-item {
+    font-size: 0.85rem;
+    padding: 0.55rem 0.6rem;
+  }
+
+  .client-nav-label {
+    max-width: 75px;
+  }
+
+  .client-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+  .client-content {
+    padding: 1.15rem;
+  }
+}
+
+/* Celulares grandes — se ocultan las etiquetas de texto del menú,
+   queda solo el ícono */
+@media (max-width: 600px) {
+  .client-sidebar {
+    padding: 0.65rem 0.75rem;
+    gap: 0.4rem;
+  }
+
+  .client-logo-badge {
+    width: 32px;
+    height: 32px;
+  }
+
+  .client-logo-text {
+    font-size: 0.82rem;
+  }
+
+  .client-logo-sub {
+    display: none;
+  }
+
+  .client-nav-item {
+    padding: 0.55rem;
+  }
+
+  .client-nav-label {
+    display: none;
+  }
+
+  .client-nav-icon {
+    font-size: 1.05rem;
+  }
+
+  .client-logout {
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+
+  .client-content {
+    padding: 0.9rem;
+  }
+}
+
+/* Celulares medianos */
+@media (max-width: 480px) {
+  .client-sidebar {
+    padding: 0.5rem 0.6rem;
+    gap: 0.3rem;
+  }
+
+  .client-logo-badge {
+    width: 28px;
+    height: 28px;
+    font-size: 0.75rem;
+  }
+
+  .client-logo-text {
+    display: none;
+  }
+
+  .client-nav-item {
+    padding: 0.45rem;
+  }
+
+  .client-nav-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 0.95rem;
+  }
+
+  .client-avatar {
+    width: 26px;
+    height: 26px;
+    font-size: 0.72rem;
+  }
+
+  .client-content {
+    padding: 0.7rem;
+  }
+}
+
+/* Celulares chicos — todo al mínimo */
+@media (max-width: 360px) {
+  .client-nav {
+    gap: 0.2rem;
+  }
+
+  .client-nav-item {
+    padding: 0.4rem;
+  }
+
+  .client-nav-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Celular acostado (landscape) — misma estructura de 2 filas,
+   compactada verticalmente porque hay poco alto disponible */
+@media (orientation: landscape) and (max-height: 500px) {
+  .client-sidebar {
+    padding: 0.5rem 0.85rem;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.6rem;
+  }
+
+  .client-top {
+    order: 1;
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .client-logo-text {
+    font-size: 0.85rem;
+  }
+
+  .client-logo-sub {
+    display: none;
+  }
+
+  .client-cuenta {
+    order: 2;
+    flex-shrink: 0;
+    margin-left: auto;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .client-cuenta-texto {
+    display: none;
+  }
+
+  .client-nav {
+    order: 3;
+    flex: 0 0 100%;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 0.2rem;
+  }
+
+  .client-nav-item {
+    padding: 0.4rem 0.6rem;
+    flex-shrink: 0;
+  }
+
+  .client-nav-label {
+    display: none;
+  }
+
+  .client-content {
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+/* Celular acostado muy angosto (celulares chicos de lado) */
+@media (orientation: landscape) and (max-height: 400px) {
+  .client-logo-badge {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
+  }
+
+  .client-logo-text {
+    display: none;
+  }
+
+  .client-nav-item {
+    padding: 0.35rem 0.5rem;
+  }
+
+  .client-nav-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.85rem;
   }
 }

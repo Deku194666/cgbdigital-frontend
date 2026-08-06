@@ -20,6 +20,23 @@ const faqs = [
     q: "¿Trabajas con clientes fuera de tu ciudad?",
     a: "Sí, trabajo de forma remota con clientes en cualquier ubicación. Coordinamos avances por el portal de clientes y videollamadas cuando se necesite.",
   },
+
+   {
+    q: "¿Necesito saber de tecnología para trabajar con ustedes?",
+    a: "No, para nada. Te explico todo en un lenguaje simple y te muestro avances en el camino, sin asumir que sabes de programación ni de términos técnicos.",
+  },
+  {
+    q: "¿Cómo es el proceso de pago?",
+    a: "Depende del proyecto: normalmente trabajamos con un anticipo para comenzar y el resto contra entrega, o dividido en hitos si el proyecto es más grande. Lo definimos juntos antes de partir.",
+  },
+  {
+    q: "¿Puedo pedir cambios en el diseño una vez que ya empezamos a desarrollar?",
+    a: "Sí, aunque mientras antes lo definamos, mejor — cambios grandes de diseño ya avanzado el desarrollo pueden afectar plazos y costo. Los ajustes menores siempre están cubiertos.",
+  },
+  {
+    q: "¿Qué pasa si mi proyecto necesita más funciones de las que cotizamos al principio?",
+    a: "No hay problema, es algo bien común. Cotizamos el trabajo adicional aparte antes de hacerlo, para que siempre sepas el costo antes de que avancemos.",
+  },
 ];
 
 const Contact = () => {
@@ -56,7 +73,7 @@ const Contact = () => {
   return (
     <section className="contact" id="contacto">
       <div className="contact-header">
-        <span className="section-eyebrow">Hablemos</span>
+        <span className="section-eyebrow7">Hablemos</span>
         <h2 className="section-title">Contacto</h2>
         <p className="section-subtitle">
           Cuéntanos sobre tu proyecto y te responderemos a la brevedad.
@@ -64,10 +81,11 @@ const Contact = () => {
       </div>
 
       <div className="contact-intro">
-        <div className="contact-avatar">TN</div>
+        <div className="contact-avatar">CGB</div>
         <div className="contact-intro-text">
-          <h3>Tu Nombre</h3>
+          <h3>Equipo CGB-Digital</h3>
           <p>Desarrollador Full-Stack Freelance · Webs y Apps a medida</p>
+          <p>Ingeniero en Computación e Informatica · Kinesiólogo · Salud Digital </p>
           <p>Ingeniera Comercial · Comercio Exterior </p>
           <span className="contact-availability">
             <span className="availability-dot" /> Disponible para nuevos proyectos

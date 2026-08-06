@@ -4,6 +4,43 @@ export const capacitacionTecnologica = {
   title: "Capacitación Tecnológica",
   tagline: "Para que tu equipo dependa menos de mí en el día a día",
   color: "#6b4f2f",
+  pricingNote:
+  "Precio según cantidad de sesiones, tamaño del grupo y complejidad de las herramientas a capacitar.",
+pricing: [
+  {
+    name: "Básico",
+    price: "Desde $150.000",
+    description: "Una sesión puntual",
+    items: [
+      "1 sesión (2-3 horas)",
+      "Grupo reducido",
+      "Guía de referencia simple",
+    ],
+  },
+  {
+    name: "Profesional",
+    price: "Desde $420.000",
+    description: "El más elegido para equipos",
+    highlight: true,
+    items: [
+      "Paquete de 3 sesiones",
+      "Manual escrito de referencia",
+      "Sesiones grabadas para revisar después",
+      "15 días de soporte post-capacitación",
+    ],
+  },
+  {
+    name: "Empresarial",
+    price: "Desde $850.000",
+    description: "Programa completo con seguimiento",
+    items: [
+      "Programa de varias sesiones a medida",
+      "Manuales y grabaciones completas",
+      "Capacitación de personal nuevo incluida",
+      "30 días de soporte post-capacitación",
+    ],
+  },
+],
   intro:
     "De nada sirve implementarte un sistema, un portal o una red si tú y tu equipo no saben usarlo bien. Armo capacitaciones a la medida de las herramientas que ya trabajamos juntos, para que puedan resolver lo básico solos y solo me necesiten para lo importante.",
   features: [
@@ -64,6 +101,43 @@ export const migracionDatos = {
   title: "Migración de Datos y Sistemas",
   tagline: "Cambia de plataforma sin perder nada en el camino",
   color: "#2f5f8a",
+  pricingNote:
+  "El precio final depende del volumen de datos, la complejidad del sistema de origen y si requiere migración en caliente (sin detener la operación).",
+pricing: [
+  {
+    name: "Básico",
+    price: "Desde $180.000",
+    description: "Migración simple y acotada",
+    items: [
+      "Un solo origen de datos (ej: Excel a sistema nuevo)",
+      "Validación básica de integridad",
+      "Migración en horario acordado",
+    ],
+  },
+  {
+    name: "Profesional",
+    price: "Desde $500.000",
+    description: "El más elegido para cambios de plataforma",
+    highlight: true,
+    items: [
+      "Migración entre plataformas o sistemas",
+      "Validación completa origen vs. destino",
+      "Plan de contingencia y respaldo",
+      "Soporte durante los primeros días de uso",
+    ],
+  },
+  {
+    name: "Empresarial",
+    price: "Desde $950.000",
+    description: "Migraciones complejas o de gran volumen",
+    items: [
+      "Múltiples sistemas o fuentes de datos",
+      "Migración sin detener la operación del negocio",
+      "Scripts de validación automatizados",
+      "Acompañamiento extendido post-migración",
+    ],
+  },
+],
   intro:
     "Si estás dejando atrás las planillas de Excel, un sistema antiguo, o cambiando de proveedor de hosting o de base de datos, me encargo de mover toda tu información de forma segura y verificada, para que el cambio no signifique perder nada importante.",
   features: [
@@ -124,6 +198,43 @@ export const disenoUxUi = {
   title: "Diseño UX/UI",
   tagline: "Mejora cómo se ve y se usa tu sitio o sistema actual",
   color: "#a0527a",
+  pricingNote:
+  "Aplica a sitios o sistemas ya existentes. El precio depende de cuántas pantallas o flujos se rediseñan y si se incluye validación con usuarios.",
+pricing: [
+  {
+    name: "Básico",
+    price: "Desde $150.000",
+    description: "Rediseño puntual de una sección",
+    items: [
+      "Auditoría de usabilidad de 1 flujo o sección",
+      "Propuesta de rediseño visual",
+      "Prototipo navegable simple",
+    ],
+  },
+  {
+    name: "Profesional",
+    price: "Desde $380.000",
+    description: "El más elegido para sitios completos",
+    highlight: true,
+    items: [
+      "Auditoría completa del sitio o sistema",
+      "Rediseño de interfaz completo",
+      "Prototipo interactivo navegable",
+      "Implementación de los cambios aprobados",
+    ],
+  },
+  {
+    name: "Empresarial",
+    price: "Desde $700.000",
+    description: "Rediseño con validación de usuarios",
+    items: [
+      "Auditoría y rediseño de sistemas complejos",
+      "Pruebas con usuarios reales",
+      "Implementación completa de cambios",
+      "Ronda de ajustes post-lanzamiento",
+    ],
+  },
+],
   intro:
     "Si ya tienes un sitio o sistema funcionando pero sientes que se ve anticuado o que a la gente le cuesta usarlo, puedo rediseñar la experiencia sin necesidad de reconstruir todo el código de fondo. El objetivo es que sea más fácil de usar y se vea más profesional.",
   features: [
@@ -180,10 +291,47 @@ export const disenoUxUi = {
 
 export const administracionRedes = {
   slug: "administracion-redes",
-  icon: "🖧",
+  icon: "📡",
   title: "Administración de Redes",
   tagline: "Configuramos y mantenemos tu red para que todo tu equipo funcione sin interrupciones",
   color: "#2f7d6b",
+  pricingNote:
+  "Precio mensual según cantidad de equipos y servidores a administrar. Incluye soporte remoto; visitas presenciales se coordinan según urgencia.",
+pricing: [
+  {
+    name: "Básico",
+    price: "Desde $150.000/mes",
+    description: "Redes pequeñas, hasta 10 equipos",
+    items: [
+      "Configuración de Wi-Fi y router empresarial",
+      "Soporte remoto ante caídas de red",
+      "Revisión mensual preventiva",
+    ],
+  },
+  {
+    name: "Profesional",
+    price: "Desde $350.000/mes",
+    description: "El más elegido para pymes con servidor",
+    highlight: true,
+    items: [
+      "Administración de Active Directory",
+      "Mantención de 1 servidor (Windows o Linux)",
+      "Configuración de VPN",
+      "Soporte remoto y presencial según urgencia",
+    ],
+  },
+  {
+    name: "Empresarial",
+    price: "Desde $650.000/mes",
+    description: "Redes grandes con múltiples servidores",
+    items: [
+      "Administración de varios servidores",
+      "Políticas de grupo y permisos avanzados",
+      "Monitoreo proactivo de la red",
+      "Soporte prioritario con tiempos de respuesta definidos",
+    ],
+  },
+],
   intro:
     "Como ingeniero informático, administro y mantengo la infraestructura de red de tu negocio: servidores, equipos conectados por Active Directory o Linux, y la red en general. El objetivo es que tu equipo trabaje sin caídas ni cuellos de botella, y que tengas a alguien a quien recurrir cuando algo falla.",
   features: [
@@ -244,6 +392,43 @@ export const ciberseguridadBasica = {
   title: "Ciberseguridad Básica",
   tagline: "Protegemos tus equipos y tu red contra amenazas comunes",
   color: "#3b4a6b",
+  pricingNote:
+  "Precio mensual según cantidad de equipos a proteger. Incluye configuración inicial y mantención continua de las medidas de seguridad.",
+pricing: [
+  {
+    name: "Básico",
+    price: "Desde $180.000/mes",
+    description: "Protección esencial, hasta 10 equipos",
+    items: [
+      "Firewall y antivirus empresarial",
+      "Políticas de contraseñas seguras",
+      "Respaldo de seguridad mensual",
+    ],
+  },
+  {
+    name: "Profesional",
+    price: "Desde $400.000/mes",
+    description: "El más elegido para negocios con datos sensibles",
+    highlight: true,
+    items: [
+      "Firewall, antivirus y control de accesos por rol",
+      "Respaldo automático semanal",
+      "Protección contra phishing y ransomware",
+      "Revisión periódica de nuevas amenazas",
+    ],
+  },
+  {
+    name: "Empresarial",
+    price: "Desde $750.000/mes",
+    description: "Para equipos grandes o datos críticos",
+    items: [
+      "Protección de múltiples equipos y servidores",
+      "Respaldo automático diario",
+      "Políticas de acceso avanzadas por área",
+      "Soporte prioritario ante incidentes de seguridad",
+    ],
+  },
+],
   intro:
     "Configuro medidas de seguridad esenciales para proteger tus equipos y tu red de las amenazas más comunes: virus, accesos no autorizados y pérdida de información. No se trata de un servicio de seguridad avanzada de nivel corporativo, sino de las buenas prácticas que todo negocio debería tener y muchas veces no tiene.",
   features: [
@@ -304,6 +489,43 @@ export const reparacionEquipos = {
   title: "Reparación de Equipos de PC",
   tagline: "Diagnóstico y reparación de computadores, hardware y software",
   color: "#c94f4f",
+  pricingNote:
+  "Diagnóstico gratuito. Los precios corresponden solo a mano de obra — el valor de los repuestos (discos, RAM, fuentes de poder, etc.) se cotiza aparte según el componente y disponibilidad.",
+pricing: [
+  {
+    name: "Básico",
+    price: "Desde $35.000",
+    description: "Formateo e instalación",
+    items: [
+      "Diagnóstico gratuito",
+      "Formateo completo del equipo",
+      "Instalación de sistema operativo y programas esenciales",
+    ],
+  },
+  {
+    name: "Profesional",
+    price: "Desde $60.000",
+    description: "El más elegido para fallas de hardware",
+    highlight: true,
+    items: [
+      "Diagnóstico gratuito",
+      "Mano de obra por cambio de pieza (repuesto no incluido)",
+      "Limpieza interna y pasta térmica",
+      "Garantía sobre el trabajo realizado",
+    ],
+  },
+  {
+    name: "Empresarial",
+    price: "Desde $150.000",
+    description: "Mantención de varios equipos",
+    items: [
+      "Diagnóstico y mantención de flota de equipos",
+      "Formateo y limpieza programada",
+      "Prioridad de atención ante fallas",
+      "Reporte de estado por equipo (repuestos no incluidos)",
+    ],
+  },
+],
   intro:
     "Reviso y reparo computadores que presentan fallas, ya sea por un problema de hardware (piezas dañadas, sobrecalentamiento) o de software (lentitud, virus, errores del sistema). Empiezo siempre con un diagnóstico para saber exactamente qué está pasando antes de cobrarte por una solución.",
   features: [
@@ -364,6 +586,43 @@ export const solucionesIA = {
   title: "Soluciones con IA",
   tagline: "Aplicamos inteligencia artificial para impulsar la toma de decisiones",
   color: "#546272",
+  pricingNote:
+  "El precio depende de la complejidad de la integración y si se requiere entrenar o ajustar un modelo a tu caso específico.",
+pricing: [
+  {
+    name: "Básico",
+    price: "Desde $350.000",
+    description: "Chatbot o automatización simple",
+    items: [
+      "Chatbot para preguntas frecuentes",
+      "Integración con WhatsApp o sitio web",
+      "Configuración inicial de respuestas",
+    ],
+  },
+  {
+    name: "Profesional",
+    price: "Desde $800.000",
+    description: "El más elegido para automatizar decisiones",
+    highlight: true,
+    items: [
+      "Chatbot con calificación de leads",
+      "Automatización con reglas de decisión",
+      "Integración con tus sistemas actuales",
+      "Ajustes durante el primer mes de uso",
+    ],
+  },
+  {
+    name: "Empresarial",
+    price: "Desde $1.500.000",
+    description: "Análisis de datos e integraciones avanzadas",
+    items: [
+      "Análisis de datos con IA (ventas, clientes, inventario)",
+      "Automatización inteligente a medida",
+      "Integraciones múltiples con sistemas existentes",
+      "Soporte y mejora continua post-lanzamiento",
+    ],
+  },
+],
   intro:
     "Incorporo inteligencia artificial donde realmente aporta valor a tu negocio: respondiendo consultas de tus clientes, analizando datos que hoy no estás aprovechando, o automatizando decisiones repetitivas. No se trata de sumar IA porque sí, sino de resolver un problema concreto con ella.",
   features: [
@@ -424,6 +683,43 @@ export const automatizacionSoporte = {
   title: "Automatización y Soporte",
   tagline: "Optimizamos procesos y damos soporte técnico experto a tu equipo",
   color: "#e08a1e",
+  pricingNote:
+  "Planes mensuales con horas de soporte incluidas. También disponible por hora suelta para necesidades puntuales — consulta la tarifa vigente.",
+pricing: [
+  {
+    name: "Básico",
+    price: "Desde $120.000/mes",
+    description: "Soporte puntual, pocas horas al mes",
+    items: [
+      "4 horas de soporte incluidas al mes",
+      "Atención remota",
+      "Tiempo de respuesta estándar",
+    ],
+  },
+  {
+    name: "Profesional",
+    price: "Desde $280.000/mes",
+    description: "El más elegido para mantención continua",
+    highlight: true,
+    items: [
+      "10 horas de soporte incluidas al mes",
+      "1 automatización de tarea repetitiva incluida",
+      "Mantenimiento preventivo mensual",
+      "Tiempo de respuesta prioritario",
+    ],
+  },
+  {
+    name: "Empresarial",
+    price: "Desde $550.000/mes",
+    description: "Soporte y automatización a medida",
+    items: [
+      "20 horas de soporte incluidas al mes",
+      "Automatizaciones múltiples según necesidad",
+      "Asesoría técnica continua",
+      "Tiempo de respuesta prioritario garantizado",
+    ],
+  },
+],
   intro:
     "No todo proyecto empieza de cero: muchas veces lo que hace falta es optimizar lo que ya tienes y contar con alguien a quien recurrir cuando algo falla. Ayudo a automatizar tareas repetitivas y doy soporte técnico continuo para que tu sistema siga funcionando sin sobresaltos.",
   features: [
@@ -484,6 +780,55 @@ export const desarrolloWeb = {
   title: "Desarrollo Web",
   tagline: "Sitios y plataformas rápidas, responsivas y efectivas",
   color: "#1656b0",
+  pricingNote:
+  "Precios referenciales. El valor final depende del alcance real, funciones personalizadas y métodos de pago que necesite tu proyecto — se ajusta en la cotización.",
+pricing: [
+  {
+    name: "Básico",
+    price: "Desde $200.000",
+    description: "Landing page o sitio simple",
+    items: [
+      "Landing page o sitio de 1-3 secciones",
+      "Diseño responsivo (celular, tablet, PC)",
+      "Formulario de contacto",
+      "SEO básico incluido",
+    ],
+  },
+  {
+    name: "Estándar",
+    price: "Desde $500.000",
+    description: "Sitio con servicios y catálogo",
+    items: [
+      "Sitio web con varias secciones",
+      "Página de servicios y catálogo",
+      "SEO técnico + estructura optimizada",
+      "Panel simple para editar contenido (opcional)",
+    ],
+  },
+  {
+    name: "Profesional",
+    price: "Desde $850.000",
+    description: "El más elegido por pymes en crecimiento",
+    highlight: true,
+    items: [
+      "Tienda online con carrito de compras",
+      "Métodos de pago integrados",
+      "Perfiles de usuario y cuentas",
+      "Funciones personalizadas según el proyecto",
+    ],
+  },
+  {
+    name: "Empresarial",
+    price: "Desde $1.200.000",
+    description: "Para pymes grandes con necesidades avanzadas",
+    items: [
+      "Arquitectura escalable para alto tráfico",
+      "Integraciones avanzadas (múltiples pasarelas de pago, ERPs, etc.)",
+      "Roles y permisos de usuario",
+      "Soporte prioritario post-lanzamiento",
+    ],
+  },
+],
   intro:
     "Construyo sitios web pensados para convertir visitas en clientes: rápidos, que se vean bien en cualquier dispositivo, y con una base técnica sólida para que Google los encuentre. Desde una página corporativa simple hasta una tienda online completa.",
   features: [
@@ -546,6 +891,42 @@ export const desarrolloSoftware = {
   color: "#2f8f4e",
   intro:
     "Construyo software pensado específicamente para cómo funciona tu negocio, no una plantilla genérica. Si hoy gestionas procesos en planillas, correos sueltos o herramientas que no se hablan entre sí, un sistema a medida ordena eso en un solo lugar y te ahorra horas de trabajo manual cada semana.",
+  pricingNote:
+    "Este servicio es para sistemas internos que usa tu propio equipo (paneles de gestión, control de procesos, herramientas a medida). No incluye sitios web ni tiendas online — para eso revisa Desarrollo Web.",
+  pricing: [
+    {
+      name: "Básico",
+      price: "Desde $450.000",
+      description: "Para una necesidad puntual y acotada",
+      items: [
+        "1 módulo funcional",
+        "Diseño funcional simple",
+        "30 días de soporte post-entrega",
+      ],
+    },
+    {
+      name: "Profesional",
+      price: "Desde $900.000",
+      description: "El más elegido por pymes",
+      highlight: true,
+      items: [
+        "Varios módulos conectados",
+        "Integración con sistemas existentes",
+        "60 días de soporte post-entrega",
+      ],
+    },
+    {
+      name: "Empresarial",
+      price: "Desde $1.800.000",
+      description: "Sistemas complejos y escalables",
+      items: [
+        "Arquitectura escalable",
+        "Roles y permisos de usuario",
+        "Integraciones avanzadas (APIs, pagos, etc.)",
+        "90 días de soporte post-entrega",
+      ],
+    },
+  ],  
   features: [
     {
       title: "Software a medida",
@@ -604,6 +985,43 @@ export const sistemasNube = {
   title: "Sistemas en la Nube",
   tagline: "Infraestructura segura, escalable y disponible cuando la necesites",
   color: "#1d6fd6",
+  pricingNote:
+  "Precio mensual de administración de infraestructura. No incluye el costo del proveedor cloud (AWS, Render, Vercel), que se factura aparte según el consumo real.",
+pricing: [
+  {
+    name: "Básico",
+    price: "Desde $80.000/mes",
+    description: "Sitios o sistemas pequeños",
+    items: [
+      "Hosting en la nube configurado",
+      "Backups automáticos semanales",
+      "Monitoreo básico de disponibilidad",
+    ],
+  },
+  {
+    name: "Profesional",
+    price: "Desde $180.000/mes",
+    description: "El más elegido para negocios en crecimiento",
+    highlight: true,
+    items: [
+      "Arquitectura con escalabilidad automática",
+      "Backups automáticos diarios",
+      "Monitoreo 24/7 con alertas",
+      "Soporte ante caídas o incidentes",
+    ],
+  },
+  {
+    name: "Empresarial",
+    price: "Desde $350.000/mes",
+    description: "Infraestructura de alta disponibilidad",
+    items: [
+      "Múltiples entornos (producción, pruebas)",
+      "Backups diarios con retención extendida",
+      "Monitoreo 24/7 con respuesta prioritaria",
+      "Revisión y optimización mensual de costos cloud",
+    ],
+  },
+],
   intro:
     "Alojo tu sitio o sistema en infraestructura cloud moderna, para que no dependa de un solo servidor físico ni se caiga cuando más lo necesitas. Configuro backups automáticos, monitoreo y una arquitectura que crece junto con tu negocio.",
   features: [
@@ -664,6 +1082,44 @@ export const appsMoviles = {
   title: "Apps Móviles",
   tagline: "Aplicaciones modernas, rápidas y fáciles de usar",
   color: "#7b3fa0",
+  pricingNote:
+  "Aplica a apps multiplataforma (iOS + Android) con React Native. Publicación en tiendas no incluye el costo de cuenta de desarrollador (Google/Apple), que paga el cliente directamente.",
+pricing: [
+  {
+    name: "Básico",
+    price: "Desde $1.500.000",
+    description: "MVP para validar una idea",
+    items: [
+      "App multiplataforma (iOS + Android)",
+      "Funciones esenciales, 1 flujo principal",
+      "Diseño UX/UI simple",
+      "Publicación en ambas tiendas",
+    ],
+  },
+  {
+    name: "Profesional",
+    price: "Desde $3.200.000",
+    description: "La más elegida para negocios con servicio",
+    highlight: true,
+    items: [
+      "App con varios módulos y pantallas",
+      "Notificaciones push",
+      "Integración con backend propio",
+      "Publicación y soporte inicial post-lanzamiento",
+    ],
+  },
+  {
+    name: "Empresarial",
+    price: "Desde $5.800.000",
+    description: "Apps complejas con integraciones",
+    items: [
+      "Múltiples módulos e integraciones avanzadas",
+      "Backend a medida con roles de usuario",
+      "Diseño UX/UI completo con prototipado",
+      "Soporte extendido post-lanzamiento",
+    ],
+  },
+],
   intro:
     "Diseño y desarrollo aplicaciones móviles para que tu negocio esté directo en el celular de tus clientes o tu equipo. Ya sea una app orientada a usuarios finales o una herramienta interna, el foco está en que sea simple de usar desde el primer momento.",
   features: [
