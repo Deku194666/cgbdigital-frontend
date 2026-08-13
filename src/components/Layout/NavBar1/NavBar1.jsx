@@ -18,7 +18,7 @@ const NavBar1 = () => {
   return (
     <div className="navbar1">
       <a href="/" className="navbar1-brand">
-        CGB <span className="brand-accent">Digital</span>
+        CGB <span className="brand-accent">Technologies</span>
       </a>
 
       <form className="navbar1-search" onSubmit={handleSearch}>

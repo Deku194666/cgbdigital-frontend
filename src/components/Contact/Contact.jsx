@@ -91,7 +91,7 @@ const Contact = () => {
         <div className="contact-intro">
           <div className="contact-avatar">CGB</div>
           <div className="contact-intro-text">
-            <h3>Equipo CGB-Digital</h3>
+            <h3>Equipo CGB-Technologies</h3>
             <p>Desarrollador Full-Stack Freelance · Webs y Apps a medida</p>
             <p>Ingeniero en Computación e Informatica · Kinesiólogo · Salud Digital </p>
             <p>Ingeniera Comercial · Comercio Exterior</p>
@@ -181,7 +181,7 @@ const Contact = () => {
               <div>
                 <span className="contact-direct-label">Email</span>
                 <span className="contact-direct-value">
-                  ✉️ soporteinformatico@cgbdigital.com
+                  ✉️ contacto@cgbdigital.com
                 </span>
               </div>
             </a>

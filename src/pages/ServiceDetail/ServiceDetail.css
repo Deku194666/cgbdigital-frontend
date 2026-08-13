@@ -432,13 +432,9 @@
   }
 
   .svcdet-pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
+    grid-template-columns: 1fr;
+  }
+
   .svcdet-pricing-card.highlight {
     transform: none;
   }

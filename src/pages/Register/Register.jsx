@@ -114,7 +114,7 @@ function Register() {
         {/* SIDE INFO (IZQUIERDA) */}
         <div className="register-side">
           <div className="side-content">
-            <div className="side-logo">TN</div>
+            <div className="side-logo">CGB</div>
             <h2>Portal de Clientes</h2>
             <h4 style={{ marginBottom: 18 }}>Únete y sigue de cerca tu proyecto</h4>
 

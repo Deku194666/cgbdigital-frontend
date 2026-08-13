@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* Columna 1: Marca / descripción */}
         <div className="footer-col footer-brand">
-          <h3 className="footer-logo">CGB Digital</h3>
+          <h3 className="footer-logo">CGB Technologies</h3>
           <p className="footer-tagline">
             Desarrollo de páginas web y aplicaciones a medida para
             profesionales y negocios.
@@ -55,7 +55,7 @@ const Footer = () => {
           <ul className="footer-contact">
             <li>
               <a href="mailto:tuemail@ejemplo.com">
-                <FaEnvelope /> soporteinformatico@cgbdigital.com
+                <FaEnvelope /> contacto@cgbtechnologies.com
               </a>
             </li>
             <li>
@@ -98,7 +98,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© {year} CGB Digital. Todos los derechos reservados.</p>
+        <p>© {year} CGB Technologies. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

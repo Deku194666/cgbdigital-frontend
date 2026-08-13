@@ -80,7 +80,7 @@ const Nosotros = () => {
         <div className="nosotros-hero-content">
           <span className="section-eyebrow-light">Quiénes somos</span>
           <h1 className="nosotros-hero-title">
-            La historia detrás de <span className="highlight-orange">CGB Digital</span>
+            La historia detrás de <span className="highlight-orange"> CGB Technologies </span>
           </h1>
           <p className="nosotros-hero-text">
             Somos un equipo joven que combina tecnología, negocio y
@@ -210,8 +210,8 @@ const Nosotros = () => {
         <h2>¿Tienes un proyecto en mente?</h2>
         <p>Conversemos sobre cómo podemos ayudarte a hacerlo realidad.</p>
         <div className="nosotros-contact-links">
-          <a href="mailto:soporteinformatico@cgbdigital.com">
-            ✉️ soporteinformatico@cgbdigital.com
+          <a href="mailto:contacto@cgbtechnologies.com">
+            ✉️ contacto@cgbtechnologies.com
           </a>
           <a href="tel:+56972664713">📞 +56 972 664 713</a>
           <a href="https://wa.me/56972664713" target="_blank" rel="noopener noreferrer">

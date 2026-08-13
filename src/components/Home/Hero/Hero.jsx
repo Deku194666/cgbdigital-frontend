@@ -11,7 +11,7 @@ const Hero = () => {
       >
       <div className="hero-inner">
         <div className="hero-content">
-          <div className="hero-logo-badge">CGB DIGITAL</div>
+          <div className="hero-logo-badge">CGB TECHNOLOGIES</div>
           <h1 className="hero-title">
             Transformando <span className="highlight-blue">ideas</span> en
             soluciones <span className="highlight-orange">digitales</span>

@@ -170,7 +170,7 @@ function Login() {
         {/* SIDE PANEL (OPCIONAL PARA DESKTOP) */}
         <div className="login-side">
           <div className="side-content">
-            <div className="side-logo">TN</div>
+            <div className="side-logo">CGB</div>
             <h2>Portal de Clientes</h2>
             <p>Seguimiento de tus proyectos, siempre a la mano</p>
 
