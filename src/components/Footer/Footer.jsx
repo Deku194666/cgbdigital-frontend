@@ -1,10 +1,5 @@
-
-
-
-
 import { Link } from "react-router-dom";
 import "./Footer.css";
-// Si no usas react-icons, instala con: npm install react-icons
 import {
   FaGithub,
   FaLinkedin,
@@ -39,22 +34,32 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Columna 3: Legal */}
-<div className="footer-col">
-  <h4>Legal</h4>
-  <ul>
-    <li><a href="/healtnex/terminos.html">Términos de Servicio</a></li>
-    <li><a href="/healtnex/privacidad.html">Política de Privacidad</a></li>
-    <li><a href="/healtnex/cookies.html">Política de Cookies</a></li>
-  </ul>
-</div>
+        {/* Columna 3: Legal Healtnex */}
+        <div className="footer-col">
+          <h4>Legal — Healtnex</h4>
+          <ul>
+            <li><a href="/healtnex/terminos.html">Términos de Servicio</a></li>
+            <li><a href="/healtnex/privacidad.html">Política de Privacidad</a></li>
+            <li><a href="/healtnex/cookies.html">Política de Cookies</a></li>
+          </ul>
+        </div>
 
-        {/* Columna 4: Contacto y redes */}
+        {/* Columna 4: Legal CGB */}
+        <div className="footer-col">
+          <h4>Legal — CGB</h4>
+          <ul>
+            <li><Link to="/terminos-de-servicio">Términos de Servicio</Link></li>
+            <li><Link to="/politica-de-privacidad">Política de Privacidad</Link></li>
+            <li><Link to="/politica-de-cookies">Política de Cookies</Link></li>
+          </ul>
+        </div>
+
+        {/* Columna 5: Contacto y redes */}
         <div className="footer-col">
           <h4>Contacto</h4>
           <ul className="footer-contact">
             <li>
-              <a href="mailto:tuemail@ejemplo.com">
+              <a href="mailto:contacto@cgbtechnologies.com">
                 <FaEnvelope /> contacto@cgbtechnologies.com
               </a>
             </li>
