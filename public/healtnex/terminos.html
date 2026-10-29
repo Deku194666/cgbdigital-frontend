@@ -1,0 +1,762 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Términos de Servicio · Healtnex</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&display=swap">
+
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --fg: #0f1623;
+    --fg-2: #3d4a5c;
+    --fg-3: #6b7a8f;
+    --accent: #1a7ed4;
+    --accent-dim: #e8f3fc;
+    --accent-border: #b3d4f0;
+    --highlight-bg: #eaf4fb;
+    --highlight-border: #1a7ed4;
+    --divider: #e4e8ee;
+    --box-bg: #f2f5f9;
+    --box-border: #dde3ec;
+    --header-bg: rgba(247,248,250,0.92);
+    --shadow: 0 1px 3px rgba(15,22,35,0.07), 0 4px 16px rgba(15,22,35,0.04);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d1117;
+      --surface: #161c26;
+      --fg: #e8edf5;
+      --fg-2: #a8b4c4;
+      --fg-3: #6b7a8f;
+      --accent: #4a9fe8;
+      --accent-dim: #1a2d3f;
+      --accent-border: #2d5a7a;
+      --highlight-bg: #1a2d3f;
+      --highlight-border: #4a9fe8;
+      --divider: #222b38;
+      --box-bg: #1a2233;
+      --box-border: #2a3548;
+      --header-bg: rgba(13,17,23,0.92);
+      --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0d1117;
+    --surface: #161c26;
+    --fg: #e8edf5;
+    --fg-2: #a8b4c4;
+    --fg-3: #6b7a8f;
+    --accent: #4a9fe8;
+    --accent-dim: #1a2d3f;
+    --accent-border: #2d5a7a;
+    --highlight-bg: #1a2d3f;
+    --highlight-border: #4a9fe8;
+    --divider: #222b38;
+    --box-bg: #1a2233;
+    --box-border: #2a3548;
+    --header-bg: rgba(13,17,23,0.92);
+    --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 0;
+  }
+
+  .site-header {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 100;
+    background: var(--header-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--divider);
+    padding: 14px max(24px, env(safe-area-inset-left, 0px));
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0 0 auto;
+    height: env(safe-area-inset-top, 0px);
+    z-index: 101;
+    background: var(--header-bg);
+  }
+
+  .header-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-mark {
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .logo-mark svg { display: block; }
+
+  .logo-text {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: -0.3px;
+  }
+
+  .logo-text span { color: var(--accent); }
+
+  .header-badge {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--fg-3);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  .article-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 0 80px;
+  }
+
+  .article-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .eyebrow-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    padding: 3px 10px;
+    border-radius: 100px;
+  }
+
+  .eyebrow-dot { color: var(--fg-3); font-size: 13px; }
+
+  .eyebrow-date {
+    font-size: 12px;
+    color: var(--fg-3);
+  }
+
+  .article-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--fg);
+    letter-spacing: -0.5px;
+    text-wrap: balance;
+    margin-bottom: 20px;
+  }
+
+  .article-lead {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--fg-2);
+    border-left: 3px solid var(--accent);
+    padding-left: 18px;
+    margin-bottom: 36px;
+  }
+
+  .divider-accent {
+    height: 1px;
+    background: var(--divider);
+    margin-bottom: 40px;
+  }
+
+  /* TOC */
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--box-border);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin-bottom: 48px;
+    box-shadow: var(--shadow);
+  }
+
+  .toc-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--fg-3);
+    margin-bottom: 14px;
+  }
+
+  .toc-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 24px;
+  }
+
+  @media (max-width: 560px) {
+    .toc-list { grid-template-columns: 1fr; }
+  }
+
+  .toc-list li a {
+    font-size: 13.5px;
+    color: var(--accent);
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    transition: opacity 0.15s;
+  }
+
+  .toc-list li a:hover { opacity: 0.75; }
+
+  .toc-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--fg-3);
+    min-width: 18px;
+  }
+
+  /* Sections */
+  .section {
+    margin-bottom: 52px;
+    scroll-margin-top: 80px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .section-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    border-radius: 6px;
+    padding: 3px 8px;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 700;
+    color: var(--fg);
+    line-height: 1.2;
+  }
+
+  .section p {
+    color: var(--fg-2);
+    margin-bottom: 14px;
+  }
+
+  .section p:last-child { margin-bottom: 0; }
+
+  .section ul, .section ol {
+    color: var(--fg-2);
+    padding-left: 20px;
+    margin-bottom: 14px;
+  }
+
+  .section li { margin-bottom: 6px; }
+
+  .callout {
+    background: var(--highlight-bg);
+    border-left: 3px solid var(--highlight-border);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 18px 0;
+    color: var(--fg-2);
+    font-size: 15px;
+  }
+
+  .callout strong { color: var(--fg); }
+
+  .info-box {
+    background: var(--box-bg);
+    border: 1px solid var(--box-border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: 14.5px;
+    color: var(--fg-2);
+  }
+
+  .info-box strong { color: var(--fg); display: block; margin-bottom: 4px; }
+
+  .section-divider {
+    height: 1px;
+    background: var(--divider);
+    margin: 52px 0;
+  }
+
+  /* Footer */
+  .article-footer {
+    background: var(--surface);
+    border: 1px solid var(--box-border);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-top: 60px;
+  }
+
+  .footer-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--fg);
+    margin-bottom: 10px;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--fg-2);
+  }
+
+  .footer-contact a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .footer-contact a:hover { text-decoration: underline; }
+
+  .footer-note {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--divider);
+    font-size: 12px;
+    color: var(--fg-3);
+    text-align: center;
+  }
+
+  /* Theme toggle */
+  .theme-btn {
+    margin-left: auto;
+    background: none;
+    border: 1px solid var(--divider);
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: var(--fg-3);
+    font-size: 14px;
+    transition: background 0.15s;
+  }
+  .theme-btn:hover { background: var(--box-bg); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-mark">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M9 2C9 2 4 5.5 4 10a5 5 0 0010 0C14 5.5 9 2 9 2z" fill="white" opacity="0.9"/>
+        <path d="M9 6v4M7 8h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="logo-text">Healt<span>nex</span></div>
+    <button class="theme-btn" onclick="toggleTheme()" aria-label="Cambiar tema">☀︎</button>
+  </div>
+</header>
+
+<main>
+  <div class="article-wrap">
+
+    <div class="article-eyebrow">
+      <span class="eyebrow-tag">Legal</span>
+      <span class="eyebrow-dot">·</span>
+      <span class="eyebrow-date">Vigente desde el 1 de noviembre de 2026</span>
+    </div>
+
+    <h1 class="article-title">Términos de Servicio</h1>
+
+    <p class="article-lead">
+      Estos Términos rigen el uso de Healtnex, la aplicación de salud integral desarrollada por CGB Technologies SpA. Al registrarte o usar la app, aceptas estas condiciones en su totalidad.
+    </p>
+
+    <div class="divider-accent"></div>
+
+    <!-- TOC -->
+    <nav class="toc" aria-label="Contenido">
+      <p class="toc-title">Contenido</p>
+      <ol class="toc-list">
+        <li><a href="#s1"><span class="toc-num">01</span> Definiciones</a></li>
+        <li><a href="#s2"><span class="toc-num">02</span> Aceptación de términos</a></li>
+        <li><a href="#s3"><span class="toc-num">03</span> Descripción del servicio</a></li>
+        <li><a href="#s4"><span class="toc-num">04</span> Registro y cuenta</a></li>
+        <li><a href="#s5"><span class="toc-num">05</span> Uso aceptable</a></li>
+        <li><a href="#s6"><span class="toc-num">06</span> Contenido del usuario</a></li>
+        <li><a href="#s7"><span class="toc-num">07</span> Planes y pagos</a></li>
+        <li><a href="#s8"><span class="toc-num">08</span> Anuncios y recompensas</a></li>
+        <li><a href="#s9"><span class="toc-num">09</span> Propiedad intelectual</a></li>
+        <li><a href="#s10"><span class="toc-num">10</span> Limitación de responsabilidad</a></li>
+        <li><a href="#s11"><span class="toc-num">11</span> Restricción de edad</a></li>
+        <li><a href="#s12"><span class="toc-num">12</span> Suspensión y terminación</a></li>
+        <li><a href="#s13"><span class="toc-num">13</span> Modificaciones</a></li>
+        <li><a href="#s14"><span class="toc-num">14</span> Ley aplicable</a></li>
+        <li><a href="#s15"><span class="toc-num">15</span> Contacto</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1 -->
+    <section class="section" id="s1">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Definiciones</h2>
+      </div>
+      <p>Para efectos de estos Términos, se entenderá por:</p>
+      <ul>
+        <li><strong>«Healtnex»</strong> o <strong>«la App»</strong>: la aplicación móvil de salud integral disponible para Android.</li>
+        <li><strong>«CGB Technologies»</strong>, <strong>«nosotros»</strong> o <strong>«la Empresa»</strong>: CGB Technologies SpA, sociedad constituida bajo las leyes de la República de Chile.</li>
+        <li><strong>«Usuario»</strong> o <strong>«tú»</strong>: cualquier persona natural que descargue, instale o use Healtnex.</li>
+        <li><strong>«Servicio»</strong>: todas las funciones, módulos y contenidos ofrecidos a través de Healtnex.</li>
+        <li><strong>«Plan Free»</strong>: modalidad gratuita con acceso limitado a funciones, habilitadas mediante visualización de anuncios o rachas.</li>
+        <li><strong>«Plan Premium»</strong>: modalidad de pago con acceso completo a todas las funciones sin restricciones publicitarias.</li>
+        <li><strong>«Contenido»</strong>: cualquier dato, texto, registro o información que el Usuario ingrese o genere en la App.</li>
+      </ul>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 2 -->
+    <section class="section" id="s2">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Aceptación de los Términos</h2>
+      </div>
+      <p>Al descargar, instalar o usar Healtnex, declaras haber leído, comprendido y aceptado estos Términos de Servicio, así como nuestra <a href="/healtnex/privacidad" style="color:var(--accent)">Política de Privacidad</a> y <a href="/healtnex/cookies" style="color:var(--accent)">Política de Cookies</a>.</p>
+      <div class="callout">
+        <strong>Si no aceptas estos Términos en su totalidad, no estás autorizado a usar Healtnex.</strong> En ese caso, desinstala la aplicación y no crees ni mantengas una cuenta.
+      </div>
+      <p>Estos Términos constituyen el acuerdo completo entre tú y CGB Technologies respecto al uso de la App, y reemplazan cualquier acuerdo previo verbal o escrito sobre el mismo objeto.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 3 -->
+    <section class="section" id="s3">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Descripción del Servicio</h2>
+      </div>
+      <p>Healtnex es una aplicación de salud integral que permite al Usuario registrar, monitorear y analizar distintos aspectos de su bienestar. Los módulos disponibles incluyen, entre otros:</p>
+      <ul>
+        <li>Registro de actividad física (musculación, cardio, deportes varios)</li>
+        <li>Nutrición y registro alimentario</li>
+        <li>Hidratación y ayuno intermitente</li>
+        <li>Seguimiento del sueño y emociones</li>
+        <li>Registro de signos vitales y medicamentos</li>
+        <li>Agenda de salud y calendario</li>
+        <li>Funciones sociales (feed, historias, mensajes)</li>
+        <li>Asistente de inteligencia artificial (módulo IA)</li>
+        <li>Sistema de rachas y recompensas</li>
+      </ul>
+      <div class="callout">
+        <strong>Healtnex no es un servicio médico.</strong> La información generada en la App tiene carácter exclusivamente informativo y de seguimiento personal. No reemplaza el diagnóstico, tratamiento ni consejo de un profesional de la salud.
+      </div>
+      <p>CGB Technologies se reserva el derecho de modificar, agregar o eliminar funciones del Servicio en cualquier momento, con o sin previo aviso, sin que ello genere derecho a indemnización alguna.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 4 -->
+    <section class="section" id="s4">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Registro y Cuenta de Usuario</h2>
+      </div>
+      <p>Para acceder a Healtnex debes crear una cuenta proporcionando información veraz, actual y completa. Eres responsable de:</p>
+      <ul>
+        <li>Mantener la confidencialidad de tus credenciales de acceso.</li>
+        <li>Notificarnos de inmediato ante cualquier uso no autorizado de tu cuenta.</li>
+        <li>Todas las actividades realizadas bajo tu cuenta, independientemente de si las autorizaste.</li>
+      </ul>
+      <p>No está permitido crear más de una cuenta personal, usar la cuenta de otra persona ni transferir tu cuenta a terceros.</p>
+      <div class="info-box">
+        <strong>Datos requeridos en el registro</strong>
+        Al crear tu cuenta se te solicitarán datos básicos como nombre, correo electrónico, fecha de nacimiento, sexo biológico y objetivos de salud. Estos datos son necesarios para personalizar tu experiencia. Consulta nuestra Política de Privacidad para más detalles.
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 5 -->
+    <section class="section" id="s5">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Uso Aceptable</h2>
+      </div>
+      <p>Te comprometes a usar Healtnex únicamente para fines lícitos y conforme a estos Términos. Queda expresamente prohibido:</p>
+      <ul>
+        <li>Usar la App para fines ilegales, fraudulentos o que dañen a terceros.</li>
+        <li>Publicar contenido ofensivo, discriminatorio, obsceno, o que incite al odio o la violencia.</li>
+        <li>Suplantar la identidad de otras personas o entidades.</li>
+        <li>Intentar acceder sin autorización a sistemas, cuentas o datos de otros usuarios.</li>
+        <li>Usar bots, scripts o medios automatizados para interactuar con la App.</li>
+        <li>Distribuir virus, malware u otro código dañino.</li>
+        <li>Realizar ingeniería inversa, descompilar o desensamblar la aplicación.</li>
+        <li>Revender, sublicenciar o explotar comercialmente el Servicio sin autorización escrita.</li>
+        <li>Eludir o intentar eludir los sistemas de monetización (anuncios, pagos de suscripción).</li>
+      </ul>
+      <p>CGB Technologies puede investigar infracciones y tomar las medidas que estime pertinentes, incluyendo la suspensión o eliminación de la cuenta infractora.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 6 -->
+    <section class="section" id="s6">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Contenido del Usuario</h2>
+      </div>
+      <p>Al usar las funciones sociales de Healtnex (publicaciones en el feed, historias, comentarios, mensajes), puedes generar y compartir contenido con otros usuarios.</p>
+      <p>Sobre el contenido que publicas:</p>
+      <ul>
+        <li>Eres el único responsable del contenido que generas y compartes.</li>
+        <li>Garantizas que tienes los derechos necesarios sobre ese contenido.</li>
+        <li>Nos otorgas una licencia no exclusiva, gratuita y mundial para mostrar ese contenido dentro de la App mientras mantengas tu cuenta activa.</li>
+      </ul>
+      <div class="callout">
+        <strong>Contenido prohibido.</strong> No está permitido publicar material que viole derechos de terceros, contenido sexual explícito, información falsa que pueda causar daño, datos personales de terceros sin su consentimiento, ni ningún contenido que infrinja la legislación chilena o internacional aplicable.
+      </div>
+      <p>CGB Technologies no revisa el contenido publicado de forma previa, pero se reserva el derecho de eliminar contenido que viole estos Términos o que sea reportado por otros usuarios, sin necesidad de aviso previo.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 7 -->
+    <section class="section" id="s7">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Planes y Pagos</h2>
+      </div>
+      <p>Healtnex opera bajo un modelo freemium con dos modalidades:</p>
+      <div class="info-box">
+        <strong>Plan Free</strong>
+        Acceso gratuito con funciones básicas disponibles. Algunas funciones avanzadas requieren ver anuncios (recompensados) o acumular rachas para desbloquearse temporalmente.
+      </div>
+      <div class="info-box">
+        <strong>Plan Premium</strong>
+        Acceso completo a todos los módulos sin restricciones publicitarias, mediante pago de suscripción mensual o anual. Incluye un período de prueba gratuita de 7 días para nuevos suscriptores.
+      </div>
+      <p>Respecto a los pagos:</p>
+      <ul>
+        <li>Los pagos se procesan a través de Google Play Store según sus propios términos y políticas.</li>
+        <li>La suscripción se renueva automáticamente al final de cada período salvo que la canceles antes del vencimiento.</li>
+        <li>Puedes cancelar en cualquier momento desde la configuración de Google Play; el acceso Premium se mantendrá hasta el fin del período pagado.</li>
+        <li>No se otorgan reembolsos por períodos parciales salvo que la ley chilena lo exija expresamente.</li>
+        <li>Los precios pueden modificarse con previo aviso de al menos 30 días.</li>
+      </ul>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 8 -->
+    <section class="section" id="s8">
+      <div class="section-header">
+        <span class="section-num">08</span>
+        <h2 class="section-title">Anuncios y Sistema de Recompensas</h2>
+      </div>
+      <p>Para usuarios del Plan Free, Healtnex ofrece un sistema de desbloqueo de funciones mediante la visualización voluntaria de anuncios publicitarios (anuncios recompensados) o mediante el sistema de rachas.</p>
+      <p>El sistema de recompensas por publicidad opera con los siguientes límites:</p>
+      <ul>
+        <li>Máximo 3 anuncios por día por usuario.</li>
+        <li>Máximo 10 anuncios por semana.</li>
+        <li>Máximo 30 anuncios por mes.</li>
+      </ul>
+      <p>Cada anuncio visto desbloquea el módulo correspondiente por un período de 24 horas. Los desbloqueos no son acumulables ni transferibles a otros usuarios.</p>
+      <div class="callout">
+        Los anuncios son proporcionados por redes publicitarias de terceros (AdMob). CGB Technologies no es responsable del contenido de esos anuncios ni de las prácticas de privacidad de los anunciantes.
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 9 -->
+    <section class="section" id="s9">
+      <div class="section-header">
+        <span class="section-num">09</span>
+        <h2 class="section-title">Propiedad Intelectual</h2>
+      </div>
+      <p>Healtnex, incluyendo su nombre, logotipo, diseño, código fuente, algoritmos, base de datos y todo el contenido original de la App, es propiedad exclusiva de CGB Technologies SpA y está protegido por las leyes de propiedad intelectual de Chile y los tratados internacionales aplicables.</p>
+      <p>Estos Términos no te otorgan ningún derecho de propiedad sobre Healtnex. El uso de la App se autoriza bajo una licencia personal, no exclusiva, no transferible, revocable y limitada para uso personal y no comercial.</p>
+      <p>Queda prohibido reproducir, copiar, distribuir, modificar, vender o crear obras derivadas de cualquier parte del Servicio sin autorización escrita previa de CGB Technologies.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 10 -->
+    <section class="section" id="s10">
+      <div class="section-header">
+        <span class="section-num">10</span>
+        <h2 class="section-title">Limitación de Responsabilidad</h2>
+      </div>
+      <p>En la medida máxima permitida por la ley chilena, CGB Technologies no será responsable por:</p>
+      <ul>
+        <li>Daños indirectos, incidentales, especiales, consecuentes o punitivos.</li>
+        <li>Pérdida de datos, registros de salud o información personal almacenada en la App.</li>
+        <li>Interrupciones, errores o indisponibilidad temporal del Servicio.</li>
+        <li>Decisiones de salud tomadas con base en la información mostrada en la App.</li>
+        <li>Conductas de terceros dentro de las funciones sociales.</li>
+        <li>Contenido de anuncios publicitarios de terceros.</li>
+      </ul>
+      <div class="callout">
+        <strong>Healtnex no es un dispositivo médico ni un servicio de telemedicina.</strong> Los datos de salud registrados en la App son de carácter personal e informativo. Ante cualquier síntoma, enfermedad o emergencia médica, consulta siempre a un profesional de la salud.
+      </div>
+      <p>El Servicio se presta «tal como está» («as-is») y «según disponibilidad». CGB Technologies no garantiza que el Servicio sea ininterrumpido, libre de errores ni que cumpla con todos tus requisitos específicos.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 11 -->
+    <section class="section" id="s11">
+      <div class="section-header">
+        <span class="section-num">11</span>
+        <h2 class="section-title">Restricción de Edad</h2>
+      </div>
+      <div class="callout">
+        <strong>Healtnex está destinada exclusivamente a personas mayores de 18 años.</strong>
+      </div>
+      <p>Al crear una cuenta, declaras y garantizas tener al menos 18 años de edad. Si eres menor de 18 años, no estás autorizado a usar Healtnex bajo ninguna circunstancia.</p>
+      <p>CGB Technologies no recopila intencionalmente información de menores de 18 años. Si tomamos conocimiento de que un menor ha creado una cuenta, la eliminaremos de inmediato junto con todos los datos asociados. Si tienes conocimiento de que un menor usa la App, notifícanos a <a href="mailto:legal@cgbtechnologies.com" style="color:var(--accent)">legal@cgbtechnologies.com</a>.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 12 -->
+    <section class="section" id="s12">
+      <div class="section-header">
+        <span class="section-num">12</span>
+        <h2 class="section-title">Suspensión y Terminación</h2>
+      </div>
+      <p>CGB Technologies puede suspender o eliminar tu cuenta, con o sin previo aviso, si:</p>
+      <ul>
+        <li>Incumples estos Términos o nuestra Política de Privacidad.</li>
+        <li>Realizas actividades fraudulentas o ilegales.</li>
+        <li>Publicas contenido que viole los estándares de la App o la legislación vigente.</li>
+        <li>Intentas comprometer la seguridad o integridad del Servicio.</li>
+      </ul>
+      <p>También puedes eliminar tu cuenta en cualquier momento desde la sección de configuración de la App. La eliminación de la cuenta implica la supresión definitiva de tus datos personales conforme a nuestra Política de Privacidad.</p>
+      <p>La terminación de la cuenta no genera derecho a reembolso alguno salvo lo dispuesto expresamente en la Sección 7.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 13 -->
+    <section class="section" id="s13">
+      <div class="section-header">
+        <span class="section-num">13</span>
+        <h2 class="section-title">Modificaciones a los Términos</h2>
+      </div>
+      <p>CGB Technologies puede actualizar estos Términos cuando lo estime necesario. Te notificaremos de cambios significativos mediante:</p>
+      <ul>
+        <li>Notificación en la App antes de que los cambios entren en vigor.</li>
+        <li>Correo electrónico a la dirección registrada en tu cuenta.</li>
+        <li>Actualización de la fecha «Vigente desde» en esta página.</li>
+      </ul>
+      <p>Si continúas usando Healtnex tras la entrada en vigor de los nuevos Términos, se entenderá que los has aceptado. Si no estás de acuerdo con los cambios, puedes eliminar tu cuenta antes de que entren en vigor.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 14 -->
+    <section class="section" id="s14">
+      <div class="section-header">
+        <span class="section-num">14</span>
+        <h2 class="section-title">Ley Aplicable y Jurisdicción</h2>
+      </div>
+      <p>Estos Términos se rigen por las leyes de la República de Chile, en particular por la Ley N.º 19.496 sobre Protección de los Derechos de los Consumidores, la Ley N.º 19.628 sobre Protección de la Vida Privada, y demás normas aplicables.</p>
+      <p>Para la resolución de cualquier controversia derivada de estos Términos, las partes se someten a la jurisdicción de los tribunales ordinarios de justicia de la ciudad de Santiago de Chile, renunciando expresamente a cualquier otro fuero que pudiera corresponderles.</p>
+      <p>En caso de conflicto entre la versión en español de estos Términos y cualquier traducción, prevalecerá la versión en español.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 15 -->
+    <section class="section" id="s15">
+      <div class="section-header">
+        <span class="section-num">15</span>
+        <h2 class="section-title">Contacto</h2>
+      </div>
+      <p>Si tienes preguntas, dudas o reclamos sobre estos Términos de Servicio, puedes contactarnos por los siguientes medios:</p>
+      <div class="info-box">
+        <strong>CGB Technologies SpA</strong>
+        <span>📧 <a href="mailto:legal@cgbtechnologies.com" style="color:var(--accent)">legal@cgbtechnologies.com</a></span>
+        <span>🌐 <a href="https://cgbtechnologies.com" style="color:var(--accent)">cgbtechnologies.com</a></span>
+        <span>📍 Santiago, Chile</span>
+      </div>
+      <p>Nos comprometemos a responder tu consulta dentro de un plazo máximo de 30 días hábiles.</p>
+    </section>
+
+    <!-- Footer -->
+    <div class="article-footer">
+      <p class="footer-title">Healtnex · CGB Technologies SpA</p>
+      <div class="footer-contact">
+        <span>Consultas legales: <a href="mailto:legal@cgbtechnologies.com">legal@cgbtechnologies.com</a></span>
+        <span>Soporte: <a href="mailto:soporte@cgbtechnologies.com">soporte@cgbtechnologies.com</a></span>
+      </div>
+      <p class="footer-note">
+        © 2026 CGB Technologies SpA · Santiago, Chile ·
+        <a href="/healtnex/privacidad" style="color:var(--accent);text-decoration:none">Política de Privacidad</a> ·
+        <a href="/healtnex/cookies" style="color:var(--accent);text-decoration:none">Política de Cookies</a>
+      </p>
+    </div>
+
+  </div>
+</main>
+
+<script>
+  function toggleTheme() {
+    const root = document.documentElement;
+    const current = root.getAttribute('data-theme');
+    if (current === 'dark') {
+      root.setAttribute('data-theme', 'light');
+    } else if (current === 'light') {
+      root.removeAttribute('data-theme');
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      root.setAttribute('data-theme', prefersDark ? 'light' : 'dark');
+    }
+  }
+</script>
+
+</body>
+</html>

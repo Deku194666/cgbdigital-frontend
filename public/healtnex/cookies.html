@@ -1,0 +1,796 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Política de Cookies · Healtnex</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&display=swap">
+
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --fg: #0f1623;
+    --fg-2: #3d4a5c;
+    --fg-3: #6b7a8f;
+    --accent: #1a7ed4;
+    --accent-dim: #e8f3fc;
+    --accent-border: #b3d4f0;
+    --highlight-bg: #eaf4fb;
+    --highlight-border: #1a7ed4;
+    --divider: #e4e8ee;
+    --box-bg: #f2f5f9;
+    --box-border: #dde3ec;
+    --header-bg: rgba(247,248,250,0.92);
+    --shadow: 0 1px 3px rgba(15,22,35,0.07), 0 4px 16px rgba(15,22,35,0.04);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0d1117;
+      --surface: #161c26;
+      --fg: #e8edf5;
+      --fg-2: #a8b4c4;
+      --fg-3: #6b7a8f;
+      --accent: #4a9fe8;
+      --accent-dim: #1a2d3f;
+      --accent-border: #2d5a7a;
+      --highlight-bg: #1a2d3f;
+      --highlight-border: #4a9fe8;
+      --divider: #222b38;
+      --box-bg: #1a2233;
+      --box-border: #2a3548;
+      --header-bg: rgba(13,17,23,0.92);
+      --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0d1117;
+    --surface: #161c26;
+    --fg: #e8edf5;
+    --fg-2: #a8b4c4;
+    --fg-3: #6b7a8f;
+    --accent: #4a9fe8;
+    --accent-dim: #1a2d3f;
+    --accent-border: #2d5a7a;
+    --highlight-bg: #1a2d3f;
+    --highlight-border: #4a9fe8;
+    --divider: #222b38;
+    --box-bg: #1a2233;
+    --box-border: #2a3548;
+    --header-bg: rgba(13,17,23,0.92);
+    --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 0;
+  }
+
+  .site-header {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    z-index: 100;
+    background: var(--header-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--divider);
+    padding: 14px max(24px, env(safe-area-inset-left, 0px));
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0 0 auto;
+    height: env(safe-area-inset-top, 0px);
+    z-index: 101;
+    background: var(--header-bg);
+  }
+
+  .header-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-mark {
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .logo-mark svg { display: block; }
+
+  .logo-text {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: -0.3px;
+  }
+
+  .logo-text span { color: var(--accent); }
+
+  .theme-btn {
+    margin-left: auto;
+    background: none;
+    border: 1px solid var(--divider);
+    border-radius: 8px;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: var(--fg-3);
+    font-size: 14px;
+    transition: background 0.15s;
+  }
+  .theme-btn:hover { background: var(--box-bg); }
+
+  .article-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 0 80px;
+  }
+
+  .article-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .eyebrow-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    padding: 3px 10px;
+    border-radius: 100px;
+  }
+
+  .eyebrow-dot { color: var(--fg-3); font-size: 13px; }
+  .eyebrow-date { font-size: 12px; color: var(--fg-3); }
+
+  .article-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--fg);
+    letter-spacing: -0.5px;
+    text-wrap: balance;
+    margin-bottom: 20px;
+  }
+
+  .article-lead {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--fg-2);
+    border-left: 3px solid var(--accent);
+    padding-left: 18px;
+    margin-bottom: 36px;
+  }
+
+  .divider-accent {
+    height: 1px;
+    background: var(--divider);
+    margin-bottom: 40px;
+  }
+
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--box-border);
+    border-radius: 14px;
+    padding: 24px 28px;
+    margin-bottom: 48px;
+    box-shadow: var(--shadow);
+  }
+
+  .toc-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--fg-3);
+    margin-bottom: 14px;
+  }
+
+  .toc-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 24px;
+  }
+
+  @media (max-width: 560px) {
+    .toc-list { grid-template-columns: 1fr; }
+  }
+
+  .toc-list li a {
+    font-size: 13.5px;
+    color: var(--accent);
+    text-decoration: none;
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    transition: opacity 0.15s;
+  }
+
+  .toc-list li a:hover { opacity: 0.75; }
+
+  .toc-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--fg-3);
+    min-width: 18px;
+  }
+
+  .section {
+    margin-bottom: 52px;
+    scroll-margin-top: 80px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+
+  .section-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    border-radius: 6px;
+    padding: 3px 8px;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: clamp(20px, 3vw, 26px);
+    font-weight: 700;
+    color: var(--fg);
+    line-height: 1.2;
+  }
+
+  .section p { color: var(--fg-2); margin-bottom: 14px; }
+  .section p:last-child { margin-bottom: 0; }
+  .section ul, .section ol { color: var(--fg-2); padding-left: 20px; margin-bottom: 14px; }
+  .section li { margin-bottom: 6px; }
+
+  .callout {
+    background: var(--highlight-bg);
+    border-left: 3px solid var(--highlight-border);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 18px 0;
+    color: var(--fg-2);
+    font-size: 15px;
+  }
+
+  .callout strong { color: var(--fg); }
+
+  .info-box {
+    background: var(--box-bg);
+    border: 1px solid var(--box-border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: 14.5px;
+    color: var(--fg-2);
+  }
+
+  .info-box strong { color: var(--fg); display: block; margin-bottom: 4px; }
+
+  /* Tabla de cookies */
+  .cookie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 14px;
+  }
+
+  .cookie-table th {
+    background: var(--box-bg);
+    border: 1px solid var(--box-border);
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 600;
+    color: var(--fg);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .cookie-table td {
+    border: 1px solid var(--box-border);
+    padding: 10px 14px;
+    color: var(--fg-2);
+    vertical-align: top;
+  }
+
+  .cookie-table tr:nth-child(even) td {
+    background: var(--box-bg);
+  }
+
+  @media (max-width: 600px) {
+    .cookie-table, .cookie-table thead, .cookie-table tbody, .cookie-table th, .cookie-table td, .cookie-table tr {
+      display: block;
+    }
+    .cookie-table thead { display: none; }
+    .cookie-table td {
+      border: none;
+      border-bottom: 1px solid var(--divider);
+      padding: 8px 12px;
+    }
+    .cookie-table tr {
+      border: 1px solid var(--box-border);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+    .cookie-table td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      color: var(--fg);
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 100px;
+    letter-spacing: 0.3px;
+  }
+
+  .badge-required {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+  }
+
+  .badge-analytics {
+    background: var(--accent-dim);
+    color: var(--accent);
+    border: 1px solid var(--accent-border);
+  }
+
+  .badge-ads {
+    background: #fce7f3;
+    color: #9d174d;
+    border: 1px solid #f9a8d4;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .badge-required {
+      background: #422006;
+      color: #fcd34d;
+      border-color: #78350f;
+    }
+    :root:not([data-theme="light"]) .badge-ads {
+      background: #3b0764;
+      color: #e879f9;
+      border-color: #6b21a8;
+    }
+  }
+
+  :root[data-theme="dark"] .badge-required {
+    background: #422006;
+    color: #fcd34d;
+    border-color: #78350f;
+  }
+
+  :root[data-theme="dark"] .badge-ads {
+    background: #3b0764;
+    color: #e879f9;
+    border-color: #6b21a8;
+  }
+
+  .section-divider {
+    height: 1px;
+    background: var(--divider);
+    margin: 52px 0;
+  }
+
+  .article-footer {
+    background: var(--surface);
+    border: 1px solid var(--box-border);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-top: 60px;
+  }
+
+  .footer-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--fg);
+    margin-bottom: 10px;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    color: var(--fg-2);
+  }
+
+  .footer-contact a { color: var(--accent); text-decoration: none; }
+  .footer-contact a:hover { text-decoration: underline; }
+
+  .footer-note {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--divider);
+    font-size: 12px;
+    color: var(--fg-3);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo-mark">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M9 2C9 2 4 5.5 4 10a5 5 0 0010 0C14 5.5 9 2 9 2z" fill="white" opacity="0.9"/>
+        <path d="M9 6v4M7 8h4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="logo-text">Healt<span>nex</span></div>
+    <button class="theme-btn" onclick="toggleTheme()" aria-label="Cambiar tema">☀︎</button>
+  </div>
+</header>
+
+<main>
+  <div class="article-wrap">
+
+    <div class="article-eyebrow">
+      <span class="eyebrow-tag">Legal</span>
+      <span class="eyebrow-dot">·</span>
+      <span class="eyebrow-date">Vigente desde el 1 de noviembre de 2026</span>
+    </div>
+
+    <h1 class="article-title">Política de Cookies</h1>
+
+    <p class="article-lead">
+      Esta política explica qué son las cookies y tecnologías similares, cuáles usa Healtnex, para qué las usa y cómo puedes controlarlas.
+    </p>
+
+    <div class="divider-accent"></div>
+
+    <!-- TOC -->
+    <nav class="toc" aria-label="Contenido">
+      <p class="toc-title">Contenido</p>
+      <ol class="toc-list">
+        <li><a href="#s1"><span class="toc-num">01</span> ¿Qué son las cookies?</a></li>
+        <li><a href="#s2"><span class="toc-num">02</span> ¿Healtnex usa cookies?</a></li>
+        <li><a href="#s3"><span class="toc-num">03</span> Tecnologías de almacenamiento</a></li>
+        <li><a href="#s4"><span class="toc-num">04</span> Cookies de terceros</a></li>
+        <li><a href="#s5"><span class="toc-num">05</span> Firebase y analítica</a></li>
+        <li><a href="#s6"><span class="toc-num">06</span> Publicidad (AdMob)</a></li>
+        <li><a href="#s7"><span class="toc-num">07</span> Tabla de tecnologías usadas</a></li>
+        <li><a href="#s8"><span class="toc-num">08</span> Cómo controlar el seguimiento</a></li>
+        <li><a href="#s9"><span class="toc-num">09</span> Cambios a esta política</a></li>
+        <li><a href="#s10"><span class="toc-num">10</span> Contacto</a></li>
+      </ol>
+    </nav>
+
+    <!-- 1 -->
+    <section class="section" id="s1">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2 class="section-title">¿Qué son las cookies?</h2>
+      </div>
+      <p>Las cookies son pequeños archivos de texto que los sitios web y aplicaciones almacenan en tu dispositivo cuando los visitas o usas. Se usan para recordar preferencias, mantener sesiones activas, analizar el uso y personalizar la experiencia.</p>
+      <p>Además de las cookies tradicionales (propias de entornos web), las aplicaciones móviles como Healtnex utilizan tecnologías equivalentes como el almacenamiento local del dispositivo (<em>AsyncStorage</em>), identificadores de dispositivo y SDKs de terceros que cumplen funciones similares.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 2 -->
+    <section class="section" id="s2">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">¿Healtnex usa cookies?</h2>
+      </div>
+      <p>Healtnex es una aplicación móvil nativa para Android, por lo que no utiliza cookies de navegador en el sentido tradicional. Sin embargo, usa tecnologías equivalentes con las mismas finalidades:</p>
+      <ul>
+        <li><strong>Almacenamiento local (AsyncStorage):</strong> para guardar la sesión del usuario y sus preferencias sin necesidad de volver a iniciar sesión.</li>
+        <li><strong>Tokens JWT:</strong> para autenticar de forma segura las solicitudes al servidor.</li>
+        <li><strong>SDKs de terceros:</strong> Firebase Analytics y Google AdMob, que pueden recopilar identificadores de dispositivo y datos de uso.</li>
+      </ul>
+      <div class="callout">
+        Al usar Healtnex, aceptas el uso de estas tecnologías conforme a esta Política y a nuestra <a href="/healtnex/privacidad" style="color:var(--accent)">Política de Privacidad</a>.
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 3 -->
+    <section class="section" id="s3">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Tecnologías de Almacenamiento Propias</h2>
+      </div>
+      <p>CGB Technologies utiliza las siguientes tecnologías de almacenamiento propio en Healtnex:</p>
+
+      <div class="info-box">
+        <strong>AsyncStorage — Sesión y preferencias</strong>
+        Guarda tu token de sesión (JWT) localmente en el dispositivo para que no tengas que iniciar sesión cada vez que abres la app. También almacena preferencias de la interfaz como el módulo activo o el estado de notificaciones. Esta información permanece en tu dispositivo y no se comparte con terceros.
+      </div>
+
+      <div class="info-box">
+        <strong>Token JWT — Autenticación</strong>
+        Cuando inicias sesión, el servidor genera un token JWT que se almacena en tu dispositivo. Este token se envía en cada solicitud al servidor para verificar tu identidad de forma segura. Expira automáticamente tras un período de inactividad.
+      </div>
+
+      <p>Estas tecnologías son <strong>estrictamente necesarias</strong> para el funcionamiento de la App. Sin ellas, no es posible mantener la sesión activa ni usar Healtnex correctamente.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 4 -->
+    <section class="section" id="s4">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Cookies y SDKs de Terceros</h2>
+      </div>
+      <p>Healtnex integra servicios de terceros que pueden recopilar datos de forma independiente bajo sus propias políticas de privacidad. CGB Technologies no controla el comportamiento de estos servicios ni los datos que recopilan directamente.</p>
+      <p>Los servicios de terceros integrados en Healtnex son:</p>
+      <ul>
+        <li><strong>Google Firebase</strong> (Analytics, Cloud Messaging, Admin SDK)</li>
+        <li><strong>Google AdMob</strong> (publicidad recompensada)</li>
+        <li><strong>Resend</strong> (envío de correos transaccionales)</li>
+        <li><strong>Google Gemini API</strong> (asistente de inteligencia artificial)</li>
+      </ul>
+      <p>Puedes consultar las políticas de privacidad de estos servicios en sus sitios web oficiales.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 5 -->
+    <section class="section" id="s5">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Firebase y Analítica</h2>
+      </div>
+      <p>Healtnex utiliza <strong>Firebase Analytics</strong> de Google para comprender cómo los usuarios interactúan con la App. Esta herramienta recopila datos de uso de forma agregada y anonimizada, incluyendo:</p>
+      <ul>
+        <li>Pantallas visitadas y tiempo de uso por módulo.</li>
+        <li>Eventos personalizados (registro de actividades, uso de funciones).</li>
+        <li>Información técnica del dispositivo (modelo, versión de Android, idioma).</li>
+        <li>Datos de instalación y actualizaciones de la App.</li>
+      </ul>
+      <p>Firebase también usa <strong>Cloud Messaging (FCM)</strong> para enviar notificaciones push al dispositivo. Para ello almacena un token de dispositivo FCM que identifica tu instalación de la App (no tu identidad personal).</p>
+      <div class="callout">
+        Firebase Analytics puede usar el identificador de publicidad de Android (GAID) si está disponible en tu dispositivo. Puedes resetear o deshabilitar este identificador desde <strong>Ajustes → Google → Anuncios</strong> en tu dispositivo Android.
+      </div>
+      <p>Política de privacidad de Google/Firebase: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--accent)">policies.google.com/privacy</a></p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 6 -->
+    <section class="section" id="s6">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Publicidad — Google AdMob</h2>
+      </div>
+      <p>Los usuarios del Plan Free pueden ver anuncios recompensados a través de <strong>Google AdMob</strong>. AdMob puede recopilar los siguientes datos para mostrar publicidad relevante:</p>
+      <ul>
+        <li>Identificador de publicidad de Android (GAID).</li>
+        <li>Dirección IP aproximada (para geolocalización general).</li>
+        <li>Información del dispositivo (modelo, versión de SO).</li>
+        <li>Datos de interacción con los anuncios.</li>
+      </ul>
+      <div class="callout">
+        <strong>Healtnex no comparte datos de salud con AdMob.</strong> La información de tus registros de salud, actividad física o bienestar no se usa para personalizar la publicidad mostrada en la App.
+      </div>
+      <p>AdMob puede usar estos datos para mostrarte anuncios personalizados en función de tus intereses según el historial de publicidad de Google. Si prefieres no recibir anuncios personalizados:</p>
+      <ul>
+        <li>Ve a <strong>Ajustes → Google → Anuncios</strong> en tu dispositivo Android.</li>
+        <li>Activa <strong>«Inhabilitar personalización de anuncios»</strong>.</li>
+      </ul>
+      <p>Política de privacidad de AdMob: <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener" style="color:var(--accent)">support.google.com/admob</a></p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 7 -->
+    <section class="section" id="s7">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Tabla de Tecnologías Usadas</h2>
+      </div>
+      <p>Resumen de todas las tecnologías de seguimiento y almacenamiento utilizadas en Healtnex:</p>
+
+      <table class="cookie-table">
+        <thead>
+          <tr>
+            <th>Tecnología</th>
+            <th>Proveedor</th>
+            <th>Finalidad</th>
+            <th>Tipo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Tecnología">AsyncStorage (JWT)</td>
+            <td data-label="Proveedor">CGB Technologies</td>
+            <td data-label="Finalidad">Mantener sesión iniciada</td>
+            <td data-label="Tipo"><span class="badge badge-required">Necesaria</span></td>
+          </tr>
+          <tr>
+            <td data-label="Tecnología">AsyncStorage (prefs)</td>
+            <td data-label="Proveedor">CGB Technologies</td>
+            <td data-label="Finalidad">Guardar preferencias de UI</td>
+            <td data-label="Tipo"><span class="badge badge-required">Necesaria</span></td>
+          </tr>
+          <tr>
+            <td data-label="Tecnología">Firebase Analytics</td>
+            <td data-label="Proveedor">Google LLC</td>
+            <td data-label="Finalidad">Analítica de uso de la App</td>
+            <td data-label="Tipo"><span class="badge badge-analytics">Analítica</span></td>
+          </tr>
+          <tr>
+            <td data-label="Tecnología">Firebase Cloud Messaging</td>
+            <td data-label="Proveedor">Google LLC</td>
+            <td data-label="Finalidad">Notificaciones push</td>
+            <td data-label="Tipo"><span class="badge badge-required">Necesaria</span></td>
+          </tr>
+          <tr>
+            <td data-label="Tecnología">Google AdMob SDK</td>
+            <td data-label="Proveedor">Google LLC</td>
+            <td data-label="Finalidad">Anuncios recompensados (Plan Free)</td>
+            <td data-label="Tipo"><span class="badge badge-ads">Publicidad</span></td>
+          </tr>
+          <tr>
+            <td data-label="Tecnología">GAID (ID de publicidad)</td>
+            <td data-label="Proveedor">Google LLC</td>
+            <td data-label="Finalidad">Personalización de anuncios</td>
+            <td data-label="Tipo"><span class="badge badge-ads">Publicidad</span></td>
+          </tr>
+          <tr>
+            <td data-label="Tecnología">Gemini API</td>
+            <td data-label="Proveedor">Google LLC</td>
+            <td data-label="Finalidad">Respuestas del asistente IA</td>
+            <td data-label="Tipo"><span class="badge badge-required">Necesaria</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 8 -->
+    <section class="section" id="s8">
+      <div class="section-header">
+        <span class="section-num">08</span>
+        <h2 class="section-title">Cómo Controlar el Seguimiento</h2>
+      </div>
+      <p>Tienes varias opciones para controlar el uso de tecnologías de seguimiento en Healtnex:</p>
+
+      <div class="info-box">
+        <strong>Deshabilitar la personalización de anuncios</strong>
+        Ve a Ajustes → Google → Anuncios en tu Android y activa «Inhabilitar personalización de anuncios». Seguirás viendo anuncios pero no serán personalizados.
+      </div>
+
+      <div class="info-box">
+        <strong>Resetear el identificador de publicidad (GAID)</strong>
+        En la misma pantalla de Ajustes → Google → Anuncios puedes resetear tu ID de publicidad, lo que desvincula tu historial de anuncios previo.
+      </div>
+
+      <div class="info-box">
+        <strong>Desactivar notificaciones push</strong>
+        Ve a Ajustes → Aplicaciones → Healtnex → Notificaciones y desactívalas. Esto no afecta el token FCM almacenado, pero no recibirás notificaciones.
+      </div>
+
+      <div class="info-box">
+        <strong>Eliminar tu cuenta</strong>
+        Desde la configuración de la App puedes eliminar tu cuenta permanentemente. Esto borra todos tus datos personales y el token FCM de nuestros servidores.
+      </div>
+
+      <div class="callout">
+        Las tecnologías <strong>estrictamente necesarias</strong> (AsyncStorage para sesión y JWT) no pueden desactivarse sin afectar el funcionamiento básico de Healtnex. Si las eliminas manualmente desde los ajustes del sistema, deberás iniciar sesión nuevamente.
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 9 -->
+    <section class="section" id="s9">
+      <div class="section-header">
+        <span class="section-num">09</span>
+        <h2 class="section-title">Cambios a Esta Política</h2>
+      </div>
+      <p>CGB Technologies puede actualizar esta Política de Cookies cuando integre nuevos servicios de terceros, cambie sus prácticas de analítica o publicidad, o lo exijan cambios legales.</p>
+      <p>Te notificaremos de cambios significativos mediante notificación en la App y actualizando la fecha «Vigente desde» en esta página. El uso continuado de Healtnex tras la entrada en vigor de los cambios implica su aceptación.</p>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <!-- 10 -->
+    <section class="section" id="s10">
+      <div class="section-header">
+        <span class="section-num">10</span>
+        <h2 class="section-title">Contacto</h2>
+      </div>
+      <p>Para consultas sobre esta Política de Cookies o sobre el uso de tecnologías de seguimiento en Healtnex:</p>
+      <div class="info-box">
+        <strong>CGB Technologies SpA</strong>
+        <span>📧 <a href="mailto:legal@cgbtechnologies.com" style="color:var(--accent)">legal@cgbtechnologies.com</a></span>
+        <span>🌐 <a href="https://cgbtechnologies.com" style="color:var(--accent)">cgbtechnologies.com</a></span>
+        <span>📍 Santiago, Chile</span>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="article-footer">
+      <p class="footer-title">Healtnex · CGB Technologies SpA</p>
+      <div class="footer-contact">
+        <span>Consultas legales: <a href="mailto:legal@cgbtechnologies.com">legal@cgbtechnologies.com</a></span>
+        <span>Soporte: <a href="mailto:soporte@cgbtechnologies.com">soporte@cgbtechnologies.com</a></span>
+      </div>
+      <p class="footer-note">
+        © 2026 CGB Technologies SpA · Santiago, Chile ·
+        <a href="/healtnex/privacidad" style="color:var(--accent);text-decoration:none">Política de Privacidad</a> ·
+        <a href="/healtnex/terminos" style="color:var(--accent);text-decoration:none">Términos de Servicio</a>
+      </p>
+    </div>
+
+  </div>
+</main>
+
+<script>
+  function toggleTheme() {
+    const root = document.documentElement;
+    const current = root.getAttribute('data-theme');
+    if (current === 'dark') {
+      root.setAttribute('data-theme', 'light');
+    } else if (current === 'light') {
+      root.removeAttribute('data-theme');
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      root.setAttribute('data-theme', prefersDark ? 'light' : 'dark');
+    }
+  }
+</script>
+
+</body>
+</html>
