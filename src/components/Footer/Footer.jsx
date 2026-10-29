@@ -40,14 +40,14 @@ const Footer = () => {
         </div>
 
         {/* Columna 3: Legal */}
-        <div className="footer-col">
-          <h4>Legal</h4>
-          <ul>
-            <li><Link to="/terminos-de-servicio">Términos de Servicio</Link></li>
-            <li><Link to="/politica-de-privacidad">Política de Privacidad</Link></li>
-            <li><Link to="/politica-de-cookies">Política de Cookies</Link></li>
-          </ul>
-        </div>
+<div className="footer-col">
+  <h4>Legal</h4>
+  <ul>
+    <li><a href="/healtnex/terminos.html">Términos de Servicio</a></li>
+    <li><a href="/healtnex/privacidad.html">Política de Privacidad</a></li>
+    <li><a href="/healtnex/cookies.html">Política de Cookies</a></li>
+  </ul>
+</div>
 
         {/* Columna 4: Contacto y redes */}
         <div className="footer-col">

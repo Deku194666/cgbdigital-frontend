@@ -77,7 +77,7 @@ const AdminDashboard = () => {
           {!collapsed && (
             <button className="admin-logo" onClick={() => setSection("resumen")}>
               <span className="admin-logo-badge">CGB</span>
-              <span className="admin-logo-text">Digital</span>
+              <span className="admin-logo-text">Technologies</span>
             </button>
           )}
           <button
