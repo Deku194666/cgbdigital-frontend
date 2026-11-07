@@ -1,33 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="claude:viewport-fit-sides" content="cover">
+  <title>Política de Privacidad · Healtnex</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&display=swap">
 
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --fg: #0f1623;
+      --fg-2: #3d4a5c;
+      --fg-3: #6b7a8f;
+      --accent: #1a7ed4;
+      --accent-dim: #e8f3fc;
+      --accent-border: #b3d4f0;
+      --highlight-bg: #eaf4fb;
+      --highlight-border: #1a7ed4;
+      --divider: #e4e8ee;
+      --box-bg: #f2f5f9;
+      --box-border: #dde3ec;
+      --header-bg: rgba(247,248,250,0.92);
+      --shadow: 0 1px 3px rgba(15,22,35,0.07), 0 4px 16px rgba(15,22,35,0.04);
+    }
 
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0d1117;
+        --surface: #161c26;
+        --fg: #e8edf5;
+        --fg-2: #a8b4c4;
+        --fg-3: #6b7a8f;
+        --accent: #4a9fe8;
+        --accent-dim: #1a2d3f;
+        --accent-border: #2d5a7a;
+        --highlight-bg: #1a2d3f;
+        --highlight-border: #4a9fe8;
+        --divider: #222b38;
+        --box-bg: #1a2233;
+        --box-border: #2a3548;
+        --header-bg: rgba(13,17,23,0.92);
+        --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
+        color-scheme: dark;
+      }
+    }
 
-
-<meta name="claude:viewport-fit-sides" content="cover">
-<title>Política de Privacidad · Healtnex</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,400&display=swap">
-
-<style>
-  /* Layout: single-column article with sticky nav header, max 720px content width */
-  :root {
-    --bg: #f7f8fa;
-    --surface: #ffffff;
-    --fg: #0f1623;
-    --fg-2: #3d4a5c;
-    --fg-3: #6b7a8f;
-    --accent: #1a7ed4;
-    --accent-dim: #e8f3fc;
-    --accent-border: #b3d4f0;
-    --highlight-bg: #eaf4fb;
-    --highlight-border: #1a7ed4;
-    --divider: #e4e8ee;
-    --box-bg: #f2f5f9;
-    --box-border: #dde3ec;
-    --header-bg: rgba(247,248,250,0.92);
-    --shadow: 0 1px 3px rgba(15,22,35,0.07), 0 4px 16px rgba(15,22,35,0.04);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
+    :root[data-theme="dark"] {
       --bg: #0d1117;
       --surface: #161c26;
       --fg: #e8edf5;
@@ -45,328 +65,298 @@
       --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
       color-scheme: dark;
     }
-  }
 
-  :root[data-theme="dark"] {
-    --bg: #0d1117;
-    --surface: #161c26;
-    --fg: #e8edf5;
-    --fg-2: #a8b4c4;
-    --fg-3: #6b7a8f;
-    --accent: #4a9fe8;
-    --accent-dim: #1a2d3f;
-    --accent-border: #2d5a7a;
-    --highlight-bg: #1a2d3f;
-    --highlight-border: #4a9fe8;
-    --divider: #222b38;
-    --box-bg: #1a2233;
-    --box-border: #2a3548;
-    --header-bg: rgba(13,17,23,0.92);
-    --shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.2);
-    color-scheme: dark;
-  }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding-left: max(16px, env(safe-area-inset-left, 0px));
+      padding-right: max(16px, env(safe-area-inset-right, 0px));
+      padding-block: 0;
+    }
 
-  body {
-    background: var(--bg);
-    color: var(--fg);
-    font-family: 'Inter', system-ui, sans-serif;
-    font-size: 16px;
-    line-height: 1.7;
-    padding-left: max(16px, env(safe-area-inset-left, 0px));
-    padding-right: max(16px, env(safe-area-inset-right, 0px));
-    padding-block: 0;
-  }
+    .site-header {
+      position: sticky;
+      top: env(safe-area-inset-top, 0px);
+      z-index: 100;
+      background: var(--header-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--divider);
+      padding: 14px max(24px, env(safe-area-inset-left, 0px));
+    }
 
-  /* Header */
-  .site-header {
-    position: sticky;
-    top: env(safe-area-inset-top, 0px);
-    z-index: 100;
-    background: var(--header-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--divider);
-    padding: 14px max(24px, env(safe-area-inset-left, 0px));
-  }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0 0 auto;
+      height: env(safe-area-inset-top, 0px);
+      z-index: 101;
+      background: var(--header-bg);
+    }
 
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0 0 auto;
-    height: env(safe-area-inset-top, 0px);
-    z-index: 101;
-    background: var(--header-bg);
-  }
+    .header-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-  .header-inner {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
 
-  .logo-mark {
-    width: 32px;
-    height: 32px;
-    background: var(--accent);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
+    .logo-mark svg { display: block; }
 
-  .logo-mark svg { display: block; }
+    .logo-text {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--fg);
+      letter-spacing: -0.3px;
+    }
 
-  .logo-text {
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--fg);
-    letter-spacing: -0.3px;
-  }
+    .logo-text span { color: var(--accent); }
 
-  .logo-text span {
-    color: var(--accent);
-  }
+    .header-badge {
+      margin-left: auto;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--fg-3);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
 
-  .header-badge {
-    margin-left: auto;
-    font-size: 11px;
-    font-weight: 600;
-    color: var(--fg-3);
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-  }
+    .article-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 0 80px;
+    }
 
-  /* Article */
-  .article-wrap {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 48px 0 80px;
-  }
+    .article-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
 
-  .article-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 16px;
-  }
+    .eyebrow-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid var(--accent-border);
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
 
-  .eyebrow-tag {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    color: var(--accent);
-    background: var(--accent-dim);
-    border: 1px solid var(--accent-border);
-    padding: 3px 10px;
-    border-radius: 100px;
-  }
+    .eyebrow-dot { color: var(--fg-3); font-size: 13px; }
 
-  .eyebrow-dot { color: var(--fg-3); font-size: 13px; }
+    .eyebrow-date { font-size: 12px; color: var(--fg-3); }
 
-  .eyebrow-date {
-    font-size: 12px;
-    color: var(--fg-3);
-  }
+    .article-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--fg);
+      letter-spacing: -0.5px;
+      text-wrap: balance;
+      margin-bottom: 20px;
+    }
 
-  .article-title {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 700;
-    line-height: 1.15;
-    color: var(--fg);
-    letter-spacing: -0.5px;
-    text-wrap: balance;
-    margin-bottom: 20px;
-  }
+    .article-lead {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--fg-2);
+      border-left: 3px solid var(--accent);
+      padding-left: 18px;
+      margin-bottom: 36px;
+    }
 
-  .article-lead {
-    font-size: 17px;
-    line-height: 1.7;
-    color: var(--fg-2);
-    border-left: 3px solid var(--accent);
-    padding-left: 18px;
-    margin-bottom: 36px;
-  }
+    .divider-accent {
+      height: 1px;
+      background: var(--divider);
+      margin-bottom: 40px;
+    }
 
-  .divider-accent {
-    height: 1px;
-    background: var(--divider);
-    margin-bottom: 40px;
-  }
+    .toc {
+      background: var(--box-bg);
+      border: 1px solid var(--box-border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+    }
 
-  /* TOC */
-  .toc {
-    background: var(--box-bg);
-    border: 1px solid var(--box-border);
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-bottom: 48px;
-  }
+    .toc-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--fg-3);
+      margin-bottom: 14px;
+    }
 
-  .toc-title {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    color: var(--fg-3);
-    margin-bottom: 14px;
-  }
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 6px 24px;
+    }
 
-  .toc-list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 6px 24px;
-  }
+    .toc-list li a {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
 
-  .toc-list li a {
-    font-size: 13px;
-    color: var(--accent);
-    text-decoration: none;
-    display: flex;
-    align-items: baseline;
-    gap: 6px;
-  }
+    .toc-list li a:hover { text-decoration: underline; }
 
-  .toc-list li a:hover { text-decoration: underline; }
+    .toc-num {
+      font-size: 11px;
+      font-variant-numeric: tabular-nums;
+      color: var(--fg-3);
+      min-width: 18px;
+    }
 
-  .toc-num {
-    font-size: 11px;
-    font-variant-numeric: tabular-nums;
-    color: var(--fg-3);
-    min-width: 18px;
-  }
+    .section { margin-bottom: 40px; }
 
-  /* Sections */
-  .section { margin-bottom: 40px; }
+    .section-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--fg);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--divider);
+      text-wrap: balance;
+      scroll-margin-top: 80px;
+    }
 
-  .section-title {
-    font-size: 19px;
-    font-weight: 700;
-    color: var(--fg);
-    margin-bottom: 14px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--divider);
-    text-wrap: balance;
-    scroll-margin-top: 80px;
-  }
+    .sub-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.2px;
+      margin: 18px 0 8px;
+    }
 
-  .sub-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 0.2px;
-    margin: 18px 0 8px;
-  }
+    p {
+      font-size: 15px;
+      color: var(--fg-2);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
 
-  p {
-    font-size: 15px;
-    color: var(--fg-2);
-    line-height: 1.75;
-    margin-bottom: 14px;
-  }
+    p strong { color: var(--fg); font-weight: 600; }
 
-  p strong { color: var(--fg); font-weight: 600; }
+    .list-items { margin-bottom: 14px; }
 
-  .list-items { margin-bottom: 14px; }
+    .list-items li {
+      font-size: 15px;
+      color: var(--fg-2);
+      line-height: 1.7;
+      padding: 3px 0 3px 18px;
+      position: relative;
+      list-style: none;
+    }
 
-  .list-items li {
-    font-size: 15px;
-    color: var(--fg-2);
-    line-height: 1.7;
-    padding: 3px 0 3px 18px;
-    position: relative;
-    list-style: none;
-  }
+    .list-items li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      color: var(--accent);
+      font-weight: 700;
+    }
 
-  .list-items li::before {
-    content: "•";
-    position: absolute;
-    left: 4px;
-    color: var(--accent);
-    font-weight: 700;
-  }
+    .list-items li strong { color: var(--fg); font-weight: 600; }
 
-  .list-items li strong { color: var(--fg); font-weight: 600; }
+    .info-box {
+      background: var(--box-bg);
+      border: 1px solid var(--box-border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
 
-  /* Info box */
-  .info-box {
-    background: var(--box-bg);
-    border: 1px solid var(--box-border);
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-bottom: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+    .info-row {
+      font-size: 14px;
+      color: var(--fg-2);
+      line-height: 1.5;
+    }
 
-  .info-row {
-    font-size: 14px;
-    color: var(--fg-2);
-    line-height: 1.5;
-  }
+    .info-row strong { color: var(--fg); font-weight: 600; }
 
-  .info-row strong { color: var(--fg); font-weight: 600; }
+    .highlight-box {
+      background: var(--highlight-bg);
+      border-left: 4px solid var(--highlight-border);
+      border-radius: 4px;
+      padding: 14px 18px;
+      margin: 8px 0 16px;
+    }
 
-  /* Highlight box */
-  .highlight-box {
-    background: var(--highlight-bg);
-    border-left: 4px solid var(--highlight-border);
-    border-radius: 4px;
-    padding: 14px 18px;
-    margin: 8px 0 16px;
-  }
+    .highlight-box p {
+      font-size: 14px;
+      color: var(--fg-2);
+      font-style: italic;
+      line-height: 1.6;
+      margin: 0;
+    }
 
-  .highlight-box p {
-    font-size: 14px;
-    color: var(--fg-2);
-    font-style: italic;
-    line-height: 1.6;
-    margin: 0;
-  }
+    .article-footer {
+      margin-top: 56px;
+      padding-top: 24px;
+      border-top: 1px solid var(--divider);
+      text-align: center;
+    }
 
-  /* Footer */
-  .article-footer {
-    margin-top: 56px;
-    padding-top: 24px;
-    border-top: 1px solid var(--divider);
-    text-align: center;
-  }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
 
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 16px;
-    flex-wrap: wrap;
-  }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-  .footer-links a {
-    font-size: 13px;
-    color: var(--accent);
-    text-decoration: none;
-  }
+    .footer-links a:hover { text-decoration: underline; }
 
-  .footer-links a:hover { text-decoration: underline; }
+    .footer-copy {
+      font-size: 13px;
+      color: var(--fg-3);
+      line-height: 1.6;
+    }
 
-  .footer-copy {
-    font-size: 13px;
-    color: var(--fg-3);
-    line-height: 1.6;
-  }
-
-  @media (max-width: 600px) {
-    .article-wrap { padding: 32px 0 60px; }
-    .toc-list { grid-template-columns: 1fr; }
-  }
-</style>
+    @media (max-width: 600px) {
+      .article-wrap { padding: 32px 0 60px; }
+      .toc-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
 
 <!-- Header -->
 <header class="site-header">
@@ -388,7 +378,7 @@
     <div class="article-eyebrow">
       <span class="eyebrow-tag">Privacidad</span>
       <span class="eyebrow-dot">·</span>
-      <span class="eyebrow-date">Septiembre 2026</span>
+      <span class="eyebrow-date">Noviembre 2026</span>
     </div>
 
     <h1 class="article-title">Política de Privacidad</h1>
@@ -411,13 +401,14 @@
         <li><a href="#s6"><span class="toc-num">06</span> Almacenamiento y Seguridad</a></li>
         <li><a href="#s7"><span class="toc-num">07</span> Compartir con Terceros</a></li>
         <li><a href="#s8"><span class="toc-num">08</span> Datos Financieros Personales</a></li>
-        <li><a href="#s9"><span class="toc-num">09</span> Tus Derechos sobre tus Datos</a></li>
-        <li><a href="#s10"><span class="toc-num">10</span> Eliminación de Cuenta</a></li>
-        <li><a href="#s11"><span class="toc-num">11</span> Público Objetivo y Restricciones</a></li>
-        <li><a href="#s12"><span class="toc-num">12</span> Retención de Datos</a></li>
-        <li><a href="#s13"><span class="toc-num">13</span> Cambios en esta Política</a></li>
-        <li><a href="#s14"><span class="toc-num">14</span> Legislación Aplicable</a></li>
-        <li><a href="#s15"><span class="toc-num">15</span> Contacto</a></li>
+        <li><a href="#s9"><span class="toc-num">09</span> Pagos y Suscripción Premium</a></li>
+        <li><a href="#s10"><span class="toc-num">10</span> Tus Derechos sobre tus Datos</a></li>
+        <li><a href="#s11"><span class="toc-num">11</span> Eliminación de Cuenta</a></li>
+        <li><a href="#s12"><span class="toc-num">12</span> Público Objetivo y Restricciones</a></li>
+        <li><a href="#s13"><span class="toc-num">13</span> Retención de Datos</a></li>
+        <li><a href="#s14"><span class="toc-num">14</span> Cambios en esta Política</a></li>
+        <li><a href="#s15"><span class="toc-num">15</span> Legislación Aplicable</a></li>
+        <li><a href="#s16"><span class="toc-num">16</span> Contacto</a></li>
       </ul>
     </nav>
 
@@ -450,17 +441,21 @@
       <div class="sub-title">Datos de salud y bienestar</div>
       <ul class="list-items">
         <li>Registros de alimentación y calorías</li>
-        <li>Actividad física y ejercicios</li>
+        <li>Actividad física: ejercicios, sesiones de running y caminata (distancia, duración, calorías estimadas)</li>
         <li>Hidratación diaria</li>
-        <li>Horas de sueño</li>
+        <li>Horas y calidad de sueño</li>
         <li>Estado emocional y bienestar psicológico</li>
-        <li>Signos vitales ingresados voluntariamente</li>
+        <li>Signos vitales ingresados voluntariamente (presión arterial, frecuencia cardíaca, temperatura, etc.)</li>
+        <li>Peso corporal e IMC (historial de registros)</li>
+        <li>Medicamentos: nombre, dosis, horario de toma, fecha de inicio y término</li>
+        <li>Ciclo menstrual: fechas de inicio y término, duración estimada</li>
+        <li>Rutinas de cuidado de la piel (skincare)</li>
       </ul>
 
       <div class="sub-title">Datos de organización personal</div>
       <ul class="list-items">
         <li>Hábitos, tareas y eventos de agenda</li>
-        <li>Registros de ingresos y gastos (agenda económica)</li>
+        <li>Registros de ingresos y gastos (agenda económica personal)</li>
       </ul>
 
       <div class="sub-title">Datos técnicos</div>
@@ -478,6 +473,7 @@
       <ul class="list-items">
         <li>Proveer y personalizar las funcionalidades de la App según tus datos.</li>
         <li>Mostrar tu progreso, estadísticas y evolución de hábitos.</li>
+        <li>Generar respuestas personalizadas a través del asistente de inteligencia artificial integrado en la App.</li>
         <li>Enviar notificaciones relevantes dentro de la App.</li>
         <li>Mejorar el rendimiento, funcionalidades y experiencia de Healtnex.</li>
         <li>Detectar y prevenir usos fraudulentos o no autorizados.</li>
@@ -503,12 +499,18 @@
     <!-- 5 -->
     <section class="section" id="s5">
       <h2 class="section-title">5. Uso de Datos para Inteligencia Artificial</h2>
-      <p>Healtnex puede utilizar datos de forma <strong>anonimizada y agregada</strong> para entrenar algoritmos, mejorar recomendaciones personalizadas y desarrollar nuevas funcionalidades. Este uso implica que:</p>
+
+      <div class="sub-title">Asistente IA en tiempo real</div>
+      <p>Healtnex cuenta con un asistente de inteligencia artificial que utiliza <strong>tus propios datos de salud y bienestar</strong> para responderte de forma personalizada. Esto incluye tu historial de alimentación, actividad física, medicamentos, peso, ciclo menstrual y otros datos que hayas registrado en la App. Estos datos se envían de forma segura al proveedor de IA para generar la respuesta y <strong>no se almacenan, venden ni comparten con terceros</strong> más allá de lo necesario para procesar tu consulta.</p>
+
+      <div class="sub-title">Uso futuro con datos anonimizados</div>
+      <p>En el futuro, Healtnex podrá utilizar datos de forma <strong>anonimizada y agregada</strong> para entrenar algoritmos, mejorar recomendaciones personalizadas, realizar estudios estadísticos y desarrollar nuevas funcionalidades. Este uso implicará que:</p>
       <ul class="list-items">
-        <li>Los datos utilizados no contienen información que permita identificarte.</li>
-        <li>Nunca utilizamos información personal identificable sin tu consentimiento.</li>
-        <li>El proceso de anonimización es irreversible antes de su uso en modelos.</li>
+        <li>Los datos utilizados no contendrán información que permita identificarte.</li>
+        <li>Nunca se utilizará información personal identificable sin tu consentimiento.</li>
+        <li>El proceso de anonimización será irreversible antes de su uso en modelos.</li>
       </ul>
+      <p>Cuando esto ocurra, te notificaremos con anticipación y actualizaremos esta política.</p>
     </section>
 
     <!-- 6 -->
@@ -516,10 +518,12 @@
       <h2 class="section-title">6. Almacenamiento y Seguridad</h2>
       <p>Tus datos se almacenan en servidores seguros con medidas de protección técnicas y organizacionales, incluyendo:</p>
       <ul class="list-items">
-        <li>Cifrado de datos en tránsito y en reposo.</li>
+        <li>Cifrado de datos en tránsito (HTTPS) y en reposo.</li>
+        <li>Contraseñas almacenadas con hash seguro (nunca en texto plano).</li>
         <li>Control de acceso restringido a personal autorizado.</li>
         <li>Monitoreo de accesos y actividad sospechosa.</li>
         <li>Copias de seguridad periódicas.</li>
+        <li>Variables de entorno para proteger credenciales y claves de acceso.</li>
       </ul>
       <p>Si bien implementamos medidas razonables de seguridad, ningún sistema de transmisión o almacenamiento de datos puede garantizar seguridad absoluta.</p>
     </section>
@@ -529,7 +533,9 @@
       <h2 class="section-title">7. Compartir Información con Terceros</h2>
       <p>CGB Technologies SpA no vende ni arrienda tu información personal. Podemos compartir datos únicamente en los siguientes casos limitados:</p>
       <ul class="list-items">
-        <li><strong>Proveedores de servicios:</strong> empresas que nos ayudan a operar la App (servidores, análisis técnico), bajo acuerdos de confidencialidad.</li>
+        <li><strong>Proveedores de infraestructura:</strong> servicios de servidores y base de datos que alojan la App, bajo acuerdos de confidencialidad.</li>
+        <li><strong>Proveedor de IA (Groq):</strong> el asistente inteligente de Healtnex procesa tus consultas a través de Groq, Inc., quien recibe los datos necesarios para generar una respuesta. Groq no almacena ni utiliza estos datos para otros fines. Puedes revisar su política en <a href="https://groq.com/privacy-policy" target="_blank" rel="noopener" style="color: var(--accent);">groq.com/privacy-policy</a>.</li>
+        <li><strong>Procesador de pagos (Flow):</strong> los pagos de suscripción Premium se procesan a través de Flow. Healtnex no almacena datos de tarjetas ni información financiera sensible.</li>
         <li><strong>Obligación legal:</strong> cuando la ley o una autoridad competente lo exija.</li>
         <li><strong>Protección de derechos:</strong> para proteger la seguridad de la plataforma, los usuarios o terceros.</li>
         <li><strong>Consentimiento expreso:</strong> cuando tú lo autorices específicamente.</li>
@@ -542,9 +548,21 @@
       <p>Los registros de ingresos y gastos ingresados en la agenda económica de Healtnex son datos exclusivamente personales del usuario. CGB Technologies SpA no accede a cuentas bancarias, no procesa pagos y no comparte esta información con instituciones financieras ni terceros. Son datos de uso privado dentro de la App.</p>
     </section>
 
-    <!-- 9 -->
+    <!-- 9 — NUEVO: Pagos -->
     <section class="section" id="s9">
-      <h2 class="section-title">9. Tus Derechos sobre tus Datos</h2>
+      <h2 class="section-title">9. Pagos y Suscripción Premium</h2>
+      <p>El Plan Premium de Healtnex se contrata y paga directamente en nuestra plataforma web a través de <strong>Flow</strong>, servicio de pagos en línea. En relación con los datos de pago:</p>
+      <ul class="list-items">
+        <li>Healtnex <strong>no almacena</strong> datos de tarjetas de crédito, débito ni credenciales bancarias.</li>
+        <li>Toda la información de pago es procesada directamente por Flow de forma segura.</li>
+        <li>Solo almacenamos el estado de tu suscripción (activa o inactiva) y la fecha de vencimiento.</li>
+        <li>Puedes cancelar tu suscripción en cualquier momento desde la configuración de tu cuenta.</li>
+      </ul>
+    </section>
+
+    <!-- 10 (antes 9) -->
+    <section class="section" id="s10">
+      <h2 class="section-title">10. Tus Derechos sobre tus Datos</h2>
       <p>Conforme a la legislación chilena aplicable, tienes derecho a:</p>
       <ul class="list-items">
         <li><strong>Acceder</strong> a los datos personales que tenemos sobre ti.</li>
@@ -557,15 +575,15 @@
       <p>Para ejercer cualquiera de estos derechos, puedes contactarnos a: <strong>contacto@cgbtechnologies.cl</strong></p>
     </section>
 
-    <!-- 10 -->
-    <section class="section" id="s10">
-      <h2 class="section-title">10. Eliminación de Cuenta y Datos</h2>
+    <!-- 11 (antes 10) -->
+    <section class="section" id="s11">
+      <h2 class="section-title">11. Eliminación de Cuenta y Datos</h2>
       <p>Puedes solicitar la eliminación de tu cuenta y todos los datos asociados en cualquier momento desde la configuración de la App o contactándonos directamente. Una vez procesada la solicitud, tus datos serán eliminados de forma permanente, salvo aquellos que debamos conservar por obligación legal por el período que corresponda.</p>
     </section>
 
-    <!-- 11 -->
-    <section class="section" id="s11">
-      <h2 class="section-title">11. Público Objetivo y Restricciones de Uso</h2>
+    <!-- 12 (antes 11) -->
+    <section class="section" id="s12">
+      <h2 class="section-title">12. Público Objetivo y Restricciones de Uso</h2>
       <p>Healtnex está diseñada exclusivamente para personas <strong>mayores de 18 años</strong>. La App <strong>no está dirigida ni es apta</strong> para:</p>
       <ul class="list-items">
         <li>Menores de 18 años.</li>
@@ -579,27 +597,27 @@
       <p>Si tomamos conocimiento de que un menor de 18 años está utilizando la App, procederemos a eliminar su cuenta y datos a la brevedad.</p>
     </section>
 
-    <!-- 12 -->
-    <section class="section" id="s12">
-      <h2 class="section-title">12. Retención de Datos</h2>
+    <!-- 13 (antes 12) -->
+    <section class="section" id="s13">
+      <h2 class="section-title">13. Retención de Datos</h2>
       <p>Conservamos tus datos mientras mantengas una cuenta activa en Healtnex o mientras sea necesario para prestarte el servicio. Una vez que solicites la eliminación de tu cuenta, los datos serán eliminados en un plazo razonable, salvo obligación legal de conservación.</p>
     </section>
 
-    <!-- 13 -->
-    <section class="section" id="s13">
-      <h2 class="section-title">13. Cambios en esta Política</h2>
+    <!-- 14 (antes 13) -->
+    <section class="section" id="s14">
+      <h2 class="section-title">14. Cambios en esta Política</h2>
       <p>CGB Technologies SpA podrá actualizar esta Política de Privacidad cuando sea necesario por cambios legales, tecnológicos u operativos. Cuando los cambios sean relevantes para tus derechos, te notificaremos dentro de la App o por correo electrónico con anticipación razonable. La versión vigente siempre estará disponible en la App.</p>
     </section>
 
-    <!-- 14 -->
-    <section class="section" id="s14">
-      <h2 class="section-title">14. Legislación Aplicable</h2>
+    <!-- 15 (antes 14) -->
+    <section class="section" id="s15">
+      <h2 class="section-title">15. Legislación Aplicable</h2>
       <p>Esta Política de Privacidad se rige por las leyes de la República de Chile, incluyendo la Ley N° 19.628 sobre Protección de la Vida Privada y demás normativa aplicable en materia de datos personales.</p>
     </section>
 
-    <!-- 15 -->
-    <section class="section" id="s15">
-      <h2 class="section-title">15. Contacto</h2>
+    <!-- 16 (antes 15) -->
+    <section class="section" id="s16">
+      <h2 class="section-title">16. Contacto</h2>
       <p>Si tienes dudas, consultas o deseas ejercer tus derechos sobre tus datos personales:</p>
       <div class="info-box">
         <div class="info-row"><strong>Empresa:</strong> CGB Technologies SpA</div>
@@ -621,3 +639,5 @@
 
   </div>
 </main>
+</body>
+</html>
