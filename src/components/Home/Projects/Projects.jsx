@@ -38,23 +38,23 @@ const projects = [
     liveLink: "https://www.hikarivet.com/",
     repoLink: "#",
   },
-  {
-    name: "Fitnex",
-    initial: "F",
+   {
+    name: "Healtnex",
+    initial: "H",
     category: "App Móvil · Salud Digital",
     description:
-      "Aplicación de salud digital pensada para el seguimiento de salud integral. Actualmente en fase de mejora continua.",
+      "Aplicación de salud integral con nutrición, ejercicio GPS, medicamentos, bienestar emocional, IA personalizada y red social de salud.",
     role: "Desarrollo de producto",
     year: "2025",
     highlights: [
-      "Seguimiento de progreso físico y mental por usuario",
-      "Registro de sesiones y ejercicios asignados",
-      "Pensada para uso diario en consulta y en casa",
+      "Módulos de nutrición, ejercicio, sueño y salud mental",
+      "Tracking GPS en tiempo real para running, caminata y bicicleta",
+      "Asistente de IA personalizado con datos del usuario",
     ],
     tags: ["App Móvil", "Salud"],
     status: "En desarrollo",
     statusType: "progress",
-    liveLink: null,
+    liveLink: "/healtnex",
     repoLink: null,
   },
 ];
@@ -113,7 +113,7 @@ const Projects = () => {
 
               <div className="project-actions">
                 {p.liveLink && (
-                  <a href={p.liveLink} className="project-btn project-btn-primary"   target="_blank" rel="noopener noreferrer"    >  
+                  <a href={p.liveLink} className="project-btn project-btn-primary" {...(p.liveLink?.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}> 
                     Ver proyecto <FaArrowRight />
                   </a>
                 )}
