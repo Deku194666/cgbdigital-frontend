@@ -16,8 +16,8 @@ const clients = [
     color: "#2f6fed",
     imageMaxWidth: "350px",
   },
-  {
-    name: "Fitnex",
+    {
+    name: "Healtnex",
     category: "Salud Digital",
     description:
       "App de salud integral, donde puedes integrar distintos módulos de tu salud, como Nutrición, Ejercicios, Sueño, Medicamentos, Salud Mental, Signos Vitales, entre otros. Todo esto integrado con una IA.",
@@ -25,7 +25,7 @@ const clients = [
     status: "En desarrollo",
     statusType: "progress",
     image: "/images/clients/fitnex.jpg",
-    link: null,
+    link: "/healtnex",
     color: "#2f8f4e",
     imageMaxWidth: "360px",
   },
@@ -88,8 +88,10 @@ const Clientes = () => {
           {filtered.map((c, i) => {
             const CardTag = c.link ? "a" : "div";
             const cardProps = c.link
-              ? { href: c.link, target: "_blank", rel: "noopener noreferrer" }
-              : {};
+  ? c.link.startsWith("http")
+    ? { href: c.link, target: "_blank", rel: "noopener noreferrer" }
+    : { href: c.link }
+  : {};
 
             return (
               <CardTag className="cliente-card" key={i} style={{ "--card-color": c.color }} {...cardProps}>
