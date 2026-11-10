@@ -24,7 +24,7 @@ const clients = [
     tags: ["App Móvil", "Salud"],
     status: "En desarrollo",
     statusType: "progress",
-    image: "/images/clients/fitnex.jpg",
+    image: "/images/clients/healtnex.jpeg",
     link: "/healtnex",
     color: "#2f8f4e",
     imageMaxWidth: "360px",
