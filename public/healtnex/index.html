@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healtnex — Tu salud integral en una sola app</title>
+  <meta name="description" content="Healtnex es la app de salud integral para Android. Nutrición, ejercicio, medicamentos, bienestar emocional, IA personalizada y más. Descárgala gratis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #27ae60;
+      --green-dark: #1e8449;
+      --blue: #2980b9;
+      --blue-dark: #1a6fa0;
+      --bg: #f0f4f8;
+      --white: #ffffff;
+      --text: #1a1a2e;
+      --text-2: #4a5568;
+      --text-3: #718096;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e2e8f0;
+      padding: 14px 16px;
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-logo-text { font-size: 20px; font-weight: 800; color: var(--text); }
+    .nav-logo-text span { color: var(--blue); }
+    .nav-links { margin-left: auto; display: flex; gap: 24px; align-items: center; }
+    .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-2); text-decoration: none; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-btn {
+      background: var(--green); color: #fff; font-size: 13px; font-weight: 700;
+      padding: 8px 18px; border-radius: 50px; text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-btn:hover { background: var(--green-dark); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1a2744 0%, #1e3a5f 50%, #1a4a2e 100%);
+      padding: 80px 16px 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(39,174,96,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 30%, rgba(41,128,185,0.15) 0%, transparent 60%);
+    }
+    .hero-inner { max-width: 900px; margin: 0 auto; position: relative; }
+    .hero-badge {
+      display: inline-block; margin-bottom: 20px;
+      background: rgba(39,174,96,0.2); border: 1px solid rgba(39,174,96,0.4);
+      color: #6edd9e; font-size: 12px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; padding: 5px 14px; border-radius: 50px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 60px); font-weight: 900; color: #fff;
+      line-height: 1.1; letter-spacing: -1px; margin-bottom: 20px;
+    }
+    .hero h1 span { color: #6edd9e; }
+    .hero p {
+      font-size: clamp(16px, 2.5vw, 20px); color: rgba(255,255,255,0.75);
+      max-width: 600px; margin: 0 auto 36px; line-height: 1.7;
+    }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px; }
+    .btn-primary {
+      background: var(--green); color: #fff; font-size: 15px; font-weight: 700;
+      padding: 14px 32px; border-radius: 50px; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: background 0.2s, transform 0.1s;
+    }
+    .btn-primary:hover { background: var(--green-dark); transform: translateY(-1px); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.1); color: #fff; font-size: 15px; font-weight: 600;
+      padding: 14px 32px; border-radius: 50px; text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.25);
+      display: inline-flex; align-items: center; gap: 8px;
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.18); }
+
+    /* SCREENSHOTS SCROLL */
+    .screenshots-wrap {
+      display: flex; gap: 16px; justify-content: center;
+      overflow-x: auto; padding: 0 16px 10px;
+      scrollbar-width: none;
+    }
+    .screenshots-wrap::-webkit-scrollbar { display: none; }
+    .screenshot {
+      flex-shrink: 0; width: 180px;
+      border-radius: 24px; overflow: hidden;
+      border: 3px solid rgba(255,255,255,0.15);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .screenshot img { width: 100%; display: block; }
+    .screenshot:nth-child(even) { margin-top: 24px; }
+
+    /* STATS */
+    .stats {
+      background: #fff; padding: 48px 16px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .stats-inner {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 32px; text-align: center;
+    }
+    .stat-num { font-size: 36px; font-weight: 900; color: var(--green); }
+    .stat-label { font-size: 14px; color: var(--text-3); margin-top: 4px; }
+
+    /* FEATURES */
+    .features { padding: 80px 16px; }
+    .section-title {
+      text-align: center; font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800; color: var(--text); margin-bottom: 10px;
+    }
+    .section-sub {
+      text-align: center; font-size: 16px; color: var(--text-3);
+      max-width: 500px; margin: 0 auto 48px;
+    }
+    .features-grid {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .feature-card {
+      background: #fff; border-radius: 20px; padding: 28px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .feature-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+    .feature-icon { font-size: 32px; margin-bottom: 14px; }
+    .feature-title { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .feature-desc { font-size: 14px; color: var(--text-3); line-height: 1.6; }
+
+    /* SCREENSHOTS SECTION */
+    .screens-section { background: #fff; padding: 80px 16px; }
+    .screens-scroll {
+      display: flex; gap: 20px; overflow-x: auto;
+      padding: 20px 0 10px; scrollbar-width: none;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .screens-scroll::-webkit-scrollbar { display: none; }
+    .screen-item {
+      flex-shrink: 0; width: 220px;
+      border-radius: 28px; overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      border: 2px solid #f0f0f0;
+    }
+    .screen-item img { width: 100%; display: block; }
+    .screen-label {
+      text-align: center; font-size: 12px; font-weight: 600;
+      color: var(--text-3); margin-top: 10px;
+    }
+
+    /* PREMIUM */
+    .premium {
+      background: linear-gradient(135deg, #1a2744 0%, #0f1e35 100%);
+      padding: 80px 16px; text-align: center;
+    }
+    .premium h2 { font-size: clamp(28px, 4vw, 42px); font-weight: 900; color: #fff; margin-bottom: 12px; }
+    .premium h2 span { color: #f1c40f; }
+    .premium p { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 36px; }
+    .premium-features {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      justify-content: center; margin-bottom: 40px;
+    }
+    .premium-tag {
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+      color: #fff; font-size: 13px; font-weight: 600;
+      padding: 8px 18px; border-radius: 50px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f1623; padding: 40px 16px;
+      text-align: center;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 10px; justify-content: center; margin-bottom: 20px; }
+    .footer-logo img { height: 32px; }
+    .footer-logo-text { font-size: 18px; font-weight: 800; color: #fff; }
+    .footer-logo-text span { color: var(--blue); }
+    .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
+    .footer-links a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; }
+    .footer-links a:hover { color: var(--green); }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.3); }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .screenshot { width: 140px; }
+      .screen-item { width: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#">
+      <img src="logo.png" alt="Healtnex logo">
+      <span class="nav-logo-text">Healtn<span>ex</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="#funciones">Funciones</a>
+      <a href="#capturas">Capturas</a>
+      <a href="#premium">Premium</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a class="nav-btn" href="#descarga">Descargar</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="hero-badge">📱 Disponible para Android</span>
+    <h1>Tu salud integral<br><span>en una sola app</span></h1>
+    <p>Nutrición, ejercicio, medicamentos, bienestar emocional, hábitos y un asistente de IA personalizado. Todo en Healtnex.</p>
+    <div class="hero-btns">
+      <a href="#descarga" class="btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.24.99.21l13.52-7.8-2.9-2.9-11.61 10.49zm17.6-10.17L17.65 12l3.13-1.59c.9-.52.9-1.38 0-1.9L4.17.24C3.82.07 3.48.1 3.18.26L14.72 11.8l6.06-3.5zm0 0"/></svg>
+        Google Play
+      </a>
+      <a href="#capturas" class="btn-secondary">Ver capturas →</a>
+    </div>
+
+    <div class="screenshots-wrap">
+      <div class="screenshot"><img src="1.jpeg" alt="Pantalla IA"></div>
+      <div class="screenshot"><img src="2.jpeg" alt="Pantalla ejercicio"></div>
+      <div class="screenshot"><img src="3.jpeg" alt="Pantalla social"></div>
+      <div class="screenshot"><img src="4.jpeg" alt="Pantalla alimentación"></div>
+      <div class="screenshot"><img src="5.jpeg" alt="Pantalla medicamentos"></div>
+      <div class="screenshot"><img src="6.jpeg" alt="Pantalla premium"></div>
+      <div class="screenshot"><img src="7.jpeg" alt="Panel de salud"></div>
+      <div class="screenshot"><img src="8.jpeg" alt="Mi día"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num">8+</div>
+      <div class="stat-label">módulos de salud</div>
+    </div>
+    <div>
+      <div class="stat-num">100%</div>
+      <div class="stat-label">datos privados y seguros</div>
+    </div>
+    <div>
+      <div class="stat-num">IA</div>
+      <div class="stat-label">personalizada con tus datos</div>
+    </div>
+    <div>
+      <div class="stat-num">Gratis</div>
+      <div class="stat-label">descarga sin costo</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="funciones">
+  <h2 class="section-title">Todo lo que necesitas para tu salud</h2>
+  <p class="section-sub">Healtnex integra todos tus hábitos y métricas de salud en un solo lugar</p>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🍎</div>
+      <div class="feature-title">Nutrición completa</div>
+      <div class="feature-desc">Registra tus comidas, controla calorías, macronutrientes, vitaminas y minerales. Con escáner de código de barras y foto.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏃</div>
+      <div class="feature-title">Ejercicio con GPS</div>
+      <div class="feature-desc">Cardio, musculación, elongación, running, caminata y bicicleta con tracking GPS en tiempo real y estadísticas detalladas.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💊</div>
+      <div class="feature-title">Medicamentos</div>
+      <div class="feature-desc">Gestiona tus fármacos diarios con recordatorios, dosis, horarios y calendario de toma.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">😊</div>
+      <div class="feature-title">Bienestar emocional</div>
+      <div class="feature-desc">Registra tu estado emocional diario y obtén análisis personalizados de tu salud mental.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💧</div>
+      <div class="feature-title">Hidratación y sueño</div>
+      <div class="feature-desc">Controla tu consumo de agua diario y registra la calidad y duración de tu sueño.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🤖</div>
+      <div class="feature-title">Asistente IA personal</div>
+      <div class="feature-desc">Un asistente inteligente que conoce tus datos y te da recomendaciones personalizadas sobre salud y bienestar.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">👥</div>
+      <div class="feature-title">Red social de salud</div>
+      <div class="feature-desc">Comparte tus logros, recetas y progreso con una comunidad enfocada en el bienestar.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📊</div>
+      <div class="feature-title">Panel de salud</div>
+      <div class="feature-desc">Visualiza tu progreso diario en nutrición, actividad, peso e IMC con gráficas y estadísticas claras.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📅</div>
+      <div class="feature-title">Hábitos y agenda</div>
+      <div class="feature-desc">Organiza tus hábitos, tareas, agenda económica personal y metas de bienestar.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPTURAS -->
+<section class="screens-section" id="capturas">
+  <h2 class="section-title">Mira la app por dentro</h2>
+  <p class="section-sub">Diseño intuitivo y moderno pensado para tu bienestar diario</p>
+  <div class="screens-scroll">
+    <div>
+      <div class="screen-item"><img src="8.jpeg" alt="Mi día"></div>
+      <div class="screen-label">Mi Día</div>
+    </div>
+    <div>
+      <div class="screen-item"><img src="1.jpeg" alt="Avisos IA"></div>
+      <div class="screen-label">Avisos de la IA</div>
+    </div>
+    <div>
+      <div class="screen-item"><img src="2.jpeg" alt="Ejercicio"></div>
+      <div class="screen-label">Ejercicio</div>
+    </div>
+    <div>
+      <div class="screen-item"><img src="4.jpeg" alt="Alimentación"></div>
+      <div class="screen-label">Nutrición</div>
+    </div>
+    <div>
+      <div class="screen-item"><img src="5.jpeg" alt="Red social"></div>
+      <div class="screen-label">Social</div>
+    </div>
+    <div>
+      <div class="screen-item"><img src="7.jpeg" alt="Medicamentos"></div>
+      <div class="screen-label">Medicamentos</div>
+    </div>
+    <div>
+      <div class="screen-item"><img src="6.jpeg" alt="Premium"></div>
+      <div class="screen-label">Premium</div>
+    </div>
+    <div>
+      <div class="screen-item"><img src="3.jpeg" alt="Perfil social"></div>
+      <div class="screen-label">Perfil social</div>
+    </div>
+  </div>
+</section>
+
+<!-- PREMIUM -->
+<section class="premium" id="premium">
+  <h2>Healtnex <span>Premium</span></h2>
+  <p>Lleva tu salud al siguiente nivel con herramientas avanzadas y planes personalizados</p>
+  <div class="premium-features">
+    <span class="premium-tag">🍽️ Nutrición personalizada</span>
+    <span class="premium-tag">💪 Rutinas exclusivas</span>
+    <span class="premium-tag">🧠 IA sin límites</span>
+    <span class="premium-tag">📈 Análisis avanzados</span>
+    <span class="premium-tag">🌙 Seguimiento de sueño</span>
+    <span class="premium-tag">⭐ Sin publicidad</span>
+  </div>
+  <a href="#descarga" class="btn-primary">Comenzar gratis</a>
+</section>
+
+<!-- DESCARGA -->
+<section id="descarga" style="background:#fff; padding:80px 16px; text-align:center;">
+  <div style="max-width:500px; margin:0 auto;">
+    <img src="logo.png" alt="Healtnex" style="height:80px; margin-bottom:24px;">
+    <h2 style="font-size:clamp(24px,4vw,36px); font-weight:900; color:var(--text); margin-bottom:12px;">Descarga Healtnex gratis</h2>
+    <p style="font-size:16px; color:var(--text-3); margin-bottom:32px;">Disponible para Android. Comienza tu camino hacia una vida más saludable hoy.</p>
+    <a href="#" class="btn-primary" style="font-size:16px; padding:16px 40px; display:inline-flex;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.24.99.21l13.52-7.8-2.9-2.9-11.61 10.49zm17.6-10.17L17.65 12l3.13-1.59c.9-.52.9-1.38 0-1.9L4.17.24C3.82.07 3.48.1 3.18.26L14.72 11.8l6.06-3.5zm0 0"/></svg>
+      &nbsp;Disponible en Google Play
+    </a>
+    <p style="font-size:12px; color:#bbb; margin-top:16px;">Próximamente en Google Play Store</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="logo.png" alt="Healtnex">
+    <span class="footer-logo-text">Healtn<span>ex</span></span>
+  </div>
+  <div class="footer-links">
+    <a href="privacidad.html">Política de Privacidad</a>
+    <a href="terminos.html">Términos de Servicio</a>
+    <a href="cookies.html">Política de Cookies</a>
+    <a href="https://www.cgbtechnologies.com" target="_blank" rel="noopener">cgbtechnologies.com</a>
+    <a href="mailto:contacto@cgbtechnologies.com">Contacto</a>
+  </div>
+  <p class="footer-copy">© 2026 Healtnex · CGB Technologies SpA · Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
