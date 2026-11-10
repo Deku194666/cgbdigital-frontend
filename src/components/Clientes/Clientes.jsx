@@ -16,19 +16,7 @@ const clients = [
     color: "#2f6fed",
     imageMaxWidth: "350px",
   },
-    {
-    name: "Healtnex",
-    category: "Salud Digital",
-    description:
-      "App de salud integral, donde puedes integrar distintos módulos de tu salud, como Nutrición, Ejercicios, Sueño, Medicamentos, Salud Mental, Signos Vitales, entre otros. Todo esto integrado con una IA.",
-    tags: ["App Móvil", "Salud"],
-    status: "En desarrollo",
-    statusType: "progress",
-    image: "/images/clients/healtnex.jpeg",
-    link: "/healtnex",
-    color: "#2f8f4e",
-    imageMaxWidth: "360px",
-  },
+     
   {
     name: "Tu Mercado Online",
     category: "E-commerce",
